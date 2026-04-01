@@ -11,10 +11,15 @@ dist/
 build/
 .eggs/
 
-# ── Data (ignore entire dataset folder) ────
-data/
+# Data — ignore heavy binaries, keep JSONs and flags
+data/raw_scenes/**/*.tif
+data/stacks/*.tif
+!data/raw_scenes/**/download_complete.flag
+!data/aoi_list.json
+!data/aoi_epochs.json
+!data/stacks/*_meta.json
 
-# ── Cache / generated artifacts ────────────
+# Cache / generated artifacts
 cache/
 logs/
 *.log
