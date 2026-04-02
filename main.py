@@ -16,6 +16,8 @@ from tdrd.pipelines.step2a_query_epochs import QueryEpochsPipeline
 from tdrd.pipelines.step2a_download_scenes import Step2aPipeline
 from tdrd.pipelines.step2b_coregister import Step2bPipeline
 from tdrd.pipelines.step3_analyze_aois import Step3PrepPipeline
+from tdrd.pipelines.step3a_damage_annotation import Step3aDamagePipeline
+from tdrd.pipelines.step3b_flood_extraction import Step3bFloodPipeline
 
 def cli_check_aois(args):
     """Verifies existing AOI list against build guide criteria."""
@@ -50,6 +52,16 @@ def cli_run_step3_prep(args):
     pipeline = Step3PrepPipeline()
     pipeline.run()
 
+def cli_run_step3a(args):
+    """Step 3a: Transfer xBD building damage labels (spectral fallback for non-xBD events)."""
+    pipeline = Step3aDamagePipeline()
+    pipeline.run()
+
+def cli_run_step3b(args):
+    """Step 3b: Extract flood extent from Sen1Floods11 GT or NDWI fallback."""
+    pipeline = Step3bFloodPipeline()
+    pipeline.run()
+
 def main():
     parser = argparse.ArgumentParser(description="TDRD Dataset Generation CLI")
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
@@ -63,8 +75,10 @@ def main():
     subparsers.add_parser("run-step2a-download", help="Download windowed COG crops per epoch")
     subparsers.add_parser("run-step2b",  help="Co-register epochs into temporal stacks")
 
-    # Step 3 Prep Commands
+    # Step 3 Commands
     subparsers.add_parser("run-step3-prep", help="Analyze AOI demographics/buildings")
+    subparsers.add_parser("run-step3a",     help="Transfer building damage labels (xBD + spectral fallback)")
+    subparsers.add_parser("run-step3b",     help="Extract flood extent (Sen1Floods11 GT + NDWI fallback)")
 
     args = parser.parse_args()
 
@@ -80,6 +94,10 @@ def main():
         cli_run_step2b(args)
     elif args.command == "run-step3-prep":
         cli_run_step3_prep(args)
+    elif args.command == "run-step3a":
+        cli_run_step3a(args)
+    elif args.command == "run-step3b":
+        cli_run_step3b(args)
     else:
         parser.print_help()
         sys.exit(1)
