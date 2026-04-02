@@ -8,15 +8,12 @@ Output: data/annotations/{aoi_id}/flood_extent_T{n}.geojson
 """
 
 import json
-import os
-import tempfile
 from pathlib import Path
 
 import numpy as np
 import geopandas as gpd
 import rasterio
 import rasterio.features
-import httpx
 from shapely.geometry import shape, box
 from shapely.ops import unary_union
 import cv2
@@ -24,38 +21,21 @@ import cv2
 AOI_LIST_PATH  = Path("data/aoi_list.json")
 STACKS_DIR     = Path("data/stacks")
 ANNOTATIONS    = Path("data/annotations")
-SEN1_CATALOG   = Path("data/sen1floods11/v1.1/catalog/sen1floods11_hand_labeled_label")
-
-_GDAL_ENV = {
-    "AWS_NO_SIGN_REQUEST": "YES",
-    "GDAL_DISABLE_READDIR_ON_OPEN": "EMPTY_DIR",
-    "CPL_VSIL_CURL_ALLOWED_EXTENSIONS": ".tif,.TIF",
-}
-
-GCS_BASE = "https://storage.googleapis.com/sen1floods11/v1.1/data/flood_events/HandLabeled/LabelHand"
+SEN1_INDEX     = Path("data/sen1floods11/label_index.json")
+SEN1_LABEL_DIR = Path("data/sen1floods11/v1.1/data/LabelHand")
 
 
-# ── Sen1Floods11 catalog index ─────────────────────────────────────────────────
+# ── Sen1Floods11 local index ───────────────────────────────────────────────────
 
 def build_sen1floods_index():
-    """Returns list of {id, bbox, url} for all hand-labeled chips."""
-    index = []
-    for chip_dir in SEN1_CATALOG.iterdir():
-        if not chip_dir.is_dir():
-            continue
-        json_files = list(chip_dir.glob("*.json"))
-        if not json_files:
-            continue
-        try:
-            with open(json_files[0]) as f:
-                item = json.load(f)
-            bbox = item.get('bbox')
-            url  = item.get('assets', {}).get('LabelHand', {}).get('href')
-            if bbox and url:
-                index.append({'id': item['id'], 'bbox': bbox, 'url': url})
-        except Exception:
-            continue
-    return index
+    """Loads pre-built local index of downloaded label TIFs."""
+    if not SEN1_INDEX.exists():
+        raise FileNotFoundError(
+            f"Sen1Floods11 index not found: {SEN1_INDEX}\n"
+            "Run: python scripts/download_sen1floods_labels.py"
+        )
+    with open(SEN1_INDEX) as f:
+        return json.load(f)
 
 
 def find_overlapping_chips(aoi_bbox, index):
@@ -64,63 +44,46 @@ def find_overlapping_chips(aoi_bbox, index):
     return [c for c in index if box(*c['bbox']).intersects(aoi_geom)]
 
 
-def download_label_tif(url, tmp_path):
-    """Download a GCS label TIF to a temp file."""
-    try:
-        with httpx.Client(timeout=60) as client:
-            r = client.get(url)
-            if r.status_code == 200:
-                with open(tmp_path, 'wb') as f:
-                    f.write(r.content)
-                return True
-    except Exception as e:
-        print(f"      Download failed {url}: {e}")
-    return False
-
-
 def extract_flood_from_sen1floods(aoi_id, aoi_bbox, index):
     """
-    Downloads overlapping Sen1Floods11 label chips and merges flood polygons.
+    Reads overlapping local Sen1Floods11 label TIFs and merges flood polygons.
     Returns GeoDataFrame or None.
     """
     chips = find_overlapping_chips(aoi_bbox, index)
     if not chips:
         return None
 
-    aoi_geom  = box(*aoi_bbox)
-    polygons  = []
+    aoi_geom = box(*aoi_bbox)
+    polygons = []
+    crs = None
 
-    with tempfile.TemporaryDirectory() as tmp_dir:
-        for chip in chips:
-            tmp_path = Path(tmp_dir) / f"{chip['id']}.tif"
-            if not download_label_tif(chip['url'], tmp_path):
-                continue
-            try:
-                with rasterio.open(tmp_path) as src:
-                    mask = src.read(1)
-                    transform = src.transform
-                    crs = src.crs
+    for chip in chips:
+        tif_path = Path(chip['path'])
+        if not tif_path.exists():
+            continue
+        try:
+            with rasterio.open(tif_path) as src:
+                mask = src.read(1)
+                transform = src.transform
+                crs = src.crs
 
-                # Sen1Floods11: -1=nodata, 0=not water, 1=water
-                flood_mask = (mask == 1).astype(np.uint8)
+            flood_mask = (mask == 1).astype(np.uint8)
+            for geom_dict, val in rasterio.features.shapes(
+                flood_mask, mask=flood_mask, transform=transform
+            ):
+                g = shape(geom_dict)
+                if g.intersects(aoi_geom):
+                    polygons.append(g)
+        except Exception as e:
+            print(f"      [{aoi_id}] Sen1Floods chip error: {e}")
+            continue
 
-                for geom_dict, val in rasterio.features.shapes(
-                    flood_mask, mask=flood_mask, transform=transform
-                ):
-                    g = shape(geom_dict)
-                    if g.intersects(aoi_geom):
-                        polygons.append(g)
-            except Exception as e:
-                print(f"      [{aoi_id}] Sen1Floods chip error: {e}")
-                continue
-
-    if not polygons:
+    if not polygons or crs is None:
         return None
 
     merged = unary_union(polygons)
     gdf = gpd.GeoDataFrame(
-        [{'geometry': merged, 'source': 'sen1floods11_gt'}],
-        crs=crs
+        [{'geometry': merged, 'source': 'sen1floods11_gt'}], crs=crs
     ).to_crs('EPSG:4326')
     return gdf.clip(box(*aoi_bbox))
 
@@ -137,16 +100,17 @@ def ndwi_flood(aoi_id, meta, stack_path, epoch_t):
     Extracts flood extent using NDWI on S2 bands for a given epoch.
     NDWI = (Green - NIR) / (Green + NIR)  — positive = water
     Band layout per epoch (S2, 4 bands): B02, B03(green), B04, B08(nir)
+    Memory-safe: frees arrays explicitly, simplifies before union.
     """
     bpe      = meta['bands_per_epoch']
-    ep_start = sum(bpe[:epoch_t]) + 1   # 1-based band index
+    ep_start = sum(bpe[:epoch_t]) + 1
 
     if len(bpe) <= epoch_t or bpe[epoch_t] < 4:
         return None
 
     try:
-        green_idx = ep_start + 1   # B03
-        nir_idx   = ep_start + 3   # B08
+        green_idx = ep_start + 1
+        nir_idx   = ep_start + 3
 
         green, transform, crs = _read_band(stack_path, green_idx)
         nir, _, _             = _read_band(stack_path, nir_idx)
@@ -154,26 +118,35 @@ def ndwi_flood(aoi_id, meta, stack_path, epoch_t):
         denom = green + nir
         denom = np.where(denom == 0, 1e-6, denom)
         ndwi  = (green - nir) / denom
+        del green, nir, denom
 
-        # Otsu threshold on NDWI
         ndwi_norm = ((ndwi - ndwi.min()) / (ndwi.max() - ndwi.min() + 1e-8) * 255).astype(np.uint8)
+        del ndwi
+
         thresh, _ = cv2.threshold(ndwi_norm, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         flood_mask = (ndwi_norm >= thresh).astype(np.uint8)
+        del ndwi_norm
 
-        # Morphological cleanup
         kernel = np.ones((3, 3), np.uint8)
         flood_mask = cv2.morphologyEx(flood_mask, cv2.MORPH_OPEN, kernel)
 
+        # Collect and simplify polygons to cap memory usage
         polygons = []
-        for geom_dict, val in rasterio.features.shapes(
-            flood_mask, mask=flood_mask, transform=transform
-        ):
-            polygons.append(shape(geom_dict))
+        for geom_dict, _ in rasterio.features.shapes(flood_mask, mask=flood_mask, transform=transform):
+            g = shape(geom_dict).simplify(0.0001)  # simplify before union
+            if g.is_valid and not g.is_empty:
+                polygons.append(g)
+        del flood_mask
 
         if not polygons:
             return None
 
-        merged = unary_union(polygons)
+        # Union in batches of 500 to avoid OOM
+        while len(polygons) > 1:
+            batches = [polygons[i:i+500] for i in range(0, len(polygons), 500)]
+            polygons = [unary_union(b) for b in batches]
+
+        merged = polygons[0]
         gdf = gpd.GeoDataFrame(
             [{'geometry': merged, 'source': 'ndwi_otsu'}], crs=crs
         ).to_crs('EPSG:4326')

@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "flood_extent_T2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "source": "ndwi_otsu", "epoch": 2 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -121.229445106667413, 39.825678218167965 ], [ -121.229452043649033, 39.825408045274806 ], [ -121.200019199007684, 39.824955019927685 ], [ -121.200012146859152, 39.825225188506025 ], [ -121.229445106667413, 39.825678218167965 ] ] ] } }
+]
+}

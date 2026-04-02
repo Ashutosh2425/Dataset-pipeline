@@ -76,28 +76,37 @@ def main():
                 aoi_ok = False
                 continue
 
-            # CRS check
+            # CRS + content check via json (avoids fiona version issues)
             try:
-                dmg_gdf = gpd.read_file(dmg_path)
-                fld_gdf = gpd.read_file(fld_path)
+                with open(dmg_path) as f:
+                    dmg_data = json.load(f)
+                with open(fld_path) as f:
+                    fld_data = json.load(f)
 
-                if stack_crs:
-                    if dmg_gdf.crs and dmg_gdf.crs.to_epsg() != 4326:
-                        crs_mismatch.append(f"{aoi_id}/damage/T{epoch_label}")
-                        aoi_ok = False
-                    if fld_gdf.crs and fld_gdf.crs.to_epsg() != 4326:
-                        crs_mismatch.append(f"{aoi_id}/flood/T{epoch_label}")
-                        aoi_ok = False
+                dmg_crs = (dmg_data.get('crs', {}) or {}).get('properties', {}).get('name', '')
+                fld_crs = (fld_data.get('crs', {}) or {}).get('properties', {}).get('name', '')
+
+                # GeoJSON spec is always EPSG:4326 — flag only explicit mismatches
+                if dmg_crs and '4326' not in dmg_crs and 'CRS84' not in dmg_crs:
+                    crs_mismatch.append(f"{aoi_id}/damage/T{epoch_label}")
+                    aoi_ok = False
+                if fld_crs and '4326' not in fld_crs and 'CRS84' not in fld_crs:
+                    crs_mismatch.append(f"{aoi_id}/flood/T{epoch_label}")
+                    aoi_ok = False
+
+                dmg_features = dmg_data.get('features', [])
+                fld_features = fld_data.get('features', [])
 
                 # Source check for non-xBD events
-                if event_id not in XBD_EVENTS and t == 1 and len(dmg_gdf) > 0:
-                    if 'source' not in dmg_gdf.columns or not (dmg_gdf['source'] == 'spectral').any():
+                if event_id not in XBD_EVENTS and t == 1 and dmg_features:
+                    sources = [f.get('properties', {}).get('source', '') for f in dmg_features]
+                    if not any(s == 'spectral' for s in sources):
                         bad_source.append(aoi_id)
                         aoi_ok = False
 
-                # Building count check (only on first post-event epoch)
+                # Building count check (first post-event epoch only)
                 if t == 1:
-                    n_buildings = len(dmg_gdf)
+                    n_buildings = len(dmg_features)
                     if n_buildings < 50:
                         low_buildings.append((aoi_id, n_buildings))
                     elif n_buildings > 500:

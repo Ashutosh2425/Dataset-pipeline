@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "damage_polygons_T4",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "damage_class": 1, "source": "spectral" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 22.624672916074996, 32.634174609347021 ], [ 22.624671286053484, 32.634084436671543 ], [ 22.624777853391492, 32.634083057375705 ], [ 22.624779483519809, 32.63417323004645 ], [ 22.624672916074996, 32.634174609347021 ] ] ] } }
+]
+}

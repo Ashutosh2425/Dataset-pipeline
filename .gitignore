@@ -14,10 +14,15 @@ build/
 # Data — ignore heavy binaries, keep JSONs and flags
 data/raw_scenes/**/*.tif
 data/stacks/*.tif
+data/sen1floods11/*.zip
+data/sen1floods11/v1.1/data/
+data/sen1floods11_repo/
+data/worldpop/
 !data/raw_scenes/**/download_complete.flag
 !data/aoi_list.json
 !data/aoi_epochs.json
 !data/stacks/*_meta.json
+!data/sen1floods11/label_index.json
 
 # Cache / generated artifacts
 cache/
