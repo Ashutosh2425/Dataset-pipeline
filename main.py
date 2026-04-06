@@ -18,6 +18,7 @@ from tdrd.pipelines.step2b_coregister import Step2bPipeline
 from tdrd.pipelines.step3_analyze_aois import Step3PrepPipeline
 from tdrd.pipelines.step3a_damage_annotation import Step3aDamagePipeline
 from tdrd.pipelines.step3b_flood_extraction import Step3bFloodPipeline
+from tdrd.pipelines.step4_road_damage_scoring import Step4RoadDamagePipeline
 
 def cli_check_aois(args):
     """Verifies existing AOI list against build guide criteria."""
@@ -62,6 +63,12 @@ def cli_run_step3b(args):
     pipeline = Step3bFloodPipeline()
     pipeline.run()
 
+def cli_run_step4(args):
+    """Step 4: Score road damage per AOI per epoch using OSM network."""
+    workers = getattr(args, 'workers', 4)
+    pipeline = Step4RoadDamagePipeline(workers=workers)
+    pipeline.run()
+
 def main():
     parser = argparse.ArgumentParser(description="TDRD Dataset Generation CLI")
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
@@ -79,6 +86,10 @@ def main():
     subparsers.add_parser("run-step3-prep", help="Analyze AOI demographics/buildings")
     subparsers.add_parser("run-step3a",     help="Transfer building damage labels (xBD + spectral fallback)")
     subparsers.add_parser("run-step3b",     help="Extract flood extent (Sen1Floods11 GT + NDWI fallback)")
+
+    # Step 4 Commands
+    p4 = subparsers.add_parser("run-step4", help="Score road damage per AOI per epoch")
+    p4.add_argument("--workers", type=int, default=2, help="Thread pool size (default 2)")
 
     args = parser.parse_args()
 
@@ -98,6 +109,8 @@ def main():
         cli_run_step3a(args)
     elif args.command == "run-step3b":
         cli_run_step3b(args)
+    elif args.command == "run-step4":
+        cli_run_step4(args)
     else:
         parser.print_help()
         sys.exit(1)
