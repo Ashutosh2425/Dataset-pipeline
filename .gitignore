@@ -15,7 +15,6 @@ build/
 data/raw_scenes/**/*.tif
 data/stacks/*.tif
 data/annotations/**/*.tif
-data/annotations/**/*.gpkg
 
 # Per-AOI annotation files (too large for GitHub — use HuggingFace Hub for dataset)
 data/annotations/**/*.geojson
