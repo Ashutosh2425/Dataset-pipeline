@@ -3,6 +3,9 @@ Step 3a — Building Damage Annotation Transfer
 Transfers xBD labels to AOIs with overlap; uses spectral change (NDVI/NBR delta)
 as fallback for AOIs without xBD coverage.
 
+xBD folder names are discovered automatically from data/xbd/ — no hardcoding.
+Event-to-folder matching uses keyword search on the event config name.
+
 Output: data/annotations/{aoi_id}/damage_polygons_T{n}.geojson
 """
 
@@ -22,14 +25,16 @@ STACKS_DIR    = Path("data/stacks")
 XBD_DIR       = Path("data/xbd")
 ANNOTATIONS   = Path("data/annotations")
 
-EVENT_TO_XBD = {
-    'EVT001': 'hurricane-harvey',
-    'EVT003': 'santa-rosa-wildfire',
-    'EVT005': 'midwest-flooding',
-    'EVT006': 'beirut-explosion',
-    'EVT008': 'tuscaloosa-tornado',
-    'EVT010': 'turkey-earthquake-2023',
-    'EVT011': 'hawaii-wildfire',
+# Keywords used to match event config name to an xBD folder name.
+# Values are ordered by specificity — first match wins.
+_EVENT_KEYWORDS = {
+    'EVT001': ['hurricane-harvey', 'harvey'],
+    'EVT003': ['santa-rosa-wildfire', 'santa-rosa'],
+    'EVT005': ['midwest-flooding', 'midwest'],
+    'EVT008': ['hurricane-michael', 'michael'],
+    'EVT009': ['nepal-flooding', 'nepal'],
+    'EVT010': ['mexico-earthquake', 'mexico'],
+    'EVT012': ['hurricane-florence', 'florence'],
 }
 
 DAMAGE_MAP = {
@@ -41,41 +46,67 @@ DAMAGE_MAP = {
 }
 
 
+def discover_xbd_event_map():
+    """
+    Scan data/xbd/ and return {event_id: [folder, ...]} mapping every event
+    to ALL matching xBD subfolders (one event can span multiple disaster folders).
+    """
+    if not XBD_DIR.exists():
+        return {}
+
+    available = [
+        d.name for d in XBD_DIR.iterdir()
+        if d.is_dir() and (d / 'labels').exists()
+    ]
+    if not available:
+        return {}
+
+    result = {}
+    for event_id, keywords in _EVENT_KEYWORDS.items():
+        matches = [f for f in available
+                   if any(kw in f.lower() for kw in keywords)]
+        if matches:
+            result[event_id] = matches
+
+    return result
+
+
 # ── xBD helpers ───────────────────────────────────────────────────────────────
 
-def load_xbd_polygons(aoi_bbox, event_id):
-    xbd_name = EVENT_TO_XBD.get(event_id)
-    if not xbd_name:
+def load_xbd_polygons(aoi_bbox, event_id, xbd_map):
+    folders = xbd_map.get(event_id)  # now a list of folder names
+    if not folders:
         return None
 
-    label_dir = XBD_DIR / xbd_name / 'labels'
-    if not label_dir.exists():
-        return None
-
+    from shapely import wkt as shapely_wkt
     aoi_geom = box(*aoi_bbox)
     rows = []
 
-    for label_file in label_dir.glob('*_post_disaster.json'):
-        try:
-            with open(label_file) as f:
-                data = json.load(f)
-        except Exception:
+    for folder in folders:
+        label_dir = XBD_DIR / folder / 'labels'
+        if not label_dir.exists():
             continue
 
-        for feat in data.get('features', {}).get('xy', []):
-            props = feat.get('properties', {})
-            damage = DAMAGE_MAP.get(props.get('subtype', 'no-damage'), 0)
-            wkt = feat.get('wkt')
-            if not wkt:
-                continue
+        for label_file in label_dir.glob('*_post_disaster.json'):
             try:
-                from shapely import wkt as shapely_wkt
-                geom = shapely_wkt.loads(wkt)
-                if geom.intersects(aoi_geom):
-                    rows.append({'geometry': geom, 'damage_class': damage,
-                                 'source': 'xbd'})
+                with open(label_file) as f:
+                    data = json.load(f)
             except Exception:
                 continue
+
+            for feat in data.get('features', {}).get('lng_lat', []):
+                props = feat.get('properties', {})
+                damage = DAMAGE_MAP.get(props.get('subtype', 'no-damage'), 0)
+                wkt = feat.get('wkt')
+                if not wkt:
+                    continue
+                try:
+                    geom = shapely_wkt.loads(wkt)
+                    if geom.intersects(aoi_geom):
+                        rows.append({'geometry': geom, 'damage_class': damage,
+                                     'source': 'xbd'})
+                except Exception:
+                    continue
 
     if not rows:
         return None
@@ -114,30 +145,25 @@ def spectral_change_damage(aoi_id, meta, stack_path):
     Band layout per epoch (S2 only, 4 bands): B02, B03, B04, B08
     Band indices in stack (1-based): epoch * 4 - 3 to epoch * 4
     """
-    dates  = meta['dates']
-    bpe    = meta['bands_per_epoch']   # bands per epoch list
     n_ep   = meta['n_epochs']
+    bpe    = meta['bands_per_epoch']
     results = []
 
     if not Path(stack_path).exists():
         return [None] * (n_ep - 1)
 
-    # Pre-event band indices (epoch 0)
-    pre_start = 1
-    pre_red_idx  = pre_start + 2   # B04 = band 3 in 0-indexed → 1-based = 3
+    pre_start    = 1
+    pre_red_idx  = pre_start + 2   # B04
     pre_nir_idx  = pre_start + 3   # B08
 
     try:
-        pre_red, transform, crs, meta_info = _read_band(stack_path, pre_red_idx)
-        pre_nir, _, _, _                   = _read_band(stack_path, pre_nir_idx)
+        pre_red, transform, crs, _ = _read_band(stack_path, pre_red_idx)
+        pre_nir, _, _, _            = _read_band(stack_path, pre_nir_idx)
         pre_ndvi = _ndvi(pre_red, pre_nir)
     except Exception:
         return [None] * (n_ep - 1)
 
-    cursor = sum(bpe[:1])  # skip epoch 0 bands
-
     for t in range(1, n_ep):
-        ep_bands = bpe[t]
         ep_start = sum(bpe[:t]) + 1   # 1-based
 
         try:
@@ -145,15 +171,13 @@ def spectral_change_damage(aoi_id, meta, stack_path):
             post_nir, _, _, _ = _read_band(stack_path, ep_start + 3)
             post_ndvi = _ndvi(post_red, post_nir)
 
-            delta = pre_ndvi - post_ndvi   # positive = vegetation loss = damage
+            delta = pre_ndvi - post_ndvi   # positive = vegetation loss
 
-            # Classify: 0=intact, 1=minor, 2=major, 3=destroyed
             damage_raster = np.zeros_like(delta, dtype=np.uint8)
             damage_raster[delta > 0.1]  = 1
             damage_raster[delta > 0.25] = 2
             damage_raster[delta > 0.4]  = 3
 
-            # Vectorise
             rows = []
             for geom_dict, val in rasterio.features.shapes(
                 damage_raster, mask=(damage_raster > 0).astype(np.uint8),
@@ -184,8 +208,44 @@ class Step3aDamagePipeline:
         with open(AOI_LIST_PATH) as f:
             self.aois = json.load(f)
 
-    def run(self):
-        print(f"Step 3a: Damage annotation for {len(self.aois)} AOIs...")
+    def run(self, force_xbd=False):
+        """
+        force_xbd: if True, delete existing damage polygons for any AOI whose
+                   event now has xBD coverage and re-annotate them from xBD.
+        """
+        xbd_map = discover_xbd_event_map()
+        if xbd_map:
+            print(f"[xBD] Found coverage for events: {sorted(xbd_map.keys())}")
+            for eid, folders in sorted(xbd_map.items()):
+                for folder in folders:
+                    print(f"  {eid} -> data/xbd/{folder}/labels/")
+        else:
+            print("[xBD] data/xbd/ not found or empty — spectral fallback for all AOIs")
+
+        xbd_events = set(xbd_map.keys())
+
+        if force_xbd and xbd_events:
+            print(f"\n[force-xbd] Clearing existing damage polygons for {len(xbd_events)} xBD events...")
+            cleared = 0
+            for aoi in self.aois:
+                if aoi['event_id'] not in xbd_events:
+                    continue
+                aoi_id = aoi['aoi_id']
+                meta_path = STACKS_DIR / f"{aoi_id}_meta.json"
+                if not meta_path.exists():
+                    continue
+                meta = json.load(open(meta_path))
+                for t in range(1, meta['n_epochs']):
+                    p = ANNOTATIONS / aoi_id / f"damage_polygons_T{t+1}.geojson"
+                    if p.exists():
+                        try:
+                            p.unlink()
+                            cleared += 1
+                        except PermissionError:
+                            pass   # file locked by another process; skip
+            print(f"  Cleared {cleared} files — will re-annotate from xBD.")
+
+        print(f"\nStep 3a: Damage annotation for {len(self.aois)} AOIs...")
         xbd_count = spectral_count = skipped = 0
 
         for aoi in self.aois:
@@ -204,9 +264,7 @@ class Step3aDamagePipeline:
                 meta = json.load(f)
 
             n_epochs = meta['n_epochs']
-            dates    = meta['dates']
 
-            # Check if all outputs already exist
             all_done = all(
                 (out_dir / f"damage_polygons_T{t+1}.geojson").exists()
                 for t in range(1, n_epochs)
@@ -215,8 +273,10 @@ class Step3aDamagePipeline:
                 skipped += 1
                 continue
 
-            # Try xBD first
-            xbd_gdf = load_xbd_polygons(aoi['bbox'], event_id) if aoi.get('has_xbd_overlap') else None
+            # Try xBD if this event has a discovered folder
+            xbd_gdf = None
+            if event_id in xbd_events:
+                xbd_gdf = load_xbd_polygons(aoi['bbox'], event_id, xbd_map)
 
             if xbd_gdf is not None and len(xbd_gdf) > 0:
                 for t in range(1, n_epochs):
@@ -228,7 +288,6 @@ class Step3aDamagePipeline:
                 xbd_count += 1
 
             else:
-                # Spectral change fallback
                 spectral_gdfs = spectral_change_damage(aoi_id, meta, stack_path)
                 for t, gdf in enumerate(spectral_gdfs):
                     out_path = out_dir / f"damage_polygons_T{t+2}.geojson"
@@ -237,7 +296,6 @@ class Step3aDamagePipeline:
                     if gdf is not None and len(gdf) > 0:
                         gdf.to_file(out_path, driver='GeoJSON')
                     else:
-                        # Write empty GeoJSON so file exists
                         empty = gpd.GeoDataFrame(
                             columns=['geometry', 'damage_class', 'source'],
                             geometry='geometry'
@@ -250,4 +308,7 @@ class Step3aDamagePipeline:
         print(f"  xBD transfer   : {xbd_count}")
         print(f"  Spectral change: {spectral_count}")
         print(f"  Skipped        : {skipped}")
+        if not xbd_map:
+            print(f"\n  NOTE: No xBD data found. Load xBD into data/xbd/ then")
+            print(f"  re-run: python main.py run-step3a --force-xbd")
         print(f"{'='*50}")

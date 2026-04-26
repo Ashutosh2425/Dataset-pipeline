@@ -1,0 +1,3033 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d52bd5616251571ef1117ddf01501c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:9999;
+                background:white;padding:10px 14px;border-radius:6px;
+                box-shadow:2px 2px 6px rgba(0,0,0,0.3);font-size:12px;">
+      <b>EVT010 — structural (58 AOIs)</b><br>
+      <ul style="list-style:none;padding:0;margin:4px 0 0 0;">
+        <li><span style="background:#8322e5;display:inline-block;width:14px;height:14px;margin-right:6px;border-radius:2px;"></span>EVT010</li>
+      </ul>
+    </div>
+    
+            <div class="folium-map" id="map_5d52bd5616251571ef1117ddf01501c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5d52bd5616251571ef1117ddf01501c4 = L.map(
+                "map_5d52bd5616251571ef1117ddf01501c4",
+                {
+                    center: [19.41983125862069, -99.14940130172417],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_38c6f0675c26053dc5a6b4f3ec97e9cf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_38c6f0675c26053dc5a6b4f3ec97e9cf.addTo(map_5d52bd5616251571ef1117ddf01501c4);
+        
+    
+            var tile_layer_eff574224c6521663f2ab82394d37633 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eff574224c6521663f2ab82394d37633.addTo(map_5d52bd5616251571ef1117ddf01501c4);
+        
+    
+            var feature_group_d1604f9c504e9a3e0a445b31a15a9f1c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_498a8acca0ff8d1d9b096a6b06c60750 = L.rectangle(
+                [[19.19009, -99.259003], [19.235135, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_408ebf01f396c64d25feba75f45669f9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8c7d16306992d3e1b1f599c8a7c7a81b = $(`<div id="html_8c7d16306992d3e1b1f599c8a7c7a81b" style="width: 100.0%; height: 100.0%;"><b>EVT010_0430</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 61<br>OSM roads: 764<br>xBD overlap: True<br>Bbox: [-99.2590, 19.1901, -99.2113, 19.2351]</div>`)[0];
+                popup_408ebf01f396c64d25feba75f45669f9.setContent(html_8c7d16306992d3e1b1f599c8a7c7a81b);
+            
+        
+
+        rectangle_498a8acca0ff8d1d9b096a6b06c60750.bindPopup(popup_408ebf01f396c64d25feba75f45669f9)
+        ;
+
+        
+    
+    
+            rectangle_498a8acca0ff8d1d9b096a6b06c60750.bindTooltip(
+                `<div>
+                     EVT010_0430
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_335a61e61ce740273d1160fc48c8aa70 = L.circleMarker(
+                [19.2126125, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_335a61e61ce740273d1160fc48c8aa70.bindTooltip(
+                `<div>
+                     EVT010_0430
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b52270284c99be345a4b5f97f798688a = L.rectangle(
+                [[19.19009, -99.211254], [19.235135, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_e4cf37a8893fb3f063868a764424b3ba = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4d826f80b78b9c81d876826d25676509 = $(`<div id="html_4d826f80b78b9c81d876826d25676509" style="width: 100.0%; height: 100.0%;"><b>EVT010_0431</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 61<br>OSM roads: 3806<br>xBD overlap: True<br>Bbox: [-99.2113, 19.1901, -99.1635, 19.2351]</div>`)[0];
+                popup_e4cf37a8893fb3f063868a764424b3ba.setContent(html_4d826f80b78b9c81d876826d25676509);
+            
+        
+
+        rectangle_b52270284c99be345a4b5f97f798688a.bindPopup(popup_e4cf37a8893fb3f063868a764424b3ba)
+        ;
+
+        
+    
+    
+            rectangle_b52270284c99be345a4b5f97f798688a.bindTooltip(
+                `<div>
+                     EVT010_0431
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2ef5833495d6681c3576a22df1f56ab = L.circleMarker(
+                [19.2126125, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_a2ef5833495d6681c3576a22df1f56ab.bindTooltip(
+                `<div>
+                     EVT010_0431
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f806bb3d6f0b2c982516c4ebfb705732 = L.rectangle(
+                [[19.19009, -99.163505], [19.235135, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_538626a712cf8fb3f52cbd3fdf7f2949 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b6e671999cb635bccabb05da91da4524 = $(`<div id="html_b6e671999cb635bccabb05da91da4524" style="width: 100.0%; height: 100.0%;"><b>EVT010_0432</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 85<br>OSM roads: 4862<br>xBD overlap: True<br>Bbox: [-99.1635, 19.1901, -99.1158, 19.2351]</div>`)[0];
+                popup_538626a712cf8fb3f52cbd3fdf7f2949.setContent(html_b6e671999cb635bccabb05da91da4524);
+            
+        
+
+        rectangle_f806bb3d6f0b2c982516c4ebfb705732.bindPopup(popup_538626a712cf8fb3f52cbd3fdf7f2949)
+        ;
+
+        
+    
+    
+            rectangle_f806bb3d6f0b2c982516c4ebfb705732.bindTooltip(
+                `<div>
+                     EVT010_0432
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6bcd212aefc73b8e9c26a0fea2f791bc = L.circleMarker(
+                [19.2126125, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_6bcd212aefc73b8e9c26a0fea2f791bc.bindTooltip(
+                `<div>
+                     EVT010_0432
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_0534969028fedc9a8a9090a74328f7be = L.rectangle(
+                [[19.235135, -99.259003], [19.28018, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_ca59009c754f7cd37bd8cb2a9426f77e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_17e6b1a86b574b7a0499b859f5c2a6ef = $(`<div id="html_17e6b1a86b574b7a0499b859f5c2a6ef" style="width: 100.0%; height: 100.0%;"><b>EVT010_0433</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 74<br>OSM roads: 3799<br>xBD overlap: True<br>Bbox: [-99.2590, 19.2351, -99.2113, 19.2802]</div>`)[0];
+                popup_ca59009c754f7cd37bd8cb2a9426f77e.setContent(html_17e6b1a86b574b7a0499b859f5c2a6ef);
+            
+        
+
+        rectangle_0534969028fedc9a8a9090a74328f7be.bindPopup(popup_ca59009c754f7cd37bd8cb2a9426f77e)
+        ;
+
+        
+    
+    
+            rectangle_0534969028fedc9a8a9090a74328f7be.bindTooltip(
+                `<div>
+                     EVT010_0433
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9943f0a05993d1f7a4073c585e19b98 = L.circleMarker(
+                [19.2576575, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_d9943f0a05993d1f7a4073c585e19b98.bindTooltip(
+                `<div>
+                     EVT010_0433
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_136e9af3f1ca518fee71f252e93e918a = L.rectangle(
+                [[19.235135, -99.211254], [19.28018, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_e21387fa32334dfea3ffe87dd88e1783 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ea21ba632ff0b39bbc75de7990d6ce2d = $(`<div id="html_ea21ba632ff0b39bbc75de7990d6ce2d" style="width: 100.0%; height: 100.0%;"><b>EVT010_0434</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 78<br>OSM roads: 6338<br>xBD overlap: True<br>Bbox: [-99.2113, 19.2351, -99.1635, 19.2802]</div>`)[0];
+                popup_e21387fa32334dfea3ffe87dd88e1783.setContent(html_ea21ba632ff0b39bbc75de7990d6ce2d);
+            
+        
+
+        rectangle_136e9af3f1ca518fee71f252e93e918a.bindPopup(popup_e21387fa32334dfea3ffe87dd88e1783)
+        ;
+
+        
+    
+    
+            rectangle_136e9af3f1ca518fee71f252e93e918a.bindTooltip(
+                `<div>
+                     EVT010_0434
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8be56e752f4d6f4e747af58f1318ffe6 = L.circleMarker(
+                [19.2576575, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_8be56e752f4d6f4e747af58f1318ffe6.bindTooltip(
+                `<div>
+                     EVT010_0434
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_fa4dcdd9208b3fc9dcdf77b8e1e0d382 = L.rectangle(
+                [[19.235135, -99.163505], [19.28018, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_cff6950dcf6195db110c69b1cf16db1a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_dd29b30fbfeecb24c49bcf9a76d7056f = $(`<div id="html_dd29b30fbfeecb24c49bcf9a76d7056f" style="width: 100.0%; height: 100.0%;"><b>EVT010_0435</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 85<br>OSM roads: 8066<br>xBD overlap: True<br>Bbox: [-99.1635, 19.2351, -99.1158, 19.2802]</div>`)[0];
+                popup_cff6950dcf6195db110c69b1cf16db1a.setContent(html_dd29b30fbfeecb24c49bcf9a76d7056f);
+            
+        
+
+        rectangle_fa4dcdd9208b3fc9dcdf77b8e1e0d382.bindPopup(popup_cff6950dcf6195db110c69b1cf16db1a)
+        ;
+
+        
+    
+    
+            rectangle_fa4dcdd9208b3fc9dcdf77b8e1e0d382.bindTooltip(
+                `<div>
+                     EVT010_0435
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dabb731069fe0a0c6721042d4faf9b78 = L.circleMarker(
+                [19.2576575, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_dabb731069fe0a0c6721042d4faf9b78.bindTooltip(
+                `<div>
+                     EVT010_0435
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_0c12c59d89199da5ee66ccb793ff9685 = L.rectangle(
+                [[19.28018, -99.259003], [19.325225, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_516653603b398a00a58872ebcf1b2d4c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_76cbc7c69af3d9a8a4a5f12c4ee8def2 = $(`<div id="html_76cbc7c69af3d9a8a4a5f12c4ee8def2" style="width: 100.0%; height: 100.0%;"><b>EVT010_0436</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 61<br>OSM roads: 9061<br>xBD overlap: True<br>Bbox: [-99.2590, 19.2802, -99.2113, 19.3252]</div>`)[0];
+                popup_516653603b398a00a58872ebcf1b2d4c.setContent(html_76cbc7c69af3d9a8a4a5f12c4ee8def2);
+            
+        
+
+        rectangle_0c12c59d89199da5ee66ccb793ff9685.bindPopup(popup_516653603b398a00a58872ebcf1b2d4c)
+        ;
+
+        
+    
+    
+            rectangle_0c12c59d89199da5ee66ccb793ff9685.bindTooltip(
+                `<div>
+                     EVT010_0436
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d343675fd53fa0cdaa876be1213b602d = L.circleMarker(
+                [19.302702500000002, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_d343675fd53fa0cdaa876be1213b602d.bindTooltip(
+                `<div>
+                     EVT010_0436
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b9f579e5efa84d38f5056bb9429a22a6 = L.rectangle(
+                [[19.28018, -99.211254], [19.325225, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_5e5508471dcc4de4ecf10494e9b7ac0e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3525a8c4c950ca381019c4a18b9dcac6 = $(`<div id="html_3525a8c4c950ca381019c4a18b9dcac6" style="width: 100.0%; height: 100.0%;"><b>EVT010_0437</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 74<br>OSM roads: 4624<br>xBD overlap: True<br>Bbox: [-99.2113, 19.2802, -99.1635, 19.3252]</div>`)[0];
+                popup_5e5508471dcc4de4ecf10494e9b7ac0e.setContent(html_3525a8c4c950ca381019c4a18b9dcac6);
+            
+        
+
+        rectangle_b9f579e5efa84d38f5056bb9429a22a6.bindPopup(popup_5e5508471dcc4de4ecf10494e9b7ac0e)
+        ;
+
+        
+    
+    
+            rectangle_b9f579e5efa84d38f5056bb9429a22a6.bindTooltip(
+                `<div>
+                     EVT010_0437
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c93d66b38bce00ea9d25efee01589f94 = L.circleMarker(
+                [19.302702500000002, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_c93d66b38bce00ea9d25efee01589f94.bindTooltip(
+                `<div>
+                     EVT010_0437
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_991e7513eff370be00883cd215e5b83e = L.rectangle(
+                [[19.28018, -99.163505], [19.325225, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_fc39919632642e62cc3cd809f622a26a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8d8cb451edd2d7e3ef8eadf82447bdeb = $(`<div id="html_8d8cb451edd2d7e3ef8eadf82447bdeb" style="width: 100.0%; height: 100.0%;"><b>EVT010_0438</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 74<br>OSM roads: 7896<br>xBD overlap: True<br>Bbox: [-99.1635, 19.2802, -99.1158, 19.3252]</div>`)[0];
+                popup_fc39919632642e62cc3cd809f622a26a.setContent(html_8d8cb451edd2d7e3ef8eadf82447bdeb);
+            
+        
+
+        rectangle_991e7513eff370be00883cd215e5b83e.bindPopup(popup_fc39919632642e62cc3cd809f622a26a)
+        ;
+
+        
+    
+    
+            rectangle_991e7513eff370be00883cd215e5b83e.bindTooltip(
+                `<div>
+                     EVT010_0438
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_980a208b6ba7b53ae5f0906fdfed2408 = L.circleMarker(
+                [19.302702500000002, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_980a208b6ba7b53ae5f0906fdfed2408.bindTooltip(
+                `<div>
+                     EVT010_0438
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ec36ae29ac4202b3af450addfa5bb8bd = L.rectangle(
+                [[19.325225, -99.259003], [19.37027, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_5cc890d9be4296d60a5ea654d48251d2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ff408a8564e0080fdf0556839a1e80b0 = $(`<div id="html_ff408a8564e0080fdf0556839a1e80b0" style="width: 100.0%; height: 100.0%;"><b>EVT010_0439</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 63<br>OSM roads: 7050<br>xBD overlap: True<br>Bbox: [-99.2590, 19.3252, -99.2113, 19.3703]</div>`)[0];
+                popup_5cc890d9be4296d60a5ea654d48251d2.setContent(html_ff408a8564e0080fdf0556839a1e80b0);
+            
+        
+
+        rectangle_ec36ae29ac4202b3af450addfa5bb8bd.bindPopup(popup_5cc890d9be4296d60a5ea654d48251d2)
+        ;
+
+        
+    
+    
+            rectangle_ec36ae29ac4202b3af450addfa5bb8bd.bindTooltip(
+                `<div>
+                     EVT010_0439
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc8e4df1adfb72975bfb85064eaebe35 = L.circleMarker(
+                [19.3477475, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_dc8e4df1adfb72975bfb85064eaebe35.bindTooltip(
+                `<div>
+                     EVT010_0439
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_4de6fde7afb5d60880c25a5d0712d66d = L.rectangle(
+                [[19.325225, -99.211254], [19.37027, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_7f2e934c66d65dad58a347d2418c6dc6 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1568f592b0c8a3b3cd5eeddfb84b1949 = $(`<div id="html_1568f592b0c8a3b3cd5eeddfb84b1949" style="width: 100.0%; height: 100.0%;"><b>EVT010_0440</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 74<br>OSM roads: 6442<br>xBD overlap: True<br>Bbox: [-99.2113, 19.3252, -99.1635, 19.3703]</div>`)[0];
+                popup_7f2e934c66d65dad58a347d2418c6dc6.setContent(html_1568f592b0c8a3b3cd5eeddfb84b1949);
+            
+        
+
+        rectangle_4de6fde7afb5d60880c25a5d0712d66d.bindPopup(popup_7f2e934c66d65dad58a347d2418c6dc6)
+        ;
+
+        
+    
+    
+            rectangle_4de6fde7afb5d60880c25a5d0712d66d.bindTooltip(
+                `<div>
+                     EVT010_0440
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77357a70ce766c605c9fb5fa372f284f = L.circleMarker(
+                [19.3477475, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_77357a70ce766c605c9fb5fa372f284f.bindTooltip(
+                `<div>
+                     EVT010_0440
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ffab93e050134d76a702fdd14f6080dc = L.rectangle(
+                [[19.325225, -99.163505], [19.37027, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_f9e67c3c9ec228366d4a40006c7645be = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_68ee05632e08e1e3021a37d20a1e8dd8 = $(`<div id="html_68ee05632e08e1e3021a37d20a1e8dd8" style="width: 100.0%; height: 100.0%;"><b>EVT010_0441</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 72<br>OSM roads: 8969<br>xBD overlap: True<br>Bbox: [-99.1635, 19.3252, -99.1158, 19.3703]</div>`)[0];
+                popup_f9e67c3c9ec228366d4a40006c7645be.setContent(html_68ee05632e08e1e3021a37d20a1e8dd8);
+            
+        
+
+        rectangle_ffab93e050134d76a702fdd14f6080dc.bindPopup(popup_f9e67c3c9ec228366d4a40006c7645be)
+        ;
+
+        
+    
+    
+            rectangle_ffab93e050134d76a702fdd14f6080dc.bindTooltip(
+                `<div>
+                     EVT010_0441
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b97b9302fe1f104f1655fbd683a86564 = L.circleMarker(
+                [19.3477475, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_b97b9302fe1f104f1655fbd683a86564.bindTooltip(
+                `<div>
+                     EVT010_0441
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_e903fa39f6e1c671d6879d786ebd26e6 = L.rectangle(
+                [[19.37027, -99.259003], [19.415315, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_e14119c662bb608d23bed320a18084e2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8a72986239172bf6a37c234d84ab76f3 = $(`<div id="html_8a72986239172bf6a37c234d84ab76f3" style="width: 100.0%; height: 100.0%;"><b>EVT010_0442</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 61<br>OSM roads: 6719<br>xBD overlap: True<br>Bbox: [-99.2590, 19.3703, -99.2113, 19.4153]</div>`)[0];
+                popup_e14119c662bb608d23bed320a18084e2.setContent(html_8a72986239172bf6a37c234d84ab76f3);
+            
+        
+
+        rectangle_e903fa39f6e1c671d6879d786ebd26e6.bindPopup(popup_e14119c662bb608d23bed320a18084e2)
+        ;
+
+        
+    
+    
+            rectangle_e903fa39f6e1c671d6879d786ebd26e6.bindTooltip(
+                `<div>
+                     EVT010_0442
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71c0c2305c4f89b636913a3c9968a232 = L.circleMarker(
+                [19.3927925, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_71c0c2305c4f89b636913a3c9968a232.bindTooltip(
+                `<div>
+                     EVT010_0442
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_7e44553fbc679f86160fe5482aee295e = L.rectangle(
+                [[19.37027, -99.211254], [19.415315, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_175705c3a54e025cce05d8185a541697 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9e84e2e9216c36f4c4ff68b6981837cc = $(`<div id="html_9e84e2e9216c36f4c4ff68b6981837cc" style="width: 100.0%; height: 100.0%;"><b>EVT010_0443</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 72<br>OSM roads: 8420<br>xBD overlap: True<br>Bbox: [-99.2113, 19.3703, -99.1635, 19.4153]</div>`)[0];
+                popup_175705c3a54e025cce05d8185a541697.setContent(html_9e84e2e9216c36f4c4ff68b6981837cc);
+            
+        
+
+        rectangle_7e44553fbc679f86160fe5482aee295e.bindPopup(popup_175705c3a54e025cce05d8185a541697)
+        ;
+
+        
+    
+    
+            rectangle_7e44553fbc679f86160fe5482aee295e.bindTooltip(
+                `<div>
+                     EVT010_0443
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6670a31afdfd21a44321d72f0cb1c77d = L.circleMarker(
+                [19.3927925, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_6670a31afdfd21a44321d72f0cb1c77d.bindTooltip(
+                `<div>
+                     EVT010_0443
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_01f513ce121c4df0bb299ee7284f1a32 = L.rectangle(
+                [[19.37027, -99.163505], [19.415315, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_1ca2a3d366f5af7fce602eb516283530 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_994f2e1327fe162066a9f4bc8926ca70 = $(`<div id="html_994f2e1327fe162066a9f4bc8926ca70" style="width: 100.0%; height: 100.0%;"><b>EVT010_0444</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 72<br>OSM roads: 8681<br>xBD overlap: True<br>Bbox: [-99.1635, 19.3703, -99.1158, 19.4153]</div>`)[0];
+                popup_1ca2a3d366f5af7fce602eb516283530.setContent(html_994f2e1327fe162066a9f4bc8926ca70);
+            
+        
+
+        rectangle_01f513ce121c4df0bb299ee7284f1a32.bindPopup(popup_1ca2a3d366f5af7fce602eb516283530)
+        ;
+
+        
+    
+    
+            rectangle_01f513ce121c4df0bb299ee7284f1a32.bindTooltip(
+                `<div>
+                     EVT010_0444
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8fef10435e8515b6cd676d973f746c80 = L.circleMarker(
+                [19.3927925, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_8fef10435e8515b6cd676d973f746c80.bindTooltip(
+                `<div>
+                     EVT010_0444
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c24ddf03fcf8702469c0940f9718b43f = L.rectangle(
+                [[19.415315, -99.259003], [19.46036, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_4ed3632bbcfc442e192a587ce6955d9d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_105d97d3fa838975915e89676c4146b9 = $(`<div id="html_105d97d3fa838975915e89676c4146b9" style="width: 100.0%; height: 100.0%;"><b>EVT010_0445</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 61<br>OSM roads: 7291<br>xBD overlap: True<br>Bbox: [-99.2590, 19.4153, -99.2113, 19.4604]</div>`)[0];
+                popup_4ed3632bbcfc442e192a587ce6955d9d.setContent(html_105d97d3fa838975915e89676c4146b9);
+            
+        
+
+        rectangle_c24ddf03fcf8702469c0940f9718b43f.bindPopup(popup_4ed3632bbcfc442e192a587ce6955d9d)
+        ;
+
+        
+    
+    
+            rectangle_c24ddf03fcf8702469c0940f9718b43f.bindTooltip(
+                `<div>
+                     EVT010_0445
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7932f5e78b76afc11f1232f7544eb249 = L.circleMarker(
+                [19.4378375, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_7932f5e78b76afc11f1232f7544eb249.bindTooltip(
+                `<div>
+                     EVT010_0445
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_d5d42c543ef2d1a9ceb8eae39a751872 = L.rectangle(
+                [[19.415315, -99.211254], [19.46036, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_5dabd0452fce60499af91a0be2c470ce = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a2db32c83a04ba3ee1a4d9bf09ff4c3e = $(`<div id="html_a2db32c83a04ba3ee1a4d9bf09ff4c3e" style="width: 100.0%; height: 100.0%;"><b>EVT010_0446</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 72<br>OSM roads: 6583<br>xBD overlap: True<br>Bbox: [-99.2113, 19.4153, -99.1635, 19.4604]</div>`)[0];
+                popup_5dabd0452fce60499af91a0be2c470ce.setContent(html_a2db32c83a04ba3ee1a4d9bf09ff4c3e);
+            
+        
+
+        rectangle_d5d42c543ef2d1a9ceb8eae39a751872.bindPopup(popup_5dabd0452fce60499af91a0be2c470ce)
+        ;
+
+        
+    
+    
+            rectangle_d5d42c543ef2d1a9ceb8eae39a751872.bindTooltip(
+                `<div>
+                     EVT010_0446
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c501db8dcc41781a2eac634172be1b83 = L.circleMarker(
+                [19.4378375, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_c501db8dcc41781a2eac634172be1b83.bindTooltip(
+                `<div>
+                     EVT010_0446
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a2d534797c76a9cbd32c50145aa06131 = L.rectangle(
+                [[19.415315, -99.163505], [19.46036, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_3bfd6d3ee34fd6d101c52d83cccf846a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b4491774e78da2d3a00d1ab80f7a03c0 = $(`<div id="html_b4491774e78da2d3a00d1ab80f7a03c0" style="width: 100.0%; height: 100.0%;"><b>EVT010_0447</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 72<br>OSM roads: 6227<br>xBD overlap: True<br>Bbox: [-99.1635, 19.4153, -99.1158, 19.4604]</div>`)[0];
+                popup_3bfd6d3ee34fd6d101c52d83cccf846a.setContent(html_b4491774e78da2d3a00d1ab80f7a03c0);
+            
+        
+
+        rectangle_a2d534797c76a9cbd32c50145aa06131.bindPopup(popup_3bfd6d3ee34fd6d101c52d83cccf846a)
+        ;
+
+        
+    
+    
+            rectangle_a2d534797c76a9cbd32c50145aa06131.bindTooltip(
+                `<div>
+                     EVT010_0447
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9007a1bb485904104801f5790638809d = L.circleMarker(
+                [19.4378375, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_9007a1bb485904104801f5790638809d.bindTooltip(
+                `<div>
+                     EVT010_0447
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c534d568cf7e15057008663b1c473b43 = L.rectangle(
+                [[19.325225, -98.87701], [19.37027, -98.85]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_28c6b27d78d11557da92bf70e1eacc54 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2c697124348dd2723f2b9640c3373dc9 = $(`<div id="html_2c697124348dd2723f2b9640c3373dc9" style="width: 100.0%; height: 100.0%;"><b>EVT010_0448</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 3331<br>xBD overlap: False<br>Bbox: [-98.8770, 19.3252, -98.8500, 19.3703]</div>`)[0];
+                popup_28c6b27d78d11557da92bf70e1eacc54.setContent(html_2c697124348dd2723f2b9640c3373dc9);
+            
+        
+
+        rectangle_c534d568cf7e15057008663b1c473b43.bindPopup(popup_28c6b27d78d11557da92bf70e1eacc54)
+        ;
+
+        
+    
+    
+            rectangle_c534d568cf7e15057008663b1c473b43.bindTooltip(
+                `<div>
+                     EVT010_0448
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca86ccd373c3bea46f21e53b95c0c277 = L.circleMarker(
+                [19.3477475, -98.863505],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_ca86ccd373c3bea46f21e53b95c0c277.bindTooltip(
+                `<div>
+                     EVT010_0448
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_31291437fc7fa16ae9f20b4543d36591 = L.rectangle(
+                [[19.46036, -98.87701], [19.505405, -98.85]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_895c7572890f8709343c914cab426a91 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0d3f41a03214d68aca9d91aa0318c67e = $(`<div id="html_0d3f41a03214d68aca9d91aa0318c67e" style="width: 100.0%; height: 100.0%;"><b>EVT010_0449</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 2180<br>xBD overlap: False<br>Bbox: [-98.8770, 19.4604, -98.8500, 19.5054]</div>`)[0];
+                popup_895c7572890f8709343c914cab426a91.setContent(html_0d3f41a03214d68aca9d91aa0318c67e);
+            
+        
+
+        rectangle_31291437fc7fa16ae9f20b4543d36591.bindPopup(popup_895c7572890f8709343c914cab426a91)
+        ;
+
+        
+    
+    
+            rectangle_31291437fc7fa16ae9f20b4543d36591.bindTooltip(
+                `<div>
+                     EVT010_0449
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9b719cab91f897c11f1545a55b8a7ac = L.circleMarker(
+                [19.482882500000002, -98.863505],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_a9b719cab91f897c11f1545a55b8a7ac.bindTooltip(
+                `<div>
+                     EVT010_0449
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_75a2f1fdb20a3b3b5c194771132c4089 = L.rectangle(
+                [[19.595495, -99.020257], [19.640541, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_8ae20731f044122434e78fe5c01aaa3b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4b67c5bb771e84c701ced85c979ffee6 = $(`<div id="html_4b67c5bb771e84c701ced85c979ffee6" style="width: 100.0%; height: 100.0%;"><b>EVT010_0450</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 14384<br>xBD overlap: False<br>Bbox: [-99.0203, 19.5955, -98.9725, 19.6405]</div>`)[0];
+                popup_8ae20731f044122434e78fe5c01aaa3b.setContent(html_4b67c5bb771e84c701ced85c979ffee6);
+            
+        
+
+        rectangle_75a2f1fdb20a3b3b5c194771132c4089.bindPopup(popup_8ae20731f044122434e78fe5c01aaa3b)
+        ;
+
+        
+    
+    
+            rectangle_75a2f1fdb20a3b3b5c194771132c4089.bindTooltip(
+                `<div>
+                     EVT010_0450
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_632958072dad4a7109a9235c7fac0b03 = L.circleMarker(
+                [19.618018, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_632958072dad4a7109a9235c7fac0b03.bindTooltip(
+                `<div>
+                     EVT010_0450
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_7f4c47687035abd7a209dda791e4d1fb = L.rectangle(
+                [[19.37027, -99.402251], [19.415315, -99.354502]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_51df75cc2aa20d3f8d26aa82d0c96b69 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b69b0074ade1e337f6e4b29528cb4d93 = $(`<div id="html_b69b0074ade1e337f6e4b29528cb4d93" style="width: 100.0%; height: 100.0%;"><b>EVT010_0451</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 797<br>xBD overlap: False<br>Bbox: [-99.4023, 19.3703, -99.3545, 19.4153]</div>`)[0];
+                popup_51df75cc2aa20d3f8d26aa82d0c96b69.setContent(html_b69b0074ade1e337f6e4b29528cb4d93);
+            
+        
+
+        rectangle_7f4c47687035abd7a209dda791e4d1fb.bindPopup(popup_51df75cc2aa20d3f8d26aa82d0c96b69)
+        ;
+
+        
+    
+    
+            rectangle_7f4c47687035abd7a209dda791e4d1fb.bindTooltip(
+                `<div>
+                     EVT010_0451
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fa661f32bac8c0cc7d218265badbf4e = L.circleMarker(
+                [19.3927925, -99.3783765],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_7fa661f32bac8c0cc7d218265badbf4e.bindTooltip(
+                `<div>
+                     EVT010_0451
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_3b925dcbd4948114fdb293d2bcc9cca1 = L.rectangle(
+                [[19.145045, -99.211254], [19.19009, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_ace1bb3a7309cd6a7a832bec097c2207 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e96841b9628453ebe1866ad8a9bed734 = $(`<div id="html_e96841b9628453ebe1866ad8a9bed734" style="width: 100.0%; height: 100.0%;"><b>EVT010_0452</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 40<br>xBD overlap: False<br>Bbox: [-99.2113, 19.1450, -99.1635, 19.1901]</div>`)[0];
+                popup_ace1bb3a7309cd6a7a832bec097c2207.setContent(html_e96841b9628453ebe1866ad8a9bed734);
+            
+        
+
+        rectangle_3b925dcbd4948114fdb293d2bcc9cca1.bindPopup(popup_ace1bb3a7309cd6a7a832bec097c2207)
+        ;
+
+        
+    
+    
+            rectangle_3b925dcbd4948114fdb293d2bcc9cca1.bindTooltip(
+                `<div>
+                     EVT010_0452
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc43397a5a1ab3cb28009a389c4bb7c8 = L.circleMarker(
+                [19.1675675, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_fc43397a5a1ab3cb28009a389c4bb7c8.bindTooltip(
+                `<div>
+                     EVT010_0452
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_347b920086822e06b6cac986c3cbef62 = L.rectangle(
+                [[19.55045, -99.211254], [19.595495, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_853bcffb823d0f1b938458a4f197eff3 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c6cdd20b04f475f72ceb168f039cae4a = $(`<div id="html_c6cdd20b04f475f72ceb168f039cae4a" style="width: 100.0%; height: 100.0%;"><b>EVT010_0453</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 8629<br>xBD overlap: False<br>Bbox: [-99.2113, 19.5505, -99.1635, 19.5955]</div>`)[0];
+                popup_853bcffb823d0f1b938458a4f197eff3.setContent(html_c6cdd20b04f475f72ceb168f039cae4a);
+            
+        
+
+        rectangle_347b920086822e06b6cac986c3cbef62.bindPopup(popup_853bcffb823d0f1b938458a4f197eff3)
+        ;
+
+        
+    
+    
+            rectangle_347b920086822e06b6cac986c3cbef62.bindTooltip(
+                `<div>
+                     EVT010_0453
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8af6015d04a203114827728a76dd5fcf = L.circleMarker(
+                [19.5729725, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_8af6015d04a203114827728a76dd5fcf.bindTooltip(
+                `<div>
+                     EVT010_0453
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f5aa2c5765ddee1f7216a41e42f1f31d = L.rectangle(
+                [[19.505405, -99.354502], [19.55045, -99.306752]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_887bc44420bb78fb583205a179446334 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c25de58484169a3cf8cf97df811744da = $(`<div id="html_c25de58484169a3cf8cf97df811744da" style="width: 100.0%; height: 100.0%;"><b>EVT010_0454</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 313<br>xBD overlap: False<br>Bbox: [-99.3545, 19.5054, -99.3068, 19.5505]</div>`)[0];
+                popup_887bc44420bb78fb583205a179446334.setContent(html_c25de58484169a3cf8cf97df811744da);
+            
+        
+
+        rectangle_f5aa2c5765ddee1f7216a41e42f1f31d.bindPopup(popup_887bc44420bb78fb583205a179446334)
+        ;
+
+        
+    
+    
+            rectangle_f5aa2c5765ddee1f7216a41e42f1f31d.bindTooltip(
+                `<div>
+                     EVT010_0454
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3bdf76102106bcfa71b65643e47653a6 = L.circleMarker(
+                [19.5279275, -99.33062699999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_3bdf76102106bcfa71b65643e47653a6.bindTooltip(
+                `<div>
+                     EVT010_0454
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_e84444774ef70efcaef38bf849f07909 = L.rectangle(
+                [[19.505405, -98.87701], [19.55045, -98.85]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_8e32b64d6743a6f1b821ad62fe74f0d8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_85f25d169ac9bc814f35658f2052519f = $(`<div id="html_85f25d169ac9bc814f35658f2052519f" style="width: 100.0%; height: 100.0%;"><b>EVT010_0455</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 3135<br>xBD overlap: False<br>Bbox: [-98.8770, 19.5054, -98.8500, 19.5505]</div>`)[0];
+                popup_8e32b64d6743a6f1b821ad62fe74f0d8.setContent(html_85f25d169ac9bc814f35658f2052519f);
+            
+        
+
+        rectangle_e84444774ef70efcaef38bf849f07909.bindPopup(popup_8e32b64d6743a6f1b821ad62fe74f0d8)
+        ;
+
+        
+    
+    
+            rectangle_e84444774ef70efcaef38bf849f07909.bindTooltip(
+                `<div>
+                     EVT010_0455
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adffe9dde657df281328eeeafda347a0 = L.circleMarker(
+                [19.5279275, -98.863505],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_adffe9dde657df281328eeeafda347a0.bindTooltip(
+                `<div>
+                     EVT010_0455
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b7906d7e0c23e9727474d5e4d18447c2 = L.rectangle(
+                [[19.19009, -99.115756], [19.235135, -99.068006]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_190db4fa5f711032ee8fb6ca0483a352 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_69043e241381ea38b0ef37c3bb2a4f76 = $(`<div id="html_69043e241381ea38b0ef37c3bb2a4f76" style="width: 100.0%; height: 100.0%;"><b>EVT010_0456</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 5653<br>xBD overlap: False<br>Bbox: [-99.1158, 19.1901, -99.0680, 19.2351]</div>`)[0];
+                popup_190db4fa5f711032ee8fb6ca0483a352.setContent(html_69043e241381ea38b0ef37c3bb2a4f76);
+            
+        
+
+        rectangle_b7906d7e0c23e9727474d5e4d18447c2.bindPopup(popup_190db4fa5f711032ee8fb6ca0483a352)
+        ;
+
+        
+    
+    
+            rectangle_b7906d7e0c23e9727474d5e4d18447c2.bindTooltip(
+                `<div>
+                     EVT010_0456
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd750971414acb8993bd9e6f281644a4 = L.circleMarker(
+                [19.2126125, -99.091881],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_fd750971414acb8993bd9e6f281644a4.bindTooltip(
+                `<div>
+                     EVT010_0456
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ee262a27ac3f815bdace839bb51e1710 = L.rectangle(
+                [[19.46036, -99.354502], [19.505405, -99.306752]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_ce7661e593afbd3013e323e876187868 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_85af566b786b995103801ebaf0ec8411 = $(`<div id="html_85af566b786b995103801ebaf0ec8411" style="width: 100.0%; height: 100.0%;"><b>EVT010_0457</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 971<br>xBD overlap: False<br>Bbox: [-99.3545, 19.4604, -99.3068, 19.5054]</div>`)[0];
+                popup_ce7661e593afbd3013e323e876187868.setContent(html_85af566b786b995103801ebaf0ec8411);
+            
+        
+
+        rectangle_ee262a27ac3f815bdace839bb51e1710.bindPopup(popup_ce7661e593afbd3013e323e876187868)
+        ;
+
+        
+    
+    
+            rectangle_ee262a27ac3f815bdace839bb51e1710.bindTooltip(
+                `<div>
+                     EVT010_0457
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_945672ea6d4b1d7619666ecd7af0f01c = L.circleMarker(
+                [19.482882500000002, -99.33062699999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_945672ea6d4b1d7619666ecd7af0f01c.bindTooltip(
+                `<div>
+                     EVT010_0457
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_84807716cfbb2110babeb95db4875867 = L.rectangle(
+                [[19.1, -99.45], [19.145045, -99.402251]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_1d62a4ddfb3b24f30c8c7e1253200baf = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_13bf98143272aed190a1d0814ed17472 = $(`<div id="html_13bf98143272aed190a1d0814ed17472" style="width: 100.0%; height: 100.0%;"><b>EVT010_0458</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 1506<br>xBD overlap: False<br>Bbox: [-99.4500, 19.1000, -99.4023, 19.1450]</div>`)[0];
+                popup_1d62a4ddfb3b24f30c8c7e1253200baf.setContent(html_13bf98143272aed190a1d0814ed17472);
+            
+        
+
+        rectangle_84807716cfbb2110babeb95db4875867.bindPopup(popup_1d62a4ddfb3b24f30c8c7e1253200baf)
+        ;
+
+        
+    
+    
+            rectangle_84807716cfbb2110babeb95db4875867.bindTooltip(
+                `<div>
+                     EVT010_0458
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d31f7e09e83f5c3d62c3f6de6173ee1 = L.circleMarker(
+                [19.122522500000002, -99.42612550000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_6d31f7e09e83f5c3d62c3f6de6173ee1.bindTooltip(
+                `<div>
+                     EVT010_0458
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_90183cdbab8f91b3a0e096bb0802520c = L.rectangle(
+                [[19.640541, -99.259003], [19.65, -99.211254]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_afc0a450354a4f4e7553e15570781920 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_469f2728fb1ff4953f92584bed852dd2 = $(`<div id="html_469f2728fb1ff4953f92584bed852dd2" style="width: 100.0%; height: 100.0%;"><b>EVT010_0459</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 1146<br>xBD overlap: False<br>Bbox: [-99.2590, 19.6405, -99.2113, 19.6500]</div>`)[0];
+                popup_afc0a450354a4f4e7553e15570781920.setContent(html_469f2728fb1ff4953f92584bed852dd2);
+            
+        
+
+        rectangle_90183cdbab8f91b3a0e096bb0802520c.bindPopup(popup_afc0a450354a4f4e7553e15570781920)
+        ;
+
+        
+    
+    
+            rectangle_90183cdbab8f91b3a0e096bb0802520c.bindTooltip(
+                `<div>
+                     EVT010_0459
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b609ebaa463063e9768be822b7081d8 = L.circleMarker(
+                [19.6452705, -99.2351285],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_2b609ebaa463063e9768be822b7081d8.bindTooltip(
+                `<div>
+                     EVT010_0459
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_15bba5c3d7ce7dc33bb88511a81b9837 = L.rectangle(
+                [[19.37027, -99.306752], [19.415315, -99.259003]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_3d522014cade280c49754d01ea77ada1 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2b991bd093b3e46f594a03f0409f1d95 = $(`<div id="html_2b991bd093b3e46f594a03f0409f1d95" style="width: 100.0%; height: 100.0%;"><b>EVT010_0460</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 5122<br>xBD overlap: False<br>Bbox: [-99.3068, 19.3703, -99.2590, 19.4153]</div>`)[0];
+                popup_3d522014cade280c49754d01ea77ada1.setContent(html_2b991bd093b3e46f594a03f0409f1d95);
+            
+        
+
+        rectangle_15bba5c3d7ce7dc33bb88511a81b9837.bindPopup(popup_3d522014cade280c49754d01ea77ada1)
+        ;
+
+        
+    
+    
+            rectangle_15bba5c3d7ce7dc33bb88511a81b9837.bindTooltip(
+                `<div>
+                     EVT010_0460
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26ec7721e9bbcb6d76fbecaa2c4bfb77 = L.circleMarker(
+                [19.3927925, -99.28287750000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_26ec7721e9bbcb6d76fbecaa2c4bfb77.bindTooltip(
+                `<div>
+                     EVT010_0460
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ed45a30006c0dd8ae3ee8abfcf934aed = L.rectangle(
+                [[19.55045, -99.45], [19.595495, -99.402251]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_3f53364b227c53c656a2cac48963ff31 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_84c825a0fadef48811cda1a29f4bf7d7 = $(`<div id="html_84c825a0fadef48811cda1a29f4bf7d7" style="width: 100.0%; height: 100.0%;"><b>EVT010_0461</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 1092<br>xBD overlap: False<br>Bbox: [-99.4500, 19.5505, -99.4023, 19.5955]</div>`)[0];
+                popup_3f53364b227c53c656a2cac48963ff31.setContent(html_84c825a0fadef48811cda1a29f4bf7d7);
+            
+        
+
+        rectangle_ed45a30006c0dd8ae3ee8abfcf934aed.bindPopup(popup_3f53364b227c53c656a2cac48963ff31)
+        ;
+
+        
+    
+    
+            rectangle_ed45a30006c0dd8ae3ee8abfcf934aed.bindTooltip(
+                `<div>
+                     EVT010_0461
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f12112e01cc47027e4a720a83923df8 = L.circleMarker(
+                [19.5729725, -99.42612550000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_3f12112e01cc47027e4a720a83923df8.bindTooltip(
+                `<div>
+                     EVT010_0461
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_2135804bee468579d3ed3d717078af33 = L.rectangle(
+                [[19.235135, -99.020257], [19.28018, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_92027650a461f65079cacf861c5a7262 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_88cdea5215d5ac5b088b375462ba6e61 = $(`<div id="html_88cdea5215d5ac5b088b375462ba6e61" style="width: 100.0%; height: 100.0%;"><b>EVT010_0462</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 5494<br>xBD overlap: False<br>Bbox: [-99.0203, 19.2351, -98.9725, 19.2802]</div>`)[0];
+                popup_92027650a461f65079cacf861c5a7262.setContent(html_88cdea5215d5ac5b088b375462ba6e61);
+            
+        
+
+        rectangle_2135804bee468579d3ed3d717078af33.bindPopup(popup_92027650a461f65079cacf861c5a7262)
+        ;
+
+        
+    
+    
+            rectangle_2135804bee468579d3ed3d717078af33.bindTooltip(
+                `<div>
+                     EVT010_0462
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c46660170d80b5e2db8180123793ab3e = L.circleMarker(
+                [19.2576575, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_c46660170d80b5e2db8180123793ab3e.bindTooltip(
+                `<div>
+                     EVT010_0462
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a35115e71c8d4fa629dd176fe78d6591 = L.rectangle(
+                [[19.28018, -99.306752], [19.325225, -99.259003]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_a1b2d8cc02fa32367413cd2ca55c4b8e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ebc56b729abc28530900ae17abaa2eb2 = $(`<div id="html_ebc56b729abc28530900ae17abaa2eb2" style="width: 100.0%; height: 100.0%;"><b>EVT010_0463</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 2524<br>xBD overlap: False<br>Bbox: [-99.3068, 19.2802, -99.2590, 19.3252]</div>`)[0];
+                popup_a1b2d8cc02fa32367413cd2ca55c4b8e.setContent(html_ebc56b729abc28530900ae17abaa2eb2);
+            
+        
+
+        rectangle_a35115e71c8d4fa629dd176fe78d6591.bindPopup(popup_a1b2d8cc02fa32367413cd2ca55c4b8e)
+        ;
+
+        
+    
+    
+            rectangle_a35115e71c8d4fa629dd176fe78d6591.bindTooltip(
+                `<div>
+                     EVT010_0463
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f921de2b1b0046b378480ce263c75111 = L.circleMarker(
+                [19.302702500000002, -99.28287750000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_f921de2b1b0046b378480ce263c75111.bindTooltip(
+                `<div>
+                     EVT010_0463
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_14fd92a6075be98e44c0fe5fe8545499 = L.rectangle(
+                [[19.595495, -99.163505], [19.640541, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_321369ec335fa98b00fc08f678444342 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_218f764d90660e07f57d79b1e6ebc1a4 = $(`<div id="html_218f764d90660e07f57d79b1e6ebc1a4" style="width: 100.0%; height: 100.0%;"><b>EVT010_0464</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 7337<br>xBD overlap: False<br>Bbox: [-99.1635, 19.5955, -99.1158, 19.6405]</div>`)[0];
+                popup_321369ec335fa98b00fc08f678444342.setContent(html_218f764d90660e07f57d79b1e6ebc1a4);
+            
+        
+
+        rectangle_14fd92a6075be98e44c0fe5fe8545499.bindPopup(popup_321369ec335fa98b00fc08f678444342)
+        ;
+
+        
+    
+    
+            rectangle_14fd92a6075be98e44c0fe5fe8545499.bindTooltip(
+                `<div>
+                     EVT010_0464
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed51fd477b3987dbdde8d456641a84bd = L.circleMarker(
+                [19.618018, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_ed51fd477b3987dbdde8d456641a84bd.bindTooltip(
+                `<div>
+                     EVT010_0464
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_0e49b115fbe33014c27c529fa18e6422 = L.rectangle(
+                [[19.55045, -99.115756], [19.595495, -99.068006]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_cc65e713ff5d07003166225e12956bfb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5d0fba2984032b3db8895656a57a5452 = $(`<div id="html_5d0fba2984032b3db8895656a57a5452" style="width: 100.0%; height: 100.0%;"><b>EVT010_0465</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 5099<br>xBD overlap: False<br>Bbox: [-99.1158, 19.5505, -99.0680, 19.5955]</div>`)[0];
+                popup_cc65e713ff5d07003166225e12956bfb.setContent(html_5d0fba2984032b3db8895656a57a5452);
+            
+        
+
+        rectangle_0e49b115fbe33014c27c529fa18e6422.bindPopup(popup_cc65e713ff5d07003166225e12956bfb)
+        ;
+
+        
+    
+    
+            rectangle_0e49b115fbe33014c27c529fa18e6422.bindTooltip(
+                `<div>
+                     EVT010_0465
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c046575d776f6009f0d13d2c913259d7 = L.circleMarker(
+                [19.5729725, -99.091881],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_c046575d776f6009f0d13d2c913259d7.bindTooltip(
+                `<div>
+                     EVT010_0465
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_1439592919374dcc289476a93729d08f = L.rectangle(
+                [[19.55045, -98.972508], [19.595495, -98.924759]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_be76f9f4193e9645bf86a968d3b31caa = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_be0bc77b228005eeb29ee53d9de43d1f = $(`<div id="html_be0bc77b228005eeb29ee53d9de43d1f" style="width: 100.0%; height: 100.0%;"><b>EVT010_0466</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 2931<br>xBD overlap: False<br>Bbox: [-98.9725, 19.5505, -98.9248, 19.5955]</div>`)[0];
+                popup_be76f9f4193e9645bf86a968d3b31caa.setContent(html_be0bc77b228005eeb29ee53d9de43d1f);
+            
+        
+
+        rectangle_1439592919374dcc289476a93729d08f.bindPopup(popup_be76f9f4193e9645bf86a968d3b31caa)
+        ;
+
+        
+    
+    
+            rectangle_1439592919374dcc289476a93729d08f.bindTooltip(
+                `<div>
+                     EVT010_0466
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bbc97e368cca86bb47e80103a69b1a8 = L.circleMarker(
+                [19.5729725, -98.9486335],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_5bbc97e368cca86bb47e80103a69b1a8.bindTooltip(
+                `<div>
+                     EVT010_0466
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_dbc1e636e1227e952c34162ed3fc819c = L.rectangle(
+                [[19.28018, -98.972508], [19.325225, -98.924759]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_94759048bdd627facabe72cc087ba182 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c9ab27bffe82a9ee7d32b1ce9da2594d = $(`<div id="html_c9ab27bffe82a9ee7d32b1ce9da2594d" style="width: 100.0%; height: 100.0%;"><b>EVT010_0467</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 13373<br>xBD overlap: False<br>Bbox: [-98.9725, 19.2802, -98.9248, 19.3252]</div>`)[0];
+                popup_94759048bdd627facabe72cc087ba182.setContent(html_c9ab27bffe82a9ee7d32b1ce9da2594d);
+            
+        
+
+        rectangle_dbc1e636e1227e952c34162ed3fc819c.bindPopup(popup_94759048bdd627facabe72cc087ba182)
+        ;
+
+        
+    
+    
+            rectangle_dbc1e636e1227e952c34162ed3fc819c.bindTooltip(
+                `<div>
+                     EVT010_0467
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4a6b90f2fc07aecc23f718ab33943de = L.circleMarker(
+                [19.302702500000002, -98.9486335],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_f4a6b90f2fc07aecc23f718ab33943de.bindTooltip(
+                `<div>
+                     EVT010_0467
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_cda32a19d9f3253ed6081bee8ca23409 = L.rectangle(
+                [[19.595495, -99.45], [19.640541, -99.402251]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_75622f68f9cbd54210b5c55f967d5795 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1e4b1945ed0f87445722c39c459c2353 = $(`<div id="html_1e4b1945ed0f87445722c39c459c2353" style="width: 100.0%; height: 100.0%;"><b>EVT010_0468</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 1278<br>xBD overlap: False<br>Bbox: [-99.4500, 19.5955, -99.4023, 19.6405]</div>`)[0];
+                popup_75622f68f9cbd54210b5c55f967d5795.setContent(html_1e4b1945ed0f87445722c39c459c2353);
+            
+        
+
+        rectangle_cda32a19d9f3253ed6081bee8ca23409.bindPopup(popup_75622f68f9cbd54210b5c55f967d5795)
+        ;
+
+        
+    
+    
+            rectangle_cda32a19d9f3253ed6081bee8ca23409.bindTooltip(
+                `<div>
+                     EVT010_0468
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08fe04028c5bf4075b267a7497ba88d1 = L.circleMarker(
+                [19.618018, -99.42612550000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_08fe04028c5bf4075b267a7497ba88d1.bindTooltip(
+                `<div>
+                     EVT010_0468
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f10e808e68059198cd11e8662364f63c = L.rectangle(
+                [[19.505405, -98.924759], [19.55045, -98.87701]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_72d5d7e1072ce475d33f739249759641 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8d0fabf8f0a9325cdc3bcf5b51e70553 = $(`<div id="html_8d0fabf8f0a9325cdc3bcf5b51e70553" style="width: 100.0%; height: 100.0%;"><b>EVT010_0469</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 6769<br>xBD overlap: False<br>Bbox: [-98.9248, 19.5054, -98.8770, 19.5505]</div>`)[0];
+                popup_72d5d7e1072ce475d33f739249759641.setContent(html_8d0fabf8f0a9325cdc3bcf5b51e70553);
+            
+        
+
+        rectangle_f10e808e68059198cd11e8662364f63c.bindPopup(popup_72d5d7e1072ce475d33f739249759641)
+        ;
+
+        
+    
+    
+            rectangle_f10e808e68059198cd11e8662364f63c.bindTooltip(
+                `<div>
+                     EVT010_0469
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e75c6ad3db79e73f76c4b0ab13d102f0 = L.circleMarker(
+                [19.5279275, -98.90088449999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_e75c6ad3db79e73f76c4b0ab13d102f0.bindTooltip(
+                `<div>
+                     EVT010_0469
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_e549d664baa0cafcbb026ed37c79b0aa = L.rectangle(
+                [[19.37027, -98.924759], [19.415315, -98.87701]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_c2d45845a2f5341320af8f13ed37b251 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5b7e403cb8a9d7533e7960a81219ba04 = $(`<div id="html_5b7e403cb8a9d7533e7960a81219ba04" style="width: 100.0%; height: 100.0%;"><b>EVT010_0470</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 13408<br>xBD overlap: False<br>Bbox: [-98.9248, 19.3703, -98.8770, 19.4153]</div>`)[0];
+                popup_c2d45845a2f5341320af8f13ed37b251.setContent(html_5b7e403cb8a9d7533e7960a81219ba04);
+            
+        
+
+        rectangle_e549d664baa0cafcbb026ed37c79b0aa.bindPopup(popup_c2d45845a2f5341320af8f13ed37b251)
+        ;
+
+        
+    
+    
+            rectangle_e549d664baa0cafcbb026ed37c79b0aa.bindTooltip(
+                `<div>
+                     EVT010_0470
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81e2aeaf9aeae967cc131ac969392d99 = L.circleMarker(
+                [19.3927925, -98.90088449999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_81e2aeaf9aeae967cc131ac969392d99.bindTooltip(
+                `<div>
+                     EVT010_0470
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b3df258f0a6ce4dbcb6265a4c2f2d895 = L.rectangle(
+                [[19.1, -99.306752], [19.145045, -99.259003]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_272e6cc45866446d9ed2fabb43c8e40f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ae73c611816ee75728141a7b2e79c758 = $(`<div id="html_ae73c611816ee75728141a7b2e79c758" style="width: 100.0%; height: 100.0%;"><b>EVT010_0471</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 78<br>xBD overlap: False<br>Bbox: [-99.3068, 19.1000, -99.2590, 19.1450]</div>`)[0];
+                popup_272e6cc45866446d9ed2fabb43c8e40f.setContent(html_ae73c611816ee75728141a7b2e79c758);
+            
+        
+
+        rectangle_b3df258f0a6ce4dbcb6265a4c2f2d895.bindPopup(popup_272e6cc45866446d9ed2fabb43c8e40f)
+        ;
+
+        
+    
+    
+            rectangle_b3df258f0a6ce4dbcb6265a4c2f2d895.bindTooltip(
+                `<div>
+                     EVT010_0471
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ed9a797246299a175b68d86ea50da4c = L.circleMarker(
+                [19.122522500000002, -99.28287750000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_2ed9a797246299a175b68d86ea50da4c.bindTooltip(
+                `<div>
+                     EVT010_0471
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_1a97605f5836b2ecfcd74227203bc217 = L.rectangle(
+                [[19.415315, -98.972508], [19.46036, -98.924759]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_c08275ea3a55f21aef68c474bc7537b5 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_38896b8f78b3daee1f6f00a84b47630f = $(`<div id="html_38896b8f78b3daee1f6f00a84b47630f" style="width: 100.0%; height: 100.0%;"><b>EVT010_0472</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 11551<br>xBD overlap: False<br>Bbox: [-98.9725, 19.4153, -98.9248, 19.4604]</div>`)[0];
+                popup_c08275ea3a55f21aef68c474bc7537b5.setContent(html_38896b8f78b3daee1f6f00a84b47630f);
+            
+        
+
+        rectangle_1a97605f5836b2ecfcd74227203bc217.bindPopup(popup_c08275ea3a55f21aef68c474bc7537b5)
+        ;
+
+        
+    
+    
+            rectangle_1a97605f5836b2ecfcd74227203bc217.bindTooltip(
+                `<div>
+                     EVT010_0472
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f843d4cc66a717d9dffb272194525bd9 = L.circleMarker(
+                [19.4378375, -98.9486335],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_f843d4cc66a717d9dffb272194525bd9.bindTooltip(
+                `<div>
+                     EVT010_0472
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f15d37dc43334fb7a0db378243813e8c = L.rectangle(
+                [[19.46036, -99.020257], [19.505405, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_9b88e83f7268e4fe2cd71ea9fa568768 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_17d2d2a346c15d4e8e5cd01acf62bd5e = $(`<div id="html_17d2d2a346c15d4e8e5cd01acf62bd5e" style="width: 100.0%; height: 100.0%;"><b>EVT010_0473</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 613<br>xBD overlap: False<br>Bbox: [-99.0203, 19.4604, -98.9725, 19.5054]</div>`)[0];
+                popup_9b88e83f7268e4fe2cd71ea9fa568768.setContent(html_17d2d2a346c15d4e8e5cd01acf62bd5e);
+            
+        
+
+        rectangle_f15d37dc43334fb7a0db378243813e8c.bindPopup(popup_9b88e83f7268e4fe2cd71ea9fa568768)
+        ;
+
+        
+    
+    
+            rectangle_f15d37dc43334fb7a0db378243813e8c.bindTooltip(
+                `<div>
+                     EVT010_0473
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_295a8a96f910ef381b4f9003f218c8d6 = L.circleMarker(
+                [19.482882500000002, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_295a8a96f910ef381b4f9003f218c8d6.bindTooltip(
+                `<div>
+                     EVT010_0473
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_6c6d4a78d12fc0a46faf679ff83eb640 = L.rectangle(
+                [[19.640541, -99.020257], [19.65, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_c0278e993f6914586e6a084d133a1dec = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b5467548e190061ef3917f874a8e9c6e = $(`<div id="html_b5467548e190061ef3917f874a8e9c6e" style="width: 100.0%; height: 100.0%;"><b>EVT010_0474</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 2689<br>xBD overlap: False<br>Bbox: [-99.0203, 19.6405, -98.9725, 19.6500]</div>`)[0];
+                popup_c0278e993f6914586e6a084d133a1dec.setContent(html_b5467548e190061ef3917f874a8e9c6e);
+            
+        
+
+        rectangle_6c6d4a78d12fc0a46faf679ff83eb640.bindPopup(popup_c0278e993f6914586e6a084d133a1dec)
+        ;
+
+        
+    
+    
+            rectangle_6c6d4a78d12fc0a46faf679ff83eb640.bindTooltip(
+                `<div>
+                     EVT010_0474
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6095815eccff5474329f443835ade162 = L.circleMarker(
+                [19.6452705, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_6095815eccff5474329f443835ade162.bindTooltip(
+                `<div>
+                     EVT010_0474
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_3338567c40bc3e18875680da0b4b88dc = L.rectangle(
+                [[19.595495, -99.306752], [19.640541, -99.259003]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_e5ba1e7e8832ad8dc2b29edc5b5ba353 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c6a8ba53a6e1187fd4bad8e79964487e = $(`<div id="html_c6a8ba53a6e1187fd4bad8e79964487e" style="width: 100.0%; height: 100.0%;"><b>EVT010_0475</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 10343<br>xBD overlap: False<br>Bbox: [-99.3068, 19.5955, -99.2590, 19.6405]</div>`)[0];
+                popup_e5ba1e7e8832ad8dc2b29edc5b5ba353.setContent(html_c6a8ba53a6e1187fd4bad8e79964487e);
+            
+        
+
+        rectangle_3338567c40bc3e18875680da0b4b88dc.bindPopup(popup_e5ba1e7e8832ad8dc2b29edc5b5ba353)
+        ;
+
+        
+    
+    
+            rectangle_3338567c40bc3e18875680da0b4b88dc.bindTooltip(
+                `<div>
+                     EVT010_0475
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30e70376517aa148875f5b9841abee0c = L.circleMarker(
+                [19.618018, -99.28287750000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_30e70376517aa148875f5b9841abee0c.bindTooltip(
+                `<div>
+                     EVT010_0475
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_9a42388ac139e52cb2c9832dcd2c14c3 = L.rectangle(
+                [[19.595495, -98.87701], [19.640541, -98.85]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_12abcf2f423036816a8ff278c89f888a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1e7f753722e9f2d06e877e339b85991d = $(`<div id="html_1e7f753722e9f2d06e877e339b85991d" style="width: 100.0%; height: 100.0%;"><b>EVT010_0476</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 28<br>xBD overlap: False<br>Bbox: [-98.8770, 19.5955, -98.8500, 19.6405]</div>`)[0];
+                popup_12abcf2f423036816a8ff278c89f888a.setContent(html_1e7f753722e9f2d06e877e339b85991d);
+            
+        
+
+        rectangle_9a42388ac139e52cb2c9832dcd2c14c3.bindPopup(popup_12abcf2f423036816a8ff278c89f888a)
+        ;
+
+        
+    
+    
+            rectangle_9a42388ac139e52cb2c9832dcd2c14c3.bindTooltip(
+                `<div>
+                     EVT010_0476
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28fdebe569d8a7d0e1c34f346a8f2610 = L.circleMarker(
+                [19.618018, -98.863505],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_28fdebe569d8a7d0e1c34f346a8f2610.bindTooltip(
+                `<div>
+                     EVT010_0476
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a48d792e17b5e0cec9d61d41ef9623a7 = L.rectangle(
+                [[19.46036, -99.163505], [19.505405, -99.115756]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_5ccc6e338250bf4257db56d98b75d924 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_58f0bc7875b71db2bd01f7e79e48d1aa = $(`<div id="html_58f0bc7875b71db2bd01f7e79e48d1aa" style="width: 100.0%; height: 100.0%;"><b>EVT010_0477</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 7917<br>xBD overlap: False<br>Bbox: [-99.1635, 19.4604, -99.1158, 19.5054]</div>`)[0];
+                popup_5ccc6e338250bf4257db56d98b75d924.setContent(html_58f0bc7875b71db2bd01f7e79e48d1aa);
+            
+        
+
+        rectangle_a48d792e17b5e0cec9d61d41ef9623a7.bindPopup(popup_5ccc6e338250bf4257db56d98b75d924)
+        ;
+
+        
+    
+    
+            rectangle_a48d792e17b5e0cec9d61d41ef9623a7.bindTooltip(
+                `<div>
+                     EVT010_0477
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_087bccf9051667262a7c04b169c47f1e = L.circleMarker(
+                [19.482882500000002, -99.13963050000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_087bccf9051667262a7c04b169c47f1e.bindTooltip(
+                `<div>
+                     EVT010_0477
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_8e07f10dfdf3c6e2005fe3190af49848 = L.rectangle(
+                [[19.145045, -99.402251], [19.19009, -99.354502]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_4a73055fd4da1cba2a20006f6ff1c5cb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cbf2aa45bc04ecb9e7d9e7c9af92640e = $(`<div id="html_cbf2aa45bc04ecb9e7d9e7c9af92640e" style="width: 100.0%; height: 100.0%;"><b>EVT010_0478</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 592<br>xBD overlap: False<br>Bbox: [-99.4023, 19.1450, -99.3545, 19.1901]</div>`)[0];
+                popup_4a73055fd4da1cba2a20006f6ff1c5cb.setContent(html_cbf2aa45bc04ecb9e7d9e7c9af92640e);
+            
+        
+
+        rectangle_8e07f10dfdf3c6e2005fe3190af49848.bindPopup(popup_4a73055fd4da1cba2a20006f6ff1c5cb)
+        ;
+
+        
+    
+    
+            rectangle_8e07f10dfdf3c6e2005fe3190af49848.bindTooltip(
+                `<div>
+                     EVT010_0478
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2cbfac01b817fcd3b207664a857ef88 = L.circleMarker(
+                [19.1675675, -99.3783765],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_b2cbfac01b817fcd3b207664a857ef88.bindTooltip(
+                `<div>
+                     EVT010_0478
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a68ae0985f11a73c893342494856a35e = L.rectangle(
+                [[19.640541, -99.45], [19.65, -99.402251]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_5fcb287e934a6dc052a3e114d8c80627 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_00766585b7a93cd9e1b3d5edee12c6e4 = $(`<div id="html_00766585b7a93cd9e1b3d5edee12c6e4" style="width: 100.0%; height: 100.0%;"><b>EVT010_0479</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 156<br>xBD overlap: False<br>Bbox: [-99.4500, 19.6405, -99.4023, 19.6500]</div>`)[0];
+                popup_5fcb287e934a6dc052a3e114d8c80627.setContent(html_00766585b7a93cd9e1b3d5edee12c6e4);
+            
+        
+
+        rectangle_a68ae0985f11a73c893342494856a35e.bindPopup(popup_5fcb287e934a6dc052a3e114d8c80627)
+        ;
+
+        
+    
+    
+            rectangle_a68ae0985f11a73c893342494856a35e.bindTooltip(
+                `<div>
+                     EVT010_0479
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13d13a516023b0b44c0ef837437e974c = L.circleMarker(
+                [19.6452705, -99.42612550000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_13d13a516023b0b44c0ef837437e974c.bindTooltip(
+                `<div>
+                     EVT010_0479
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_54b31e327964dc00da0120587200fcb9 = L.rectangle(
+                [[19.19009, -99.020257], [19.235135, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_6d529567d9e3f61a27af093d36b601d9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d9beb6f209b4acf70dc322a725466ddf = $(`<div id="html_d9beb6f209b4acf70dc322a725466ddf" style="width: 100.0%; height: 100.0%;"><b>EVT010_0480</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 4963<br>xBD overlap: False<br>Bbox: [-99.0203, 19.1901, -98.9725, 19.2351]</div>`)[0];
+                popup_6d529567d9e3f61a27af093d36b601d9.setContent(html_d9beb6f209b4acf70dc322a725466ddf);
+            
+        
+
+        rectangle_54b31e327964dc00da0120587200fcb9.bindPopup(popup_6d529567d9e3f61a27af093d36b601d9)
+        ;
+
+        
+    
+    
+            rectangle_54b31e327964dc00da0120587200fcb9.bindTooltip(
+                `<div>
+                     EVT010_0480
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9956588237ed45fbbaecb0f92939f718 = L.circleMarker(
+                [19.2126125, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_9956588237ed45fbbaecb0f92939f718.bindTooltip(
+                `<div>
+                     EVT010_0480
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_450e30551c710b0430696736cffc8929 = L.rectangle(
+                [[19.595495, -99.068006], [19.640541, -99.020257]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_b9b8ebf5d4447ff928823b85fabfc40a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_79d470118147da7c5bc497ed4d8191ce = $(`<div id="html_79d470118147da7c5bc497ed4d8191ce" style="width: 100.0%; height: 100.0%;"><b>EVT010_0481</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 13491<br>xBD overlap: False<br>Bbox: [-99.0680, 19.5955, -99.0203, 19.6405]</div>`)[0];
+                popup_b9b8ebf5d4447ff928823b85fabfc40a.setContent(html_79d470118147da7c5bc497ed4d8191ce);
+            
+        
+
+        rectangle_450e30551c710b0430696736cffc8929.bindPopup(popup_b9b8ebf5d4447ff928823b85fabfc40a)
+        ;
+
+        
+    
+    
+            rectangle_450e30551c710b0430696736cffc8929.bindTooltip(
+                `<div>
+                     EVT010_0481
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe452c26bd6d7f5ad1eecedd70d5f365 = L.circleMarker(
+                [19.618018, -99.04413149999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_fe452c26bd6d7f5ad1eecedd70d5f365.bindTooltip(
+                `<div>
+                     EVT010_0481
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_cb4381dad4132ce7f5242b4c8a0c8410 = L.rectangle(
+                [[19.595495, -99.402251], [19.640541, -99.354502]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_3608a8d8084a7960287a4e2cedb2732d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cfe002a162400d5ce85142bb3d523988 = $(`<div id="html_cfe002a162400d5ce85142bb3d523988" style="width: 100.0%; height: 100.0%;"><b>EVT010_0482</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 1677<br>xBD overlap: False<br>Bbox: [-99.4023, 19.5955, -99.3545, 19.6405]</div>`)[0];
+                popup_3608a8d8084a7960287a4e2cedb2732d.setContent(html_cfe002a162400d5ce85142bb3d523988);
+            
+        
+
+        rectangle_cb4381dad4132ce7f5242b4c8a0c8410.bindPopup(popup_3608a8d8084a7960287a4e2cedb2732d)
+        ;
+
+        
+    
+    
+            rectangle_cb4381dad4132ce7f5242b4c8a0c8410.bindTooltip(
+                `<div>
+                     EVT010_0482
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62b2a904de3a993f75ebb3dd88e53654 = L.circleMarker(
+                [19.618018, -99.3783765],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_62b2a904de3a993f75ebb3dd88e53654.bindTooltip(
+                `<div>
+                     EVT010_0482
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_02ff3aadcd5ef91fec740267052bc80f = L.rectangle(
+                [[19.415315, -99.020257], [19.46036, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_c15294026463163c3e67cc6049a50860 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6698f2c28b8c7b2823f6ec21aaa2f6d1 = $(`<div id="html_6698f2c28b8c7b2823f6ec21aaa2f6d1" style="width: 100.0%; height: 100.0%;"><b>EVT010_0483</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 2523<br>xBD overlap: False<br>Bbox: [-99.0203, 19.4153, -98.9725, 19.4604]</div>`)[0];
+                popup_c15294026463163c3e67cc6049a50860.setContent(html_6698f2c28b8c7b2823f6ec21aaa2f6d1);
+            
+        
+
+        rectangle_02ff3aadcd5ef91fec740267052bc80f.bindPopup(popup_c15294026463163c3e67cc6049a50860)
+        ;
+
+        
+    
+    
+            rectangle_02ff3aadcd5ef91fec740267052bc80f.bindTooltip(
+                `<div>
+                     EVT010_0483
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65cdeea34195df91e7103cc6c500edd7 = L.circleMarker(
+                [19.4378375, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_65cdeea34195df91e7103cc6c500edd7.bindTooltip(
+                `<div>
+                     EVT010_0483
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_4d547d1d4933a0452afdab0355896d35 = L.rectangle(
+                [[19.55045, -99.020257], [19.595495, -98.972508]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_6239da4da51a5724622f0a396719e6fe = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f4684b07682a3fe0dea79828a897c401 = $(`<div id="html_f4684b07682a3fe0dea79828a897c401" style="width: 100.0%; height: 100.0%;"><b>EVT010_0484</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 5882<br>xBD overlap: False<br>Bbox: [-99.0203, 19.5505, -98.9725, 19.5955]</div>`)[0];
+                popup_6239da4da51a5724622f0a396719e6fe.setContent(html_f4684b07682a3fe0dea79828a897c401);
+            
+        
+
+        rectangle_4d547d1d4933a0452afdab0355896d35.bindPopup(popup_6239da4da51a5724622f0a396719e6fe)
+        ;
+
+        
+    
+    
+            rectangle_4d547d1d4933a0452afdab0355896d35.bindTooltip(
+                `<div>
+                     EVT010_0484
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f33d2a6212a522b1ddfea1137d7b3607 = L.circleMarker(
+                [19.5729725, -98.99638250000001],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_f33d2a6212a522b1ddfea1137d7b3607.bindTooltip(
+                `<div>
+                     EVT010_0484
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_35df958646b30a746a967f290a0ea6f6 = L.rectangle(
+                [[19.595495, -99.354502], [19.640541, -99.306752]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_6aa2cf149ce173c4b7dc1cdd7c95182f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_de8b0a965a727bde7af3fc7d6e7ee6f2 = $(`<div id="html_de8b0a965a727bde7af3fc7d6e7ee6f2" style="width: 100.0%; height: 100.0%;"><b>EVT010_0485</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 7989<br>xBD overlap: False<br>Bbox: [-99.3545, 19.5955, -99.3068, 19.6405]</div>`)[0];
+                popup_6aa2cf149ce173c4b7dc1cdd7c95182f.setContent(html_de8b0a965a727bde7af3fc7d6e7ee6f2);
+            
+        
+
+        rectangle_35df958646b30a746a967f290a0ea6f6.bindPopup(popup_6aa2cf149ce173c4b7dc1cdd7c95182f)
+        ;
+
+        
+    
+    
+            rectangle_35df958646b30a746a967f290a0ea6f6.bindTooltip(
+                `<div>
+                     EVT010_0485
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de2ff44b965ffbcba599df1455c104a6 = L.circleMarker(
+                [19.618018, -99.33062699999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_de2ff44b965ffbcba599df1455c104a6.bindTooltip(
+                `<div>
+                     EVT010_0485
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_3afdfc9844ffde003a404c2f85c3c960 = L.rectangle(
+                [[19.46036, -98.972508], [19.505405, -98.924759]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_a6cb5158087b4b9615da8bf695ed21c1 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_583c75b0c8fb5b5fc846ecba8d9ab509 = $(`<div id="html_583c75b0c8fb5b5fc846ecba8d9ab509" style="width: 100.0%; height: 100.0%;"><b>EVT010_0486</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 84<br>xBD overlap: False<br>Bbox: [-98.9725, 19.4604, -98.9248, 19.5054]</div>`)[0];
+                popup_a6cb5158087b4b9615da8bf695ed21c1.setContent(html_583c75b0c8fb5b5fc846ecba8d9ab509);
+            
+        
+
+        rectangle_3afdfc9844ffde003a404c2f85c3c960.bindPopup(popup_a6cb5158087b4b9615da8bf695ed21c1)
+        ;
+
+        
+    
+    
+            rectangle_3afdfc9844ffde003a404c2f85c3c960.bindTooltip(
+                `<div>
+                     EVT010_0486
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4110b7c9018dabe909cf2f9c6fd890df = L.circleMarker(
+                [19.482882500000002, -98.9486335],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_4110b7c9018dabe909cf2f9c6fd890df.bindTooltip(
+                `<div>
+                     EVT010_0486
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ac2c9fc2bb8512b2762d61e02ceae456 = L.rectangle(
+                [[19.46036, -99.211254], [19.505405, -99.163505]],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+        var popup_24a10e6be8844d64a7ed7b5afe9bc0d2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0fb003334a7a83c14ad04a78e353625f = $(`<div id="html_0fb003334a7a83c14ad04a78e353625f" style="width: 100.0%; height: 100.0%;"><b>EVT010_0487</b><br>Event: EVT010 (structural)<br>Dates: 2017-07-01 – 2017-11-30<br>Sentinel scenes: 3<br>OSM roads: 6919<br>xBD overlap: False<br>Bbox: [-99.2113, 19.4604, -99.1635, 19.5054]</div>`)[0];
+                popup_24a10e6be8844d64a7ed7b5afe9bc0d2.setContent(html_0fb003334a7a83c14ad04a78e353625f);
+            
+        
+
+        rectangle_ac2c9fc2bb8512b2762d61e02ceae456.bindPopup(popup_24a10e6be8844d64a7ed7b5afe9bc0d2)
+        ;
+
+        
+    
+    
+            rectangle_ac2c9fc2bb8512b2762d61e02ceae456.bindTooltip(
+                `<div>
+                     EVT010_0487
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4041730a99ad2556888fa88e11d52906 = L.circleMarker(
+                [19.482882500000002, -99.18737949999999],
+                {"bubblingMouseEvents": true, "color": "#8322e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8322e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d1604f9c504e9a3e0a445b31a15a9f1c);
+        
+    
+            circle_marker_4041730a99ad2556888fa88e11d52906.bindTooltip(
+                `<div>
+                     EVT010_0487
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_d1604f9c504e9a3e0a445b31a15a9f1c.addTo(map_5d52bd5616251571ef1117ddf01501c4);
+        
+    
+            var layer_control_f9e40899e1455e709f9c45a731d8bf14_layers = {
+                base_layers : {
+                    "Street (OSM)" : tile_layer_38c6f0675c26053dc5a6b4f3ec97e9cf,
+                    "Satellite (ESRI)" : tile_layer_eff574224c6521663f2ab82394d37633,
+                },
+                overlays :  {
+                    "EVT010 (structural)" : feature_group_d1604f9c504e9a3e0a445b31a15a9f1c,
+                },
+            };
+            let layer_control_f9e40899e1455e709f9c45a731d8bf14 = L.control.layers(
+                layer_control_f9e40899e1455e709f9c45a731d8bf14_layers.base_layers,
+                layer_control_f9e40899e1455e709f9c45a731d8bf14_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_5d52bd5616251571ef1117ddf01501c4);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_5d52bd5616251571ef1117ddf01501c4);
+        
+    
+            var mouse_position_21eeeef204a17c32a194c6b06c8465a0 = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_21eeeef204a17c32a194c6b06c8465a0.options["latFormatter"] =
+                undefined;
+            mouse_position_21eeeef204a17c32a194c6b06c8465a0.options["lngFormatter"] =
+                undefined;
+            map_5d52bd5616251571ef1117ddf01501c4.addControl(mouse_position_21eeeef204a17c32a194c6b06c8465a0);
+        
+</script>
+</html>

@@ -25,13 +25,19 @@ async def search_stac_items(client, bbox, date_range, collections, cloud_filter=
     if cloud_filter is not None:
         payload["query"] = {"eo:cloud_cover": {"lt": cloud_filter}}
         
-    try:
-        response = await client.post(STAC_API_URL, json=payload, timeout=60.0)
-        if response.status_code == 200:
-            return response.json().get('features', [])
-    except Exception as e:
-        print(f"STAC search error: {e}")
-        
+    import asyncio
+    for attempt in range(3):
+        try:
+            response = await client.post(STAC_API_URL, json=payload, timeout=60.0)
+            if response.status_code == 200:
+                return response.json().get('features', [])
+            if response.status_code in (429, 403):
+                await asyncio.sleep(2 ** attempt * 2)
+                continue
+        except Exception as e:
+            if attempt == 0:
+                print(f"STAC search error: {e}")
+            await asyncio.sleep(2 ** attempt)
     return []
 
 async def get_best_scenes(client, aoi, cloud_threshold=25):

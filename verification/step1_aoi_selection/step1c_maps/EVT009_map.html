@@ -1,0 +1,3719 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b3d462b7f3272ac2f05595a62aae352b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:9999;
+                background:white;padding:10px 14px;border-radius:6px;
+                box-shadow:2px 2px 6px rgba(0,0,0,0.3);font-size:12px;">
+      <b>EVT009 — flood (72 AOIs)</b><br>
+      <ul style="list-style:none;padding:0;margin:4px 0 0 0;">
+        <li><span style="background:#2222e5;display:inline-block;width:14px;height:14px;margin-right:6px;border-radius:2px;"></span>EVT009</li>
+      </ul>
+    </div>
+    
+            <div class="folium-map" id="map_b3d462b7f3272ac2f05595a62aae352b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b3d462b7f3272ac2f05595a62aae352b = L.map(
+                "map_b3d462b7f3272ac2f05595a62aae352b",
+                {
+                    center: [26.72603841666668, 83.37542579166666],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3289df4468a9c959afc4990765a7be23 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3289df4468a9c959afc4990765a7be23.addTo(map_b3d462b7f3272ac2f05595a62aae352b);
+        
+    
+            var tile_layer_b2286d438050fbc2449881b4d8ec01cc = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b2286d438050fbc2449881b4d8ec01cc.addTo(map_b3d462b7f3272ac2f05595a62aae352b);
+        
+    
+            var feature_group_d722edf4493c616786b832480cdcb317 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_64a93250cfd359e07b5fe61aa76e5b12 = L.rectangle(
+                [[26.435135, 83.403549], [26.48018, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_d370972ce32b33297e9e2629dea5e482 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5b9c7a87c0031bf5dcadad3132aea712 = $(`<div id="html_5b9c7a87c0031bf5dcadad3132aea712" style="width: 100.0%; height: 100.0%;"><b>EVT009_0358</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 60<br>xBD overlap: True<br>Bbox: [83.4035, 26.4351, 83.4540, 26.4802]</div>`)[0];
+                popup_d370972ce32b33297e9e2629dea5e482.setContent(html_5b9c7a87c0031bf5dcadad3132aea712);
+            
+        
+
+        rectangle_64a93250cfd359e07b5fe61aa76e5b12.bindPopup(popup_d370972ce32b33297e9e2629dea5e482)
+        ;
+
+        
+    
+    
+            rectangle_64a93250cfd359e07b5fe61aa76e5b12.bindTooltip(
+                `<div>
+                     EVT009_0358
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b9573f580066f131dfac6de3cc277e8 = L.circleMarker(
+                [26.4576575, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_0b9573f580066f131dfac6de3cc277e8.bindTooltip(
+                `<div>
+                     EVT009_0358
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_2782b35d39189db7f0a1c1a137c195f6 = L.rectangle(
+                [[26.435135, 83.453992], [26.48018, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_048cc3f1a6b01b91b6e0576b83c0e77b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_965bc81a4fd341c48f39b7d1dac5feac = $(`<div id="html_965bc81a4fd341c48f39b7d1dac5feac" style="width: 100.0%; height: 100.0%;"><b>EVT009_0359</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 828<br>xBD overlap: True<br>Bbox: [83.4540, 26.4351, 83.5044, 26.4802]</div>`)[0];
+                popup_048cc3f1a6b01b91b6e0576b83c0e77b.setContent(html_965bc81a4fd341c48f39b7d1dac5feac);
+            
+        
+
+        rectangle_2782b35d39189db7f0a1c1a137c195f6.bindPopup(popup_048cc3f1a6b01b91b6e0576b83c0e77b)
+        ;
+
+        
+    
+    
+            rectangle_2782b35d39189db7f0a1c1a137c195f6.bindTooltip(
+                `<div>
+                     EVT009_0359
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc4b5bb7564759077e4443a902a39db9 = L.circleMarker(
+                [26.4576575, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_bc4b5bb7564759077e4443a902a39db9.bindTooltip(
+                `<div>
+                     EVT009_0359
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_dfd9f0a98ed588259d8df4b5f7325bdb = L.rectangle(
+                [[26.435135, 83.504436], [26.48018, 83.554879]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_8406a417b4fd0189b76a815761df4655 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_54412831c4c768bb64baecda0c10326d = $(`<div id="html_54412831c4c768bb64baecda0c10326d" style="width: 100.0%; height: 100.0%;"><b>EVT009_0360</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 766<br>xBD overlap: True<br>Bbox: [83.5044, 26.4351, 83.5549, 26.4802]</div>`)[0];
+                popup_8406a417b4fd0189b76a815761df4655.setContent(html_54412831c4c768bb64baecda0c10326d);
+            
+        
+
+        rectangle_dfd9f0a98ed588259d8df4b5f7325bdb.bindPopup(popup_8406a417b4fd0189b76a815761df4655)
+        ;
+
+        
+    
+    
+            rectangle_dfd9f0a98ed588259d8df4b5f7325bdb.bindTooltip(
+                `<div>
+                     EVT009_0360
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e93d116a5b47c538cca3685ee94b433c = L.circleMarker(
+                [26.4576575, 83.5296575],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_e93d116a5b47c538cca3685ee94b433c.bindTooltip(
+                `<div>
+                     EVT009_0360
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_6ac0894729660228965687295e4c2c80 = L.rectangle(
+                [[26.48018, 83.403549], [26.525225, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_ce2a3111e7084caadee6fc47ba68e1bd = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1a15f65d73fe46a6f2ac142ae7a8ad4b = $(`<div id="html_1a15f65d73fe46a6f2ac142ae7a8ad4b" style="width: 100.0%; height: 100.0%;"><b>EVT009_0361</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 187<br>xBD overlap: True<br>Bbox: [83.4035, 26.4802, 83.4540, 26.5252]</div>`)[0];
+                popup_ce2a3111e7084caadee6fc47ba68e1bd.setContent(html_1a15f65d73fe46a6f2ac142ae7a8ad4b);
+            
+        
+
+        rectangle_6ac0894729660228965687295e4c2c80.bindPopup(popup_ce2a3111e7084caadee6fc47ba68e1bd)
+        ;
+
+        
+    
+    
+            rectangle_6ac0894729660228965687295e4c2c80.bindTooltip(
+                `<div>
+                     EVT009_0361
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03f7c6f86b025860d3a3ab5d62f03a67 = L.circleMarker(
+                [26.502702499999998, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_03f7c6f86b025860d3a3ab5d62f03a67.bindTooltip(
+                `<div>
+                     EVT009_0361
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f199950160778dea27a457823c62e980 = L.rectangle(
+                [[26.48018, 83.453992], [26.525225, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_7571e0b38284cee10607161a8d9e2b17 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1fb244c6b9415eab47667ee5ea37f315 = $(`<div id="html_1fb244c6b9415eab47667ee5ea37f315" style="width: 100.0%; height: 100.0%;"><b>EVT009_0362</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1046<br>xBD overlap: True<br>Bbox: [83.4540, 26.4802, 83.5044, 26.5252]</div>`)[0];
+                popup_7571e0b38284cee10607161a8d9e2b17.setContent(html_1fb244c6b9415eab47667ee5ea37f315);
+            
+        
+
+        rectangle_f199950160778dea27a457823c62e980.bindPopup(popup_7571e0b38284cee10607161a8d9e2b17)
+        ;
+
+        
+    
+    
+            rectangle_f199950160778dea27a457823c62e980.bindTooltip(
+                `<div>
+                     EVT009_0362
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ce9af77ae1fa60cda4c51e7ea7b27d0e = L.circleMarker(
+                [26.502702499999998, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_ce9af77ae1fa60cda4c51e7ea7b27d0e.bindTooltip(
+                `<div>
+                     EVT009_0362
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f302edd076d80f7387fdaf8e94224f9f = L.rectangle(
+                [[26.48018, 83.504436], [26.525225, 83.554879]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_355193c22d98a3521ededa2bc72f565f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b7508b68e9e180a71bebae5f532230c1 = $(`<div id="html_b7508b68e9e180a71bebae5f532230c1" style="width: 100.0%; height: 100.0%;"><b>EVT009_0363</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 584<br>xBD overlap: True<br>Bbox: [83.5044, 26.4802, 83.5549, 26.5252]</div>`)[0];
+                popup_355193c22d98a3521ededa2bc72f565f.setContent(html_b7508b68e9e180a71bebae5f532230c1);
+            
+        
+
+        rectangle_f302edd076d80f7387fdaf8e94224f9f.bindPopup(popup_355193c22d98a3521ededa2bc72f565f)
+        ;
+
+        
+    
+    
+            rectangle_f302edd076d80f7387fdaf8e94224f9f.bindTooltip(
+                `<div>
+                     EVT009_0363
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39e051191d5de742d619fcf5c2916e88 = L.circleMarker(
+                [26.502702499999998, 83.5296575],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_39e051191d5de742d619fcf5c2916e88.bindTooltip(
+                `<div>
+                     EVT009_0363
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a3b6fec972203f9bb00c99cc4225b100 = L.rectangle(
+                [[26.48018, 83.554879], [26.525225, 83.605323]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_559a58b6214c0de1361ae2a67c941619 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4213b59ff91eb660176497b4deb806b2 = $(`<div id="html_4213b59ff91eb660176497b4deb806b2" style="width: 100.0%; height: 100.0%;"><b>EVT009_0364</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1034<br>xBD overlap: True<br>Bbox: [83.5549, 26.4802, 83.6053, 26.5252]</div>`)[0];
+                popup_559a58b6214c0de1361ae2a67c941619.setContent(html_4213b59ff91eb660176497b4deb806b2);
+            
+        
+
+        rectangle_a3b6fec972203f9bb00c99cc4225b100.bindPopup(popup_559a58b6214c0de1361ae2a67c941619)
+        ;
+
+        
+    
+    
+            rectangle_a3b6fec972203f9bb00c99cc4225b100.bindTooltip(
+                `<div>
+                     EVT009_0364
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd9aec95edd62c1b1ac778e66c466bda = L.circleMarker(
+                [26.502702499999998, 83.580101],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_cd9aec95edd62c1b1ac778e66c466bda.bindTooltip(
+                `<div>
+                     EVT009_0364
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_7bcf66131c662a8240c7089f3fc2fdd9 = L.rectangle(
+                [[26.525225, 83.302661], [26.57027, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_a825994af2d7a556dec6980533f399a7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6a5fe26c491f0b416df3a9ea76d2c763 = $(`<div id="html_6a5fe26c491f0b416df3a9ea76d2c763" style="width: 100.0%; height: 100.0%;"><b>EVT009_0365</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 56<br>xBD overlap: True<br>Bbox: [83.3027, 26.5252, 83.3531, 26.5703]</div>`)[0];
+                popup_a825994af2d7a556dec6980533f399a7.setContent(html_6a5fe26c491f0b416df3a9ea76d2c763);
+            
+        
+
+        rectangle_7bcf66131c662a8240c7089f3fc2fdd9.bindPopup(popup_a825994af2d7a556dec6980533f399a7)
+        ;
+
+        
+    
+    
+            rectangle_7bcf66131c662a8240c7089f3fc2fdd9.bindTooltip(
+                `<div>
+                     EVT009_0365
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_251dc520c59a6b35c47aa3544662db0e = L.circleMarker(
+                [26.5477475, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_251dc520c59a6b35c47aa3544662db0e.bindTooltip(
+                `<div>
+                     EVT009_0365
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_405291113855d73aeee56de48d3a239b = L.rectangle(
+                [[26.525225, 83.353105], [26.57027, 83.403549]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_a60a0d2210abc8bfa72023edeb2e5557 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3aaa41be5d6f443b279525e3f2b57c0f = $(`<div id="html_3aaa41be5d6f443b279525e3f2b57c0f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0366</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 16<br>xBD overlap: True<br>Bbox: [83.3531, 26.5252, 83.4035, 26.5703]</div>`)[0];
+                popup_a60a0d2210abc8bfa72023edeb2e5557.setContent(html_3aaa41be5d6f443b279525e3f2b57c0f);
+            
+        
+
+        rectangle_405291113855d73aeee56de48d3a239b.bindPopup(popup_a60a0d2210abc8bfa72023edeb2e5557)
+        ;
+
+        
+    
+    
+            rectangle_405291113855d73aeee56de48d3a239b.bindTooltip(
+                `<div>
+                     EVT009_0366
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1104ef71fb4b0b87181bb25e269ae6c9 = L.circleMarker(
+                [26.5477475, 83.378327],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_1104ef71fb4b0b87181bb25e269ae6c9.bindTooltip(
+                `<div>
+                     EVT009_0366
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_14468ab1b80a5bb7b552f5e17c9b29b3 = L.rectangle(
+                [[26.525225, 83.403549], [26.57027, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_c368eb1b020a4844d078c42779923725 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5094434d03ed4dcd7cbae19e8dc8fca6 = $(`<div id="html_5094434d03ed4dcd7cbae19e8dc8fca6" style="width: 100.0%; height: 100.0%;"><b>EVT009_0367</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 159<br>xBD overlap: True<br>Bbox: [83.4035, 26.5252, 83.4540, 26.5703]</div>`)[0];
+                popup_c368eb1b020a4844d078c42779923725.setContent(html_5094434d03ed4dcd7cbae19e8dc8fca6);
+            
+        
+
+        rectangle_14468ab1b80a5bb7b552f5e17c9b29b3.bindPopup(popup_c368eb1b020a4844d078c42779923725)
+        ;
+
+        
+    
+    
+            rectangle_14468ab1b80a5bb7b552f5e17c9b29b3.bindTooltip(
+                `<div>
+                     EVT009_0367
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bad5dfe4f7ada36fc3250f3f0081ddd4 = L.circleMarker(
+                [26.5477475, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_bad5dfe4f7ada36fc3250f3f0081ddd4.bindTooltip(
+                `<div>
+                     EVT009_0367
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_6aa7da0b33cfaba09c31a8ed5ed76032 = L.rectangle(
+                [[26.525225, 83.453992], [26.57027, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_71a9ea03f7c467728a02cc16d90f4ecd = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b87e985cfec64d1df9b24176b01ef838 = $(`<div id="html_b87e985cfec64d1df9b24176b01ef838" style="width: 100.0%; height: 100.0%;"><b>EVT009_0368</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 852<br>xBD overlap: True<br>Bbox: [83.4540, 26.5252, 83.5044, 26.5703]</div>`)[0];
+                popup_71a9ea03f7c467728a02cc16d90f4ecd.setContent(html_b87e985cfec64d1df9b24176b01ef838);
+            
+        
+
+        rectangle_6aa7da0b33cfaba09c31a8ed5ed76032.bindPopup(popup_71a9ea03f7c467728a02cc16d90f4ecd)
+        ;
+
+        
+    
+    
+            rectangle_6aa7da0b33cfaba09c31a8ed5ed76032.bindTooltip(
+                `<div>
+                     EVT009_0368
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddacff9c995db90552a187fe9afd347b = L.circleMarker(
+                [26.5477475, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_ddacff9c995db90552a187fe9afd347b.bindTooltip(
+                `<div>
+                     EVT009_0368
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a079d4ced321b3c7cf9d09264079da01 = L.rectangle(
+                [[26.525225, 83.504436], [26.57027, 83.554879]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_3d34893947c7fd86d2ad2b4357026eab = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c17203df843083e588576eb8eb7d6512 = $(`<div id="html_c17203df843083e588576eb8eb7d6512" style="width: 100.0%; height: 100.0%;"><b>EVT009_0369</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 656<br>xBD overlap: True<br>Bbox: [83.5044, 26.5252, 83.5549, 26.5703]</div>`)[0];
+                popup_3d34893947c7fd86d2ad2b4357026eab.setContent(html_c17203df843083e588576eb8eb7d6512);
+            
+        
+
+        rectangle_a079d4ced321b3c7cf9d09264079da01.bindPopup(popup_3d34893947c7fd86d2ad2b4357026eab)
+        ;
+
+        
+    
+    
+            rectangle_a079d4ced321b3c7cf9d09264079da01.bindTooltip(
+                `<div>
+                     EVT009_0369
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae405132de358a79c844e0d3d91d0168 = L.circleMarker(
+                [26.5477475, 83.5296575],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_ae405132de358a79c844e0d3d91d0168.bindTooltip(
+                `<div>
+                     EVT009_0369
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_bbd24838f53fde9220eaaf1d94e6cd0b = L.rectangle(
+                [[26.525225, 83.554879], [26.57027, 83.605323]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_4fbe691f5bc659984e39e9c0a887737b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6781df219250c309acac5edb55c0775f = $(`<div id="html_6781df219250c309acac5edb55c0775f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0370</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1634<br>xBD overlap: True<br>Bbox: [83.5549, 26.5252, 83.6053, 26.5703]</div>`)[0];
+                popup_4fbe691f5bc659984e39e9c0a887737b.setContent(html_6781df219250c309acac5edb55c0775f);
+            
+        
+
+        rectangle_bbd24838f53fde9220eaaf1d94e6cd0b.bindPopup(popup_4fbe691f5bc659984e39e9c0a887737b)
+        ;
+
+        
+    
+    
+            rectangle_bbd24838f53fde9220eaaf1d94e6cd0b.bindTooltip(
+                `<div>
+                     EVT009_0370
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8e59ae78c0498bd7bbea25eaec63f2b = L.circleMarker(
+                [26.5477475, 83.580101],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_b8e59ae78c0498bd7bbea25eaec63f2b.bindTooltip(
+                `<div>
+                     EVT009_0370
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_4f36fae470a228a914bc46b82fc58ca9 = L.rectangle(
+                [[26.57027, 83.252218], [26.615315, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_b0fd2791f723c25c72d75d4ac3701ea9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f24e43e64bf04ab04f011b22fce0969e = $(`<div id="html_f24e43e64bf04ab04f011b22fce0969e" style="width: 100.0%; height: 100.0%;"><b>EVT009_0371</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 18<br>xBD overlap: True<br>Bbox: [83.2522, 26.5703, 83.3027, 26.6153]</div>`)[0];
+                popup_b0fd2791f723c25c72d75d4ac3701ea9.setContent(html_f24e43e64bf04ab04f011b22fce0969e);
+            
+        
+
+        rectangle_4f36fae470a228a914bc46b82fc58ca9.bindPopup(popup_b0fd2791f723c25c72d75d4ac3701ea9)
+        ;
+
+        
+    
+    
+            rectangle_4f36fae470a228a914bc46b82fc58ca9.bindTooltip(
+                `<div>
+                     EVT009_0371
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8760090dc8d7e53d803d6d10667f6e14 = L.circleMarker(
+                [26.5927925, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_8760090dc8d7e53d803d6d10667f6e14.bindTooltip(
+                `<div>
+                     EVT009_0371
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_69a1e49fbbbfed8127782be5774d84ef = L.rectangle(
+                [[26.57027, 83.353105], [26.615315, 83.403549]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_2eb5ec50a94a97435cef8a9866eb9bff = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5f2aa93953fdf1016ee5644b1886205f = $(`<div id="html_5f2aa93953fdf1016ee5644b1886205f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0372</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 12<br>xBD overlap: True<br>Bbox: [83.3531, 26.5703, 83.4035, 26.6153]</div>`)[0];
+                popup_2eb5ec50a94a97435cef8a9866eb9bff.setContent(html_5f2aa93953fdf1016ee5644b1886205f);
+            
+        
+
+        rectangle_69a1e49fbbbfed8127782be5774d84ef.bindPopup(popup_2eb5ec50a94a97435cef8a9866eb9bff)
+        ;
+
+        
+    
+    
+            rectangle_69a1e49fbbbfed8127782be5774d84ef.bindTooltip(
+                `<div>
+                     EVT009_0372
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6056bc69d79cf92765ff05eb3ec6ff8b = L.circleMarker(
+                [26.5927925, 83.378327],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_6056bc69d79cf92765ff05eb3ec6ff8b.bindTooltip(
+                `<div>
+                     EVT009_0372
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_5e4de5480b15c49715602adaeb8cae80 = L.rectangle(
+                [[26.57027, 83.403549], [26.615315, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_a8c3e46c09103b3c209e09543609362b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_57be2d92e5f6d54e27d0afc7b5ff5c28 = $(`<div id="html_57be2d92e5f6d54e27d0afc7b5ff5c28" style="width: 100.0%; height: 100.0%;"><b>EVT009_0373</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1022<br>xBD overlap: True<br>Bbox: [83.4035, 26.5703, 83.4540, 26.6153]</div>`)[0];
+                popup_a8c3e46c09103b3c209e09543609362b.setContent(html_57be2d92e5f6d54e27d0afc7b5ff5c28);
+            
+        
+
+        rectangle_5e4de5480b15c49715602adaeb8cae80.bindPopup(popup_a8c3e46c09103b3c209e09543609362b)
+        ;
+
+        
+    
+    
+            rectangle_5e4de5480b15c49715602adaeb8cae80.bindTooltip(
+                `<div>
+                     EVT009_0373
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_364766522d5e3cee432e9aa9e190e055 = L.circleMarker(
+                [26.5927925, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_364766522d5e3cee432e9aa9e190e055.bindTooltip(
+                `<div>
+                     EVT009_0373
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_67f94600285b638bed21c2d0829e41ae = L.rectangle(
+                [[26.57027, 83.453992], [26.615315, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_9500be2c82af8aa1a5cb269453df9e1b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ef1642dfcc9bd4b3d1f44b14c4907f65 = $(`<div id="html_ef1642dfcc9bd4b3d1f44b14c4907f65" style="width: 100.0%; height: 100.0%;"><b>EVT009_0374</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 482<br>xBD overlap: True<br>Bbox: [83.4540, 26.5703, 83.5044, 26.6153]</div>`)[0];
+                popup_9500be2c82af8aa1a5cb269453df9e1b.setContent(html_ef1642dfcc9bd4b3d1f44b14c4907f65);
+            
+        
+
+        rectangle_67f94600285b638bed21c2d0829e41ae.bindPopup(popup_9500be2c82af8aa1a5cb269453df9e1b)
+        ;
+
+        
+    
+    
+            rectangle_67f94600285b638bed21c2d0829e41ae.bindTooltip(
+                `<div>
+                     EVT009_0374
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21001f107d1ccea95a6449f26adbdb6b = L.circleMarker(
+                [26.5927925, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_21001f107d1ccea95a6449f26adbdb6b.bindTooltip(
+                `<div>
+                     EVT009_0374
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_5b34f902d51264aea74b42603c08660d = L.rectangle(
+                [[26.57027, 83.504436], [26.615315, 83.554879]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_871ae7228484ac2178fbc6d117f4f50b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cf79baf80f2728e7b241c3008b653a66 = $(`<div id="html_cf79baf80f2728e7b241c3008b653a66" style="width: 100.0%; height: 100.0%;"><b>EVT009_0375</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 952<br>xBD overlap: True<br>Bbox: [83.5044, 26.5703, 83.5549, 26.6153]</div>`)[0];
+                popup_871ae7228484ac2178fbc6d117f4f50b.setContent(html_cf79baf80f2728e7b241c3008b653a66);
+            
+        
+
+        rectangle_5b34f902d51264aea74b42603c08660d.bindPopup(popup_871ae7228484ac2178fbc6d117f4f50b)
+        ;
+
+        
+    
+    
+            rectangle_5b34f902d51264aea74b42603c08660d.bindTooltip(
+                `<div>
+                     EVT009_0375
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f16d2af8742b9036201967f986fa1ef7 = L.circleMarker(
+                [26.5927925, 83.5296575],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_f16d2af8742b9036201967f986fa1ef7.bindTooltip(
+                `<div>
+                     EVT009_0375
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_7c821f9fda183cc761f1e6e7ebdf8b22 = L.rectangle(
+                [[26.57027, 83.554879], [26.615315, 83.605323]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_4f36e406953ed83a5428871111831f37 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_63a516f3491e8708a3a6518609d11892 = $(`<div id="html_63a516f3491e8708a3a6518609d11892" style="width: 100.0%; height: 100.0%;"><b>EVT009_0376</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1980<br>xBD overlap: True<br>Bbox: [83.5549, 26.5703, 83.6053, 26.6153]</div>`)[0];
+                popup_4f36e406953ed83a5428871111831f37.setContent(html_63a516f3491e8708a3a6518609d11892);
+            
+        
+
+        rectangle_7c821f9fda183cc761f1e6e7ebdf8b22.bindPopup(popup_4f36e406953ed83a5428871111831f37)
+        ;
+
+        
+    
+    
+            rectangle_7c821f9fda183cc761f1e6e7ebdf8b22.bindTooltip(
+                `<div>
+                     EVT009_0376
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68463565d097057464fd8e809e2b0e47 = L.circleMarker(
+                [26.5927925, 83.580101],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_68463565d097057464fd8e809e2b0e47.bindTooltip(
+                `<div>
+                     EVT009_0376
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_86544e1652a33b07614563c048ce86b5 = L.rectangle(
+                [[26.615315, 83.252218], [26.66036, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_8313c1a886067a54797cd8a0e0c7748b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_98f29f3b1a50de4aa7a9690213f71c34 = $(`<div id="html_98f29f3b1a50de4aa7a9690213f71c34" style="width: 100.0%; height: 100.0%;"><b>EVT009_0377</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 390<br>xBD overlap: True<br>Bbox: [83.2522, 26.6153, 83.3027, 26.6604]</div>`)[0];
+                popup_8313c1a886067a54797cd8a0e0c7748b.setContent(html_98f29f3b1a50de4aa7a9690213f71c34);
+            
+        
+
+        rectangle_86544e1652a33b07614563c048ce86b5.bindPopup(popup_8313c1a886067a54797cd8a0e0c7748b)
+        ;
+
+        
+    
+    
+            rectangle_86544e1652a33b07614563c048ce86b5.bindTooltip(
+                `<div>
+                     EVT009_0377
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1dd1a5374fdb9ea4a1e00f802823ebe = L.circleMarker(
+                [26.6378375, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_e1dd1a5374fdb9ea4a1e00f802823ebe.bindTooltip(
+                `<div>
+                     EVT009_0377
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_88cb919da0d1ff541cd4765684c835f7 = L.rectangle(
+                [[26.615315, 83.302661], [26.66036, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_6d85c3074f6d4c42c9081b5303276b61 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_79441fabb297832f30eba6c1cd7a724e = $(`<div id="html_79441fabb297832f30eba6c1cd7a724e" style="width: 100.0%; height: 100.0%;"><b>EVT009_0378</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 379<br>xBD overlap: True<br>Bbox: [83.3027, 26.6153, 83.3531, 26.6604]</div>`)[0];
+                popup_6d85c3074f6d4c42c9081b5303276b61.setContent(html_79441fabb297832f30eba6c1cd7a724e);
+            
+        
+
+        rectangle_88cb919da0d1ff541cd4765684c835f7.bindPopup(popup_6d85c3074f6d4c42c9081b5303276b61)
+        ;
+
+        
+    
+    
+            rectangle_88cb919da0d1ff541cd4765684c835f7.bindTooltip(
+                `<div>
+                     EVT009_0378
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_048f5df10166709e0af668dea94276b2 = L.circleMarker(
+                [26.6378375, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_048f5df10166709e0af668dea94276b2.bindTooltip(
+                `<div>
+                     EVT009_0378
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_702fbae403becbef737b1945376b5860 = L.rectangle(
+                [[26.615315, 83.353105], [26.66036, 83.403549]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_07d03fe0d6d7bd149e02ed45cf90bb2e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6ec1252b8e073c6792b71f2485096cac = $(`<div id="html_6ec1252b8e073c6792b71f2485096cac" style="width: 100.0%; height: 100.0%;"><b>EVT009_0379</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 794<br>xBD overlap: True<br>Bbox: [83.3531, 26.6153, 83.4035, 26.6604]</div>`)[0];
+                popup_07d03fe0d6d7bd149e02ed45cf90bb2e.setContent(html_6ec1252b8e073c6792b71f2485096cac);
+            
+        
+
+        rectangle_702fbae403becbef737b1945376b5860.bindPopup(popup_07d03fe0d6d7bd149e02ed45cf90bb2e)
+        ;
+
+        
+    
+    
+            rectangle_702fbae403becbef737b1945376b5860.bindTooltip(
+                `<div>
+                     EVT009_0379
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe82e0e6c48dc80324700712916a93a4 = L.circleMarker(
+                [26.6378375, 83.378327],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_fe82e0e6c48dc80324700712916a93a4.bindTooltip(
+                `<div>
+                     EVT009_0379
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_81cdb98649ab65face1bcee1025848ae = L.rectangle(
+                [[26.615315, 83.403549], [26.66036, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_799b80a4777171ea16ab8ff4f843f52b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_61cff140a6cd3ff8c4726de7299c5635 = $(`<div id="html_61cff140a6cd3ff8c4726de7299c5635" style="width: 100.0%; height: 100.0%;"><b>EVT009_0380</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 496<br>xBD overlap: True<br>Bbox: [83.4035, 26.6153, 83.4540, 26.6604]</div>`)[0];
+                popup_799b80a4777171ea16ab8ff4f843f52b.setContent(html_61cff140a6cd3ff8c4726de7299c5635);
+            
+        
+
+        rectangle_81cdb98649ab65face1bcee1025848ae.bindPopup(popup_799b80a4777171ea16ab8ff4f843f52b)
+        ;
+
+        
+    
+    
+            rectangle_81cdb98649ab65face1bcee1025848ae.bindTooltip(
+                `<div>
+                     EVT009_0380
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e14f30be67c057d10e505409604a1765 = L.circleMarker(
+                [26.6378375, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_e14f30be67c057d10e505409604a1765.bindTooltip(
+                `<div>
+                     EVT009_0380
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_36ce97516385f55732197fcf06e04c8d = L.rectangle(
+                [[26.615315, 83.453992], [26.66036, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_5485a5571492be24461e7e58daac26d7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3e80a6bef699c36ddaa92ddca8e85eef = $(`<div id="html_3e80a6bef699c36ddaa92ddca8e85eef" style="width: 100.0%; height: 100.0%;"><b>EVT009_0381</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1300<br>xBD overlap: True<br>Bbox: [83.4540, 26.6153, 83.5044, 26.6604]</div>`)[0];
+                popup_5485a5571492be24461e7e58daac26d7.setContent(html_3e80a6bef699c36ddaa92ddca8e85eef);
+            
+        
+
+        rectangle_36ce97516385f55732197fcf06e04c8d.bindPopup(popup_5485a5571492be24461e7e58daac26d7)
+        ;
+
+        
+    
+    
+            rectangle_36ce97516385f55732197fcf06e04c8d.bindTooltip(
+                `<div>
+                     EVT009_0381
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36070047da6747ac2787354bff35fe6d = L.circleMarker(
+                [26.6378375, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_36070047da6747ac2787354bff35fe6d.bindTooltip(
+                `<div>
+                     EVT009_0381
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ef425d574ac4b343e1501e9127cd8cdb = L.rectangle(
+                [[26.615315, 83.504436], [26.66036, 83.554879]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_7de9dca6865e8214272dd79a47605118 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2eb8d6e94a324ddd07b255d13597faa6 = $(`<div id="html_2eb8d6e94a324ddd07b255d13597faa6" style="width: 100.0%; height: 100.0%;"><b>EVT009_0382</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1183<br>xBD overlap: True<br>Bbox: [83.5044, 26.6153, 83.5549, 26.6604]</div>`)[0];
+                popup_7de9dca6865e8214272dd79a47605118.setContent(html_2eb8d6e94a324ddd07b255d13597faa6);
+            
+        
+
+        rectangle_ef425d574ac4b343e1501e9127cd8cdb.bindPopup(popup_7de9dca6865e8214272dd79a47605118)
+        ;
+
+        
+    
+    
+            rectangle_ef425d574ac4b343e1501e9127cd8cdb.bindTooltip(
+                `<div>
+                     EVT009_0382
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47a667575b000f28f3cd8d15c51a6b2a = L.circleMarker(
+                [26.6378375, 83.5296575],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_47a667575b000f28f3cd8d15c51a6b2a.bindTooltip(
+                `<div>
+                     EVT009_0382
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a4c7d5f090781d63b6d32378a1fd973d = L.rectangle(
+                [[26.615315, 83.554879], [26.66036, 83.605323]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_95bc594330fb4a74d944e546ea10d462 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_03960acca794c772ccc185f47d2c2c18 = $(`<div id="html_03960acca794c772ccc185f47d2c2c18" style="width: 100.0%; height: 100.0%;"><b>EVT009_0383</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 3291<br>xBD overlap: True<br>Bbox: [83.5549, 26.6153, 83.6053, 26.6604]</div>`)[0];
+                popup_95bc594330fb4a74d944e546ea10d462.setContent(html_03960acca794c772ccc185f47d2c2c18);
+            
+        
+
+        rectangle_a4c7d5f090781d63b6d32378a1fd973d.bindPopup(popup_95bc594330fb4a74d944e546ea10d462)
+        ;
+
+        
+    
+    
+            rectangle_a4c7d5f090781d63b6d32378a1fd973d.bindTooltip(
+                `<div>
+                     EVT009_0383
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_283719e0dc210e07569d371ad978ac51 = L.circleMarker(
+                [26.6378375, 83.580101],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_283719e0dc210e07569d371ad978ac51.bindTooltip(
+                `<div>
+                     EVT009_0383
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_4c8826469ef77022ed14e82bf4183212 = L.rectangle(
+                [[26.66036, 83.252218], [26.705405, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_a6b57f0b7694696ba6525a79b0b2e119 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_faa9fc38e61490f570efa600618e766b = $(`<div id="html_faa9fc38e61490f570efa600618e766b" style="width: 100.0%; height: 100.0%;"><b>EVT009_0384</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 906<br>xBD overlap: True<br>Bbox: [83.2522, 26.6604, 83.3027, 26.7054]</div>`)[0];
+                popup_a6b57f0b7694696ba6525a79b0b2e119.setContent(html_faa9fc38e61490f570efa600618e766b);
+            
+        
+
+        rectangle_4c8826469ef77022ed14e82bf4183212.bindPopup(popup_a6b57f0b7694696ba6525a79b0b2e119)
+        ;
+
+        
+    
+    
+            rectangle_4c8826469ef77022ed14e82bf4183212.bindTooltip(
+                `<div>
+                     EVT009_0384
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6304bf1cb16be555f503dc81dd8c02d1 = L.circleMarker(
+                [26.682882499999998, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_6304bf1cb16be555f503dc81dd8c02d1.bindTooltip(
+                `<div>
+                     EVT009_0384
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_8ae675d1f385cf1ebe8b1384429eed7e = L.rectangle(
+                [[26.66036, 83.302661], [26.705405, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_ea049630ea46fe13b4e351099aa06eee = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6ccd2a7cb7f1302b81d7e3ff8977dc4b = $(`<div id="html_6ccd2a7cb7f1302b81d7e3ff8977dc4b" style="width: 100.0%; height: 100.0%;"><b>EVT009_0385</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1389<br>xBD overlap: True<br>Bbox: [83.3027, 26.6604, 83.3531, 26.7054]</div>`)[0];
+                popup_ea049630ea46fe13b4e351099aa06eee.setContent(html_6ccd2a7cb7f1302b81d7e3ff8977dc4b);
+            
+        
+
+        rectangle_8ae675d1f385cf1ebe8b1384429eed7e.bindPopup(popup_ea049630ea46fe13b4e351099aa06eee)
+        ;
+
+        
+    
+    
+            rectangle_8ae675d1f385cf1ebe8b1384429eed7e.bindTooltip(
+                `<div>
+                     EVT009_0385
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f799ee17a471df1da95ac9403df825a = L.circleMarker(
+                [26.682882499999998, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_4f799ee17a471df1da95ac9403df825a.bindTooltip(
+                `<div>
+                     EVT009_0385
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_4760ff4f36d703a7d3fb021ad0c51a38 = L.rectangle(
+                [[26.66036, 83.353105], [26.705405, 83.403549]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_cb4cce8c1565e6da2cb5d79e54c9a545 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7d62d8edf26e8b240bb1671e0081418f = $(`<div id="html_7d62d8edf26e8b240bb1671e0081418f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0386</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 744<br>xBD overlap: True<br>Bbox: [83.3531, 26.6604, 83.4035, 26.7054]</div>`)[0];
+                popup_cb4cce8c1565e6da2cb5d79e54c9a545.setContent(html_7d62d8edf26e8b240bb1671e0081418f);
+            
+        
+
+        rectangle_4760ff4f36d703a7d3fb021ad0c51a38.bindPopup(popup_cb4cce8c1565e6da2cb5d79e54c9a545)
+        ;
+
+        
+    
+    
+            rectangle_4760ff4f36d703a7d3fb021ad0c51a38.bindTooltip(
+                `<div>
+                     EVT009_0386
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d444ef74849068196c90e28aa77df27d = L.circleMarker(
+                [26.682882499999998, 83.378327],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_d444ef74849068196c90e28aa77df27d.bindTooltip(
+                `<div>
+                     EVT009_0386
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_5f5dd72128ee74f72f260c22f4504daa = L.rectangle(
+                [[26.66036, 83.403549], [26.705405, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_0f4c6503405f3a52365f0871a64df87c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e4960e05472ce3e002943e20a746a484 = $(`<div id="html_e4960e05472ce3e002943e20a746a484" style="width: 100.0%; height: 100.0%;"><b>EVT009_0387</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1366<br>xBD overlap: True<br>Bbox: [83.4035, 26.6604, 83.4540, 26.7054]</div>`)[0];
+                popup_0f4c6503405f3a52365f0871a64df87c.setContent(html_e4960e05472ce3e002943e20a746a484);
+            
+        
+
+        rectangle_5f5dd72128ee74f72f260c22f4504daa.bindPopup(popup_0f4c6503405f3a52365f0871a64df87c)
+        ;
+
+        
+    
+    
+            rectangle_5f5dd72128ee74f72f260c22f4504daa.bindTooltip(
+                `<div>
+                     EVT009_0387
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18da43fa45a76fab4f1363cdd7c13be2 = L.circleMarker(
+                [26.682882499999998, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_18da43fa45a76fab4f1363cdd7c13be2.bindTooltip(
+                `<div>
+                     EVT009_0387
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c59ade5526814890de32f4c5b187fda8 = L.rectangle(
+                [[26.705405, 83.252218], [26.75045, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_ad05aa85a4b4345505df8ed3a96ec774 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b5751f7684424bc460faec1b59299c3a = $(`<div id="html_b5751f7684424bc460faec1b59299c3a" style="width: 100.0%; height: 100.0%;"><b>EVT009_0388</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1763<br>xBD overlap: True<br>Bbox: [83.2522, 26.7054, 83.3027, 26.7505]</div>`)[0];
+                popup_ad05aa85a4b4345505df8ed3a96ec774.setContent(html_b5751f7684424bc460faec1b59299c3a);
+            
+        
+
+        rectangle_c59ade5526814890de32f4c5b187fda8.bindPopup(popup_ad05aa85a4b4345505df8ed3a96ec774)
+        ;
+
+        
+    
+    
+            rectangle_c59ade5526814890de32f4c5b187fda8.bindTooltip(
+                `<div>
+                     EVT009_0388
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d98b1ff7259f076c38f30681b579da27 = L.circleMarker(
+                [26.7279275, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_d98b1ff7259f076c38f30681b579da27.bindTooltip(
+                `<div>
+                     EVT009_0388
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_151aad5de6452ba9cb2e969a6cd2d006 = L.rectangle(
+                [[26.705405, 83.302661], [26.75045, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_5b7f30e6de72a007c3a66a23eed16dec = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a09312e94aa1f8960b51c88b99caa36e = $(`<div id="html_a09312e94aa1f8960b51c88b99caa36e" style="width: 100.0%; height: 100.0%;"><b>EVT009_0389</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1902<br>xBD overlap: True<br>Bbox: [83.3027, 26.7054, 83.3531, 26.7505]</div>`)[0];
+                popup_5b7f30e6de72a007c3a66a23eed16dec.setContent(html_a09312e94aa1f8960b51c88b99caa36e);
+            
+        
+
+        rectangle_151aad5de6452ba9cb2e969a6cd2d006.bindPopup(popup_5b7f30e6de72a007c3a66a23eed16dec)
+        ;
+
+        
+    
+    
+            rectangle_151aad5de6452ba9cb2e969a6cd2d006.bindTooltip(
+                `<div>
+                     EVT009_0389
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10365661562dd3eeabc862db93673dff = L.circleMarker(
+                [26.7279275, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_10365661562dd3eeabc862db93673dff.bindTooltip(
+                `<div>
+                     EVT009_0389
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_8247763df5b3d1ce02e32daf15e4e904 = L.rectangle(
+                [[26.705405, 83.353105], [26.75045, 83.403549]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_14f9cb8128fb6c9926f165cbc4a57069 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0e719f9ee7731cc34f246be19a24ea86 = $(`<div id="html_0e719f9ee7731cc34f246be19a24ea86" style="width: 100.0%; height: 100.0%;"><b>EVT009_0390</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 10161<br>xBD overlap: True<br>Bbox: [83.3531, 26.7054, 83.4035, 26.7505]</div>`)[0];
+                popup_14f9cb8128fb6c9926f165cbc4a57069.setContent(html_0e719f9ee7731cc34f246be19a24ea86);
+            
+        
+
+        rectangle_8247763df5b3d1ce02e32daf15e4e904.bindPopup(popup_14f9cb8128fb6c9926f165cbc4a57069)
+        ;
+
+        
+    
+    
+            rectangle_8247763df5b3d1ce02e32daf15e4e904.bindTooltip(
+                `<div>
+                     EVT009_0390
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f766b8abc57c6e9c62280b9f985f058 = L.circleMarker(
+                [26.7279275, 83.378327],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_5f766b8abc57c6e9c62280b9f985f058.bindTooltip(
+                `<div>
+                     EVT009_0390
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_901d4b4a8e50204ac384e636914fe1b5 = L.rectangle(
+                [[26.705405, 83.403549], [26.75045, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_b282d9e4c7f11b5ad2ab04bf9b189db0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3f37423c35124e1f4a3bb86092eaaa9b = $(`<div id="html_3f37423c35124e1f4a3bb86092eaaa9b" style="width: 100.0%; height: 100.0%;"><b>EVT009_0391</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 6326<br>xBD overlap: True<br>Bbox: [83.4035, 26.7054, 83.4540, 26.7505]</div>`)[0];
+                popup_b282d9e4c7f11b5ad2ab04bf9b189db0.setContent(html_3f37423c35124e1f4a3bb86092eaaa9b);
+            
+        
+
+        rectangle_901d4b4a8e50204ac384e636914fe1b5.bindPopup(popup_b282d9e4c7f11b5ad2ab04bf9b189db0)
+        ;
+
+        
+    
+    
+            rectangle_901d4b4a8e50204ac384e636914fe1b5.bindTooltip(
+                `<div>
+                     EVT009_0391
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56a498e0a095623d60339c8245322fec = L.circleMarker(
+                [26.7279275, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_56a498e0a095623d60339c8245322fec.bindTooltip(
+                `<div>
+                     EVT009_0391
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ee1fec628405bd87cacaa676b179598d = L.rectangle(
+                [[26.75045, 83.252218], [26.795495, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_1dbebefaa903e60b8902775493cd265f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_98261ce4aacb28d8ffaedb1b973d16c2 = $(`<div id="html_98261ce4aacb28d8ffaedb1b973d16c2" style="width: 100.0%; height: 100.0%;"><b>EVT009_0392</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 995<br>xBD overlap: True<br>Bbox: [83.2522, 26.7505, 83.3027, 26.7955]</div>`)[0];
+                popup_1dbebefaa903e60b8902775493cd265f.setContent(html_98261ce4aacb28d8ffaedb1b973d16c2);
+            
+        
+
+        rectangle_ee1fec628405bd87cacaa676b179598d.bindPopup(popup_1dbebefaa903e60b8902775493cd265f)
+        ;
+
+        
+    
+    
+            rectangle_ee1fec628405bd87cacaa676b179598d.bindTooltip(
+                `<div>
+                     EVT009_0392
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f37497a848afd51bd3b45ba2577ac756 = L.circleMarker(
+                [26.7729725, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_f37497a848afd51bd3b45ba2577ac756.bindTooltip(
+                `<div>
+                     EVT009_0392
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_1768f288e0ed2597cc6f465e23a7341b = L.rectangle(
+                [[26.75045, 83.302661], [26.795495, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_c9d76beb4021ac72c9918c63b6a650dd = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5a7ac462793673fd7d6924ed1bec57b5 = $(`<div id="html_5a7ac462793673fd7d6924ed1bec57b5" style="width: 100.0%; height: 100.0%;"><b>EVT009_0393</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 5633<br>xBD overlap: True<br>Bbox: [83.3027, 26.7505, 83.3531, 26.7955]</div>`)[0];
+                popup_c9d76beb4021ac72c9918c63b6a650dd.setContent(html_5a7ac462793673fd7d6924ed1bec57b5);
+            
+        
+
+        rectangle_1768f288e0ed2597cc6f465e23a7341b.bindPopup(popup_c9d76beb4021ac72c9918c63b6a650dd)
+        ;
+
+        
+    
+    
+            rectangle_1768f288e0ed2597cc6f465e23a7341b.bindTooltip(
+                `<div>
+                     EVT009_0393
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f910600cd2958213fb9f21316fec44c = L.circleMarker(
+                [26.7729725, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_4f910600cd2958213fb9f21316fec44c.bindTooltip(
+                `<div>
+                     EVT009_0393
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_d98c3ba1cada4a7d940e26b5549abfda = L.rectangle(
+                [[26.795495, 83.201774], [26.840541, 83.252218]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_6bcf9dc151bc9948fea1d3a0622705a9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1ad8893fa707160169a02a17d727e51f = $(`<div id="html_1ad8893fa707160169a02a17d727e51f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0394</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 706<br>xBD overlap: True<br>Bbox: [83.2018, 26.7955, 83.2522, 26.8405]</div>`)[0];
+                popup_6bcf9dc151bc9948fea1d3a0622705a9.setContent(html_1ad8893fa707160169a02a17d727e51f);
+            
+        
+
+        rectangle_d98c3ba1cada4a7d940e26b5549abfda.bindPopup(popup_6bcf9dc151bc9948fea1d3a0622705a9)
+        ;
+
+        
+    
+    
+            rectangle_d98c3ba1cada4a7d940e26b5549abfda.bindTooltip(
+                `<div>
+                     EVT009_0394
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e5fe8e1519b1f4bac56ec684a03b89f = L.circleMarker(
+                [26.818018000000002, 83.226996],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_8e5fe8e1519b1f4bac56ec684a03b89f.bindTooltip(
+                `<div>
+                     EVT009_0394
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_50e93281724cb73dde9a829f5bc6ac07 = L.rectangle(
+                [[26.795495, 83.252218], [26.840541, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_f501974609fa4a14b04f6b443c07d780 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e39f233277c53bb5863797aaaf2e85a0 = $(`<div id="html_e39f233277c53bb5863797aaaf2e85a0" style="width: 100.0%; height: 100.0%;"><b>EVT009_0395</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1359<br>xBD overlap: True<br>Bbox: [83.2522, 26.7955, 83.3027, 26.8405]</div>`)[0];
+                popup_f501974609fa4a14b04f6b443c07d780.setContent(html_e39f233277c53bb5863797aaaf2e85a0);
+            
+        
+
+        rectangle_50e93281724cb73dde9a829f5bc6ac07.bindPopup(popup_f501974609fa4a14b04f6b443c07d780)
+        ;
+
+        
+    
+    
+            rectangle_50e93281724cb73dde9a829f5bc6ac07.bindTooltip(
+                `<div>
+                     EVT009_0395
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_700247a42cee863aafe940e7a7e0ac34 = L.circleMarker(
+                [26.818018000000002, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_700247a42cee863aafe940e7a7e0ac34.bindTooltip(
+                `<div>
+                     EVT009_0395
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_0a716c5328584374cf7568fddc493303 = L.rectangle(
+                [[26.795495, 83.302661], [26.840541, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_5691160f6f06a851b2bafdf33eda0fba = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8697f5e5b5ef455f2bf53a57fd5ea9aa = $(`<div id="html_8697f5e5b5ef455f2bf53a57fd5ea9aa" style="width: 100.0%; height: 100.0%;"><b>EVT009_0396</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1917<br>xBD overlap: True<br>Bbox: [83.3027, 26.7955, 83.3531, 26.8405]</div>`)[0];
+                popup_5691160f6f06a851b2bafdf33eda0fba.setContent(html_8697f5e5b5ef455f2bf53a57fd5ea9aa);
+            
+        
+
+        rectangle_0a716c5328584374cf7568fddc493303.bindPopup(popup_5691160f6f06a851b2bafdf33eda0fba)
+        ;
+
+        
+    
+    
+            rectangle_0a716c5328584374cf7568fddc493303.bindTooltip(
+                `<div>
+                     EVT009_0396
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea74d92a308a3b512efe1b5a50f4a488 = L.circleMarker(
+                [26.818018000000002, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_ea74d92a308a3b512efe1b5a50f4a488.bindTooltip(
+                `<div>
+                     EVT009_0396
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a2e8acc6d17f9098e3c9288c44d6c661 = L.rectangle(
+                [[26.840541, 83.201774], [26.885586, 83.252218]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_89de889b8650b3cd49c1da946c74fc69 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_78be8788a4947629a8d306d8628f1e20 = $(`<div id="html_78be8788a4947629a8d306d8628f1e20" style="width: 100.0%; height: 100.0%;"><b>EVT009_0397</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 126<br>xBD overlap: True<br>Bbox: [83.2018, 26.8405, 83.2522, 26.8856]</div>`)[0];
+                popup_89de889b8650b3cd49c1da946c74fc69.setContent(html_78be8788a4947629a8d306d8628f1e20);
+            
+        
+
+        rectangle_a2e8acc6d17f9098e3c9288c44d6c661.bindPopup(popup_89de889b8650b3cd49c1da946c74fc69)
+        ;
+
+        
+    
+    
+            rectangle_a2e8acc6d17f9098e3c9288c44d6c661.bindTooltip(
+                `<div>
+                     EVT009_0397
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3908fc79dc106002e81e4780ae6c46b = L.circleMarker(
+                [26.863063500000003, 83.226996],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_b3908fc79dc106002e81e4780ae6c46b.bindTooltip(
+                `<div>
+                     EVT009_0397
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_4257f578b4124b07874a12a7bb947cb1 = L.rectangle(
+                [[26.840541, 83.252218], [26.885586, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_33e788940aff905d79941ad079d56279 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7ab954b9be4729518c946580db7207c1 = $(`<div id="html_7ab954b9be4729518c946580db7207c1" style="width: 100.0%; height: 100.0%;"><b>EVT009_0398</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1156<br>xBD overlap: True<br>Bbox: [83.2522, 26.8405, 83.3027, 26.8856]</div>`)[0];
+                popup_33e788940aff905d79941ad079d56279.setContent(html_7ab954b9be4729518c946580db7207c1);
+            
+        
+
+        rectangle_4257f578b4124b07874a12a7bb947cb1.bindPopup(popup_33e788940aff905d79941ad079d56279)
+        ;
+
+        
+    
+    
+            rectangle_4257f578b4124b07874a12a7bb947cb1.bindTooltip(
+                `<div>
+                     EVT009_0398
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0136d39b3041d2934088226b224439d5 = L.circleMarker(
+                [26.863063500000003, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_0136d39b3041d2934088226b224439d5.bindTooltip(
+                `<div>
+                     EVT009_0398
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_d00b67e8058addd414b4ae258c075e10 = L.rectangle(
+                [[26.840541, 83.302661], [26.885586, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_66729fe66c64ec5c108f6f06e645353f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_63fca9261cad1d61f6230392aa66fc99 = $(`<div id="html_63fca9261cad1d61f6230392aa66fc99" style="width: 100.0%; height: 100.0%;"><b>EVT009_0399</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1087<br>xBD overlap: True<br>Bbox: [83.3027, 26.8405, 83.3531, 26.8856]</div>`)[0];
+                popup_66729fe66c64ec5c108f6f06e645353f.setContent(html_63fca9261cad1d61f6230392aa66fc99);
+            
+        
+
+        rectangle_d00b67e8058addd414b4ae258c075e10.bindPopup(popup_66729fe66c64ec5c108f6f06e645353f)
+        ;
+
+        
+    
+    
+            rectangle_d00b67e8058addd414b4ae258c075e10.bindTooltip(
+                `<div>
+                     EVT009_0399
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ba00293bcd3dd5fef128258753cbe5d = L.circleMarker(
+                [26.863063500000003, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_6ba00293bcd3dd5fef128258753cbe5d.bindTooltip(
+                `<div>
+                     EVT009_0399
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_2f451b3fc517b9dbf540ca9fd39534f5 = L.rectangle(
+                [[26.885586, 83.252218], [26.930631, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_df7b9152fdb65f8d37cd0a6b240b3b75 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3531a181c4882c77ca70f983fd617a7f = $(`<div id="html_3531a181c4882c77ca70f983fd617a7f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0400</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1546<br>xBD overlap: True<br>Bbox: [83.2522, 26.8856, 83.3027, 26.9306]</div>`)[0];
+                popup_df7b9152fdb65f8d37cd0a6b240b3b75.setContent(html_3531a181c4882c77ca70f983fd617a7f);
+            
+        
+
+        rectangle_2f451b3fc517b9dbf540ca9fd39534f5.bindPopup(popup_df7b9152fdb65f8d37cd0a6b240b3b75)
+        ;
+
+        
+    
+    
+            rectangle_2f451b3fc517b9dbf540ca9fd39534f5.bindTooltip(
+                `<div>
+                     EVT009_0400
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80073a6e27fa9b2abd9e9e33affeb7e0 = L.circleMarker(
+                [26.9081085, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_80073a6e27fa9b2abd9e9e33affeb7e0.bindTooltip(
+                `<div>
+                     EVT009_0400
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_643ea4e8e810ed3bbf1926295d4fb39d = L.rectangle(
+                [[26.885586, 83.302661], [26.930631, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_e8d27c4096eab603f0374a662eee75d4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_508ee2f4316260275be211eb51aea5ec = $(`<div id="html_508ee2f4316260275be211eb51aea5ec" style="width: 100.0%; height: 100.0%;"><b>EVT009_0401</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1012<br>xBD overlap: True<br>Bbox: [83.3027, 26.8856, 83.3531, 26.9306]</div>`)[0];
+                popup_e8d27c4096eab603f0374a662eee75d4.setContent(html_508ee2f4316260275be211eb51aea5ec);
+            
+        
+
+        rectangle_643ea4e8e810ed3bbf1926295d4fb39d.bindPopup(popup_e8d27c4096eab603f0374a662eee75d4)
+        ;
+
+        
+    
+    
+            rectangle_643ea4e8e810ed3bbf1926295d4fb39d.bindTooltip(
+                `<div>
+                     EVT009_0401
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f0fc00e7b6e20827e236788cf2f163a = L.circleMarker(
+                [26.9081085, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_9f0fc00e7b6e20827e236788cf2f163a.bindTooltip(
+                `<div>
+                     EVT009_0401
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_726a0a68ac2b8a21513ec89ff20537fc = L.rectangle(
+                [[26.930631, 83.252218], [26.975676, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_498db4a71eac8c8f7373ec8317232af4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e3ba3ef456abe498cadd7ce47dbb460a = $(`<div id="html_e3ba3ef456abe498cadd7ce47dbb460a" style="width: 100.0%; height: 100.0%;"><b>EVT009_0402</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 1341<br>xBD overlap: True<br>Bbox: [83.2522, 26.9306, 83.3027, 26.9757]</div>`)[0];
+                popup_498db4a71eac8c8f7373ec8317232af4.setContent(html_e3ba3ef456abe498cadd7ce47dbb460a);
+            
+        
+
+        rectangle_726a0a68ac2b8a21513ec89ff20537fc.bindPopup(popup_498db4a71eac8c8f7373ec8317232af4)
+        ;
+
+        
+    
+    
+            rectangle_726a0a68ac2b8a21513ec89ff20537fc.bindTooltip(
+                `<div>
+                     EVT009_0402
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cab53d0dd83cfb619babc7a9de801047 = L.circleMarker(
+                [26.9531535, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_cab53d0dd83cfb619babc7a9de801047.bindTooltip(
+                `<div>
+                     EVT009_0402
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f366acd95a58c30d27dcd9f03335d0d6 = L.rectangle(
+                [[26.930631, 83.302661], [26.975676, 83.353105]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_cee2c01fdbe5c00fb638a3d7ca27bbd6 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_de0145f9172899c216885671dfc9c78d = $(`<div id="html_de0145f9172899c216885671dfc9c78d" style="width: 100.0%; height: 100.0%;"><b>EVT009_0403</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 41<br>OSM roads: 566<br>xBD overlap: True<br>Bbox: [83.3027, 26.9306, 83.3531, 26.9757]</div>`)[0];
+                popup_cee2c01fdbe5c00fb638a3d7ca27bbd6.setContent(html_de0145f9172899c216885671dfc9c78d);
+            
+        
+
+        rectangle_f366acd95a58c30d27dcd9f03335d0d6.bindPopup(popup_cee2c01fdbe5c00fb638a3d7ca27bbd6)
+        ;
+
+        
+    
+    
+            rectangle_f366acd95a58c30d27dcd9f03335d0d6.bindTooltip(
+                `<div>
+                     EVT009_0403
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2c65e036e1807b40a0cb9dcaba0def2 = L.circleMarker(
+                [26.9531535, 83.327883],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_a2c65e036e1807b40a0cb9dcaba0def2.bindTooltip(
+                `<div>
+                     EVT009_0403
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_6eec4ed97b816a08a4ec8bfaa644276b = L.rectangle(
+                [[26.975676, 83.252218], [27.020721, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_4c94351cdecacedf7bfe6ffb7463c58a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c477b24a1a66bab99137b1ab5849f58d = $(`<div id="html_c477b24a1a66bab99137b1ab5849f58d" style="width: 100.0%; height: 100.0%;"><b>EVT009_0404</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 45<br>OSM roads: 120<br>xBD overlap: True<br>Bbox: [83.2522, 26.9757, 83.3027, 27.0207]</div>`)[0];
+                popup_4c94351cdecacedf7bfe6ffb7463c58a.setContent(html_c477b24a1a66bab99137b1ab5849f58d);
+            
+        
+
+        rectangle_6eec4ed97b816a08a4ec8bfaa644276b.bindPopup(popup_4c94351cdecacedf7bfe6ffb7463c58a)
+        ;
+
+        
+    
+    
+            rectangle_6eec4ed97b816a08a4ec8bfaa644276b.bindTooltip(
+                `<div>
+                     EVT009_0404
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dcb006797c30b276e577fb18bec1c720 = L.circleMarker(
+                [26.9981985, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_dcb006797c30b276e577fb18bec1c720.bindTooltip(
+                `<div>
+                     EVT009_0404
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_1dd567fab76e3e77f9b668e2636e81a4 = L.rectangle(
+                [[27.065766, 83.151331], [27.110811, 83.201774]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_b99ffda454306527ca439ace87411c87 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d1da76dcd44e25fd550ecc38fa86a65d = $(`<div id="html_d1da76dcd44e25fd550ecc38fa86a65d" style="width: 100.0%; height: 100.0%;"><b>EVT009_0405</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 234<br>xBD overlap: False<br>Bbox: [83.1513, 27.0658, 83.2018, 27.1108]</div>`)[0];
+                popup_b99ffda454306527ca439ace87411c87.setContent(html_d1da76dcd44e25fd550ecc38fa86a65d);
+            
+        
+
+        rectangle_1dd567fab76e3e77f9b668e2636e81a4.bindPopup(popup_b99ffda454306527ca439ace87411c87)
+        ;
+
+        
+    
+    
+            rectangle_1dd567fab76e3e77f9b668e2636e81a4.bindTooltip(
+                `<div>
+                     EVT009_0405
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_045cb30490f66520ade5d12bf99d6f97 = L.circleMarker(
+                [27.0882885, 83.1765525],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_045cb30490f66520ade5d12bf99d6f97.bindTooltip(
+                `<div>
+                     EVT009_0405
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_fc9d782250ad9aa172aa25d40ee60a82 = L.rectangle(
+                [[26.795495, 83.0], [26.840541, 83.050444]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_4681c9a1f524a152f1ece7bda8ddd85c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_68866c9f58448e29b67ab567c5bb9d95 = $(`<div id="html_68866c9f58448e29b67ab567c5bb9d95" style="width: 100.0%; height: 100.0%;"><b>EVT009_0406</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 16<br>xBD overlap: False<br>Bbox: [83.0000, 26.7955, 83.0504, 26.8405]</div>`)[0];
+                popup_4681c9a1f524a152f1ece7bda8ddd85c.setContent(html_68866c9f58448e29b67ab567c5bb9d95);
+            
+        
+
+        rectangle_fc9d782250ad9aa172aa25d40ee60a82.bindPopup(popup_4681c9a1f524a152f1ece7bda8ddd85c)
+        ;
+
+        
+    
+    
+            rectangle_fc9d782250ad9aa172aa25d40ee60a82.bindTooltip(
+                `<div>
+                     EVT009_0406
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e8bf1415d5b3db2cba065a645701a3e = L.circleMarker(
+                [26.818018000000002, 83.025222],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_1e8bf1415d5b3db2cba065a645701a3e.bindTooltip(
+                `<div>
+                     EVT009_0406
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_03a1a3ad0d3d22fdad06a328308be0d6 = L.rectangle(
+                [[26.48018, 83.0], [26.525225, 83.050444]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_bf90c67f87db251c50cb259fdcf05481 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b654d93aeca907c9843f368ec21b4bea = $(`<div id="html_b654d93aeca907c9843f368ec21b4bea" style="width: 100.0%; height: 100.0%;"><b>EVT009_0407</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 140<br>xBD overlap: False<br>Bbox: [83.0000, 26.4802, 83.0504, 26.5252]</div>`)[0];
+                popup_bf90c67f87db251c50cb259fdcf05481.setContent(html_b654d93aeca907c9843f368ec21b4bea);
+            
+        
+
+        rectangle_03a1a3ad0d3d22fdad06a328308be0d6.bindPopup(popup_bf90c67f87db251c50cb259fdcf05481)
+        ;
+
+        
+    
+    
+            rectangle_03a1a3ad0d3d22fdad06a328308be0d6.bindTooltip(
+                `<div>
+                     EVT009_0407
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09e98dfe8038e93898ae2ecde4862f80 = L.circleMarker(
+                [26.502702499999998, 83.025222],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_09e98dfe8038e93898ae2ecde4862f80.bindTooltip(
+                `<div>
+                     EVT009_0407
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ee0cd4375508e7feb0d4825e96bf6e02 = L.rectangle(
+                [[26.930631, 83.151331], [26.975676, 83.201774]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_24916cb7042e8f2f0457fb11c5507e1f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0ca84522923261ce3805a71f92a31fde = $(`<div id="html_0ca84522923261ce3805a71f92a31fde" style="width: 100.0%; height: 100.0%;"><b>EVT009_0408</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 384<br>xBD overlap: False<br>Bbox: [83.1513, 26.9306, 83.2018, 26.9757]</div>`)[0];
+                popup_24916cb7042e8f2f0457fb11c5507e1f.setContent(html_0ca84522923261ce3805a71f92a31fde);
+            
+        
+
+        rectangle_ee0cd4375508e7feb0d4825e96bf6e02.bindPopup(popup_24916cb7042e8f2f0457fb11c5507e1f)
+        ;
+
+        
+    
+    
+            rectangle_ee0cd4375508e7feb0d4825e96bf6e02.bindTooltip(
+                `<div>
+                     EVT009_0408
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0768f917ed94c3a498616a195f74ead4 = L.circleMarker(
+                [26.9531535, 83.1765525],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_0768f917ed94c3a498616a195f74ead4.bindTooltip(
+                `<div>
+                     EVT009_0408
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_732b6365781c8f9ac619c8489fbb0e46 = L.rectangle(
+                [[26.705405, 83.655766], [26.75045, 83.70621]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_ff3bca76e3da699f5c971f32fab1ff4e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c939a77a7b7b9d035276a7d320d6688b = $(`<div id="html_c939a77a7b7b9d035276a7d320d6688b" style="width: 100.0%; height: 100.0%;"><b>EVT009_0409</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 584<br>xBD overlap: False<br>Bbox: [83.6558, 26.7054, 83.7062, 26.7505]</div>`)[0];
+                popup_ff3bca76e3da699f5c971f32fab1ff4e.setContent(html_c939a77a7b7b9d035276a7d320d6688b);
+            
+        
+
+        rectangle_732b6365781c8f9ac619c8489fbb0e46.bindPopup(popup_ff3bca76e3da699f5c971f32fab1ff4e)
+        ;
+
+        
+    
+    
+            rectangle_732b6365781c8f9ac619c8489fbb0e46.bindTooltip(
+                `<div>
+                     EVT009_0409
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eeb71ac3ef559aa75d697968d0b2d314 = L.circleMarker(
+                [26.7279275, 83.680988],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_eeb71ac3ef559aa75d697968d0b2d314.bindTooltip(
+                `<div>
+                     EVT009_0409
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_a98119288190a36cc06c2b2466cfc165 = L.rectangle(
+                [[26.3, 83.453992], [26.345045, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_5243c5c1817730404f208a65f086c98d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_501fd67e40797ab068c2aa74287e27a0 = $(`<div id="html_501fd67e40797ab068c2aa74287e27a0" style="width: 100.0%; height: 100.0%;"><b>EVT009_0410</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 66<br>xBD overlap: False<br>Bbox: [83.4540, 26.3000, 83.5044, 26.3450]</div>`)[0];
+                popup_5243c5c1817730404f208a65f086c98d.setContent(html_501fd67e40797ab068c2aa74287e27a0);
+            
+        
+
+        rectangle_a98119288190a36cc06c2b2466cfc165.bindPopup(popup_5243c5c1817730404f208a65f086c98d)
+        ;
+
+        
+    
+    
+            rectangle_a98119288190a36cc06c2b2466cfc165.bindTooltip(
+                `<div>
+                     EVT009_0410
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fba43869c5275dc6c73cb4d6efa8202d = L.circleMarker(
+                [26.322522499999998, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_fba43869c5275dc6c73cb4d6efa8202d.bindTooltip(
+                `<div>
+                     EVT009_0410
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_0145f6b02249f638d5585aeec748450e = L.rectangle(
+                [[26.66036, 83.201774], [26.705405, 83.252218]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_0a6961778e0e2521c0a071e42c9c1387 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_212452d0e2821d8529011b2c54fa32b0 = $(`<div id="html_212452d0e2821d8529011b2c54fa32b0" style="width: 100.0%; height: 100.0%;"><b>EVT009_0411</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 428<br>xBD overlap: False<br>Bbox: [83.2018, 26.6604, 83.2522, 26.7054]</div>`)[0];
+                popup_0a6961778e0e2521c0a071e42c9c1387.setContent(html_212452d0e2821d8529011b2c54fa32b0);
+            
+        
+
+        rectangle_0145f6b02249f638d5585aeec748450e.bindPopup(popup_0a6961778e0e2521c0a071e42c9c1387)
+        ;
+
+        
+    
+    
+            rectangle_0145f6b02249f638d5585aeec748450e.bindTooltip(
+                `<div>
+                     EVT009_0411
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9438b33bb6e1e92c762205d2fe153693 = L.circleMarker(
+                [26.682882499999998, 83.226996],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_9438b33bb6e1e92c762205d2fe153693.bindTooltip(
+                `<div>
+                     EVT009_0411
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c864cfedbd0823b4044f71e275f9f8db = L.rectangle(
+                [[27.020721, 83.252218], [27.065766, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_6b7499c8428b4bc5304b641da7b3acd7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_27d79ed3e891ef3a03054a3b5274244e = $(`<div id="html_27d79ed3e891ef3a03054a3b5274244e" style="width: 100.0%; height: 100.0%;"><b>EVT009_0412</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 15<br>xBD overlap: False<br>Bbox: [83.2522, 27.0207, 83.3027, 27.0658]</div>`)[0];
+                popup_6b7499c8428b4bc5304b641da7b3acd7.setContent(html_27d79ed3e891ef3a03054a3b5274244e);
+            
+        
+
+        rectangle_c864cfedbd0823b4044f71e275f9f8db.bindPopup(popup_6b7499c8428b4bc5304b641da7b3acd7)
+        ;
+
+        
+    
+    
+            rectangle_c864cfedbd0823b4044f71e275f9f8db.bindTooltip(
+                `<div>
+                     EVT009_0412
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df58eb5d076dea02fc52659377e6422d = L.circleMarker(
+                [27.043243500000003, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_df58eb5d076dea02fc52659377e6422d.bindTooltip(
+                `<div>
+                     EVT009_0412
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_2700399a7f929938320db4a63ebbc795 = L.rectangle(
+                [[26.3, 83.252218], [26.345045, 83.302661]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_af09134e936009d5e081d25fce0f4bc0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_88d1282d745615815c9075c46ff726b4 = $(`<div id="html_88d1282d745615815c9075c46ff726b4" style="width: 100.0%; height: 100.0%;"><b>EVT009_0413</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 26<br>xBD overlap: False<br>Bbox: [83.2522, 26.3000, 83.3027, 26.3450]</div>`)[0];
+                popup_af09134e936009d5e081d25fce0f4bc0.setContent(html_88d1282d745615815c9075c46ff726b4);
+            
+        
+
+        rectangle_2700399a7f929938320db4a63ebbc795.bindPopup(popup_af09134e936009d5e081d25fce0f4bc0)
+        ;
+
+        
+    
+    
+            rectangle_2700399a7f929938320db4a63ebbc795.bindTooltip(
+                `<div>
+                     EVT009_0413
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_832d2de924646e4c022e3c325890302f = L.circleMarker(
+                [26.322522499999998, 83.2774395],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_832d2de924646e4c022e3c325890302f.bindTooltip(
+                `<div>
+                     EVT009_0413
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_ee47ff6daf47322db01fd54b570fbd17 = L.rectangle(
+                [[27.110811, 83.554879], [27.155856, 83.605323]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_18b1ce2c98536917f365ce3473f02c1e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b8d78a1382f1687da0e0216b1accdde9 = $(`<div id="html_b8d78a1382f1687da0e0216b1accdde9" style="width: 100.0%; height: 100.0%;"><b>EVT009_0414</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 380<br>xBD overlap: False<br>Bbox: [83.5549, 27.1108, 83.6053, 27.1559]</div>`)[0];
+                popup_18b1ce2c98536917f365ce3473f02c1e.setContent(html_b8d78a1382f1687da0e0216b1accdde9);
+            
+        
+
+        rectangle_ee47ff6daf47322db01fd54b570fbd17.bindPopup(popup_18b1ce2c98536917f365ce3473f02c1e)
+        ;
+
+        
+    
+    
+            rectangle_ee47ff6daf47322db01fd54b570fbd17.bindTooltip(
+                `<div>
+                     EVT009_0414
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5748746cf1b6bd0e6be51d1e918050a = L.circleMarker(
+                [27.1333335, 83.580101],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_d5748746cf1b6bd0e6be51d1e918050a.bindTooltip(
+                `<div>
+                     EVT009_0414
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_88525c31db48e5251b13878104fe580f = L.rectangle(
+                [[26.840541, 83.403549], [26.885586, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_81ef249982f6b9a2587bd921c0d6721f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fa2cfc01a39d35f3429e340d9b9b3074 = $(`<div id="html_fa2cfc01a39d35f3429e340d9b9b3074" style="width: 100.0%; height: 100.0%;"><b>EVT009_0415</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 1703<br>xBD overlap: False<br>Bbox: [83.4035, 26.8405, 83.4540, 26.8856]</div>`)[0];
+                popup_81ef249982f6b9a2587bd921c0d6721f.setContent(html_fa2cfc01a39d35f3429e340d9b9b3074);
+            
+        
+
+        rectangle_88525c31db48e5251b13878104fe580f.bindPopup(popup_81ef249982f6b9a2587bd921c0d6721f)
+        ;
+
+        
+    
+    
+            rectangle_88525c31db48e5251b13878104fe580f.bindTooltip(
+                `<div>
+                     EVT009_0415
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa39f0111886fd611adba2bdf42e29b0 = L.circleMarker(
+                [26.863063500000003, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_fa39f0111886fd611adba2bdf42e29b0.bindTooltip(
+                `<div>
+                     EVT009_0415
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_61bbb0dfbb2932c601a5ea18639f855c = L.rectangle(
+                [[27.065766, 83.201774], [27.110811, 83.252218]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_891867aa5b9a8763f5fc8746d74d3b1d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1d2759efb0e16a4ef2dd031e0970dfa7 = $(`<div id="html_1d2759efb0e16a4ef2dd031e0970dfa7" style="width: 100.0%; height: 100.0%;"><b>EVT009_0416</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 474<br>xBD overlap: False<br>Bbox: [83.2018, 27.0658, 83.2522, 27.1108]</div>`)[0];
+                popup_891867aa5b9a8763f5fc8746d74d3b1d.setContent(html_1d2759efb0e16a4ef2dd031e0970dfa7);
+            
+        
+
+        rectangle_61bbb0dfbb2932c601a5ea18639f855c.bindPopup(popup_891867aa5b9a8763f5fc8746d74d3b1d)
+        ;
+
+        
+    
+    
+            rectangle_61bbb0dfbb2932c601a5ea18639f855c.bindTooltip(
+                `<div>
+                     EVT009_0416
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9bd93eed5f180b047b472940110c2136 = L.circleMarker(
+                [27.0882885, 83.226996],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_9bd93eed5f180b047b472940110c2136.bindTooltip(
+                `<div>
+                     EVT009_0416
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_221d7881d7954d9c48568c61514bd2d6 = L.rectangle(
+                [[26.615315, 83.201774], [26.66036, 83.252218]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_25365a21a0321197dc5c2b70c84b1f18 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_64394599ce4c400d0b4258fab65af321 = $(`<div id="html_64394599ce4c400d0b4258fab65af321" style="width: 100.0%; height: 100.0%;"><b>EVT009_0417</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 188<br>xBD overlap: False<br>Bbox: [83.2018, 26.6153, 83.2522, 26.6604]</div>`)[0];
+                popup_25365a21a0321197dc5c2b70c84b1f18.setContent(html_64394599ce4c400d0b4258fab65af321);
+            
+        
+
+        rectangle_221d7881d7954d9c48568c61514bd2d6.bindPopup(popup_25365a21a0321197dc5c2b70c84b1f18)
+        ;
+
+        
+    
+    
+            rectangle_221d7881d7954d9c48568c61514bd2d6.bindTooltip(
+                `<div>
+                     EVT009_0417
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd02fe719952364a77c301dd9e64aab7 = L.circleMarker(
+                [26.6378375, 83.226996],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_dd02fe719952364a77c301dd9e64aab7.bindTooltip(
+                `<div>
+                     EVT009_0417
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c400200b000e0f02cb1209022f6228be = L.rectangle(
+                [[26.840541, 83.100887], [26.885586, 83.151331]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_031697a4560794159378350394384d86 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_49dd077f24a80a50e13ba5f33071e218 = $(`<div id="html_49dd077f24a80a50e13ba5f33071e218" style="width: 100.0%; height: 100.0%;"><b>EVT009_0418</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 822<br>xBD overlap: False<br>Bbox: [83.1009, 26.8405, 83.1513, 26.8856]</div>`)[0];
+                popup_031697a4560794159378350394384d86.setContent(html_49dd077f24a80a50e13ba5f33071e218);
+            
+        
+
+        rectangle_c400200b000e0f02cb1209022f6228be.bindPopup(popup_031697a4560794159378350394384d86)
+        ;
+
+        
+    
+    
+            rectangle_c400200b000e0f02cb1209022f6228be.bindTooltip(
+                `<div>
+                     EVT009_0418
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2fb037af305e9063d87d3a88e627b3fa = L.circleMarker(
+                [26.863063500000003, 83.126109],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_2fb037af305e9063d87d3a88e627b3fa.bindTooltip(
+                `<div>
+                     EVT009_0418
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_2cfd423ed8ae5d52c23c7415a7605425 = L.rectangle(
+                [[27.110811, 83.504436], [27.155856, 83.554879]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_dc899e2d279d39e6b61cd0489f71ddbb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d37df151fdd9338412909ee4428761c5 = $(`<div id="html_d37df151fdd9338412909ee4428761c5" style="width: 100.0%; height: 100.0%;"><b>EVT009_0419</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 277<br>xBD overlap: False<br>Bbox: [83.5044, 27.1108, 83.5549, 27.1559]</div>`)[0];
+                popup_dc899e2d279d39e6b61cd0489f71ddbb.setContent(html_d37df151fdd9338412909ee4428761c5);
+            
+        
+
+        rectangle_2cfd423ed8ae5d52c23c7415a7605425.bindPopup(popup_dc899e2d279d39e6b61cd0489f71ddbb)
+        ;
+
+        
+    
+    
+            rectangle_2cfd423ed8ae5d52c23c7415a7605425.bindTooltip(
+                `<div>
+                     EVT009_0419
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4e339367be74de11bbd977e70d89d8eb = L.circleMarker(
+                [27.1333335, 83.5296575],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_4e339367be74de11bbd977e70d89d8eb.bindTooltip(
+                `<div>
+                     EVT009_0419
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_bc160277c9e9314ee4aa917d35863190 = L.rectangle(
+                [[26.66036, 83.0], [26.705405, 83.050444]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_77dfbfa24d6d0ca440bc0062e7ed6e22 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9fd9a6570bb9196268ffacf166ffa996 = $(`<div id="html_9fd9a6570bb9196268ffacf166ffa996" style="width: 100.0%; height: 100.0%;"><b>EVT009_0420</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 154<br>xBD overlap: False<br>Bbox: [83.0000, 26.6604, 83.0504, 26.7054]</div>`)[0];
+                popup_77dfbfa24d6d0ca440bc0062e7ed6e22.setContent(html_9fd9a6570bb9196268ffacf166ffa996);
+            
+        
+
+        rectangle_bc160277c9e9314ee4aa917d35863190.bindPopup(popup_77dfbfa24d6d0ca440bc0062e7ed6e22)
+        ;
+
+        
+    
+    
+            rectangle_bc160277c9e9314ee4aa917d35863190.bindTooltip(
+                `<div>
+                     EVT009_0420
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc83b296a54a19263e4c230fca2d258c = L.circleMarker(
+                [26.682882499999998, 83.025222],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_dc83b296a54a19263e4c230fca2d258c.bindTooltip(
+                `<div>
+                     EVT009_0420
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c812f93c71dc0d79a267fff46ddbc72b = L.rectangle(
+                [[26.705405, 83.756654], [26.75045, 83.8]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_3c5c7d7bd354b2835c67d044dd37c696 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_06add4bd986fd1cce44d0657cec47f2f = $(`<div id="html_06add4bd986fd1cce44d0657cec47f2f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0421</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 728<br>xBD overlap: False<br>Bbox: [83.7567, 26.7054, 83.8000, 26.7505]</div>`)[0];
+                popup_3c5c7d7bd354b2835c67d044dd37c696.setContent(html_06add4bd986fd1cce44d0657cec47f2f);
+            
+        
+
+        rectangle_c812f93c71dc0d79a267fff46ddbc72b.bindPopup(popup_3c5c7d7bd354b2835c67d044dd37c696)
+        ;
+
+        
+    
+    
+            rectangle_c812f93c71dc0d79a267fff46ddbc72b.bindTooltip(
+                `<div>
+                     EVT009_0421
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23be12da722fa298111ccc6641e84912 = L.circleMarker(
+                [26.7279275, 83.77832699999999],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_23be12da722fa298111ccc6641e84912.bindTooltip(
+                `<div>
+                     EVT009_0421
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_79f2e93cda64671592f1ce3f17990d74 = L.rectangle(
+                [[27.155856, 83.403549], [27.2, 83.453992]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_4ec5ecfe98639865bc10de4e53216b11 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_9e9964e30e3221e4319bb3e8c904e5af = $(`<div id="html_9e9964e30e3221e4319bb3e8c904e5af" style="width: 100.0%; height: 100.0%;"><b>EVT009_0422</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 64<br>xBD overlap: False<br>Bbox: [83.4035, 27.1559, 83.4540, 27.2000]</div>`)[0];
+                popup_4ec5ecfe98639865bc10de4e53216b11.setContent(html_9e9964e30e3221e4319bb3e8c904e5af);
+            
+        
+
+        rectangle_79f2e93cda64671592f1ce3f17990d74.bindPopup(popup_4ec5ecfe98639865bc10de4e53216b11)
+        ;
+
+        
+    
+    
+            rectangle_79f2e93cda64671592f1ce3f17990d74.bindTooltip(
+                `<div>
+                     EVT009_0422
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3d3b596389c7f7452711d156be8e7b5 = L.circleMarker(
+                [27.177928, 83.4287705],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_c3d3b596389c7f7452711d156be8e7b5.bindTooltip(
+                `<div>
+                     EVT009_0422
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c6bba90dd5867a1e7d3f5064476dab91 = L.rectangle(
+                [[26.525225, 83.0], [26.57027, 83.050444]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_06b29de70d32444b72382f56477e2cd1 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_abbc573fd2fbc84548666622999ac2c7 = $(`<div id="html_abbc573fd2fbc84548666622999ac2c7" style="width: 100.0%; height: 100.0%;"><b>EVT009_0423</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 120<br>xBD overlap: False<br>Bbox: [83.0000, 26.5252, 83.0504, 26.5703]</div>`)[0];
+                popup_06b29de70d32444b72382f56477e2cd1.setContent(html_abbc573fd2fbc84548666622999ac2c7);
+            
+        
+
+        rectangle_c6bba90dd5867a1e7d3f5064476dab91.bindPopup(popup_06b29de70d32444b72382f56477e2cd1)
+        ;
+
+        
+    
+    
+            rectangle_c6bba90dd5867a1e7d3f5064476dab91.bindTooltip(
+                `<div>
+                     EVT009_0423
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1db46e5bc0984d8b8bfbf9bbc21ea3b1 = L.circleMarker(
+                [26.5477475, 83.025222],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_1db46e5bc0984d8b8bfbf9bbc21ea3b1.bindTooltip(
+                `<div>
+                     EVT009_0423
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_955ccc52a45eae500646cff5174c5d6e = L.rectangle(
+                [[26.66036, 83.151331], [26.705405, 83.201774]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_b37a50aedaf616927f3d567f4218361b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7274bf3ea79571004592608a415c4d19 = $(`<div id="html_7274bf3ea79571004592608a415c4d19" style="width: 100.0%; height: 100.0%;"><b>EVT009_0424</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 1164<br>xBD overlap: False<br>Bbox: [83.1513, 26.6604, 83.2018, 26.7054]</div>`)[0];
+                popup_b37a50aedaf616927f3d567f4218361b.setContent(html_7274bf3ea79571004592608a415c4d19);
+            
+        
+
+        rectangle_955ccc52a45eae500646cff5174c5d6e.bindPopup(popup_b37a50aedaf616927f3d567f4218361b)
+        ;
+
+        
+    
+    
+            rectangle_955ccc52a45eae500646cff5174c5d6e.bindTooltip(
+                `<div>
+                     EVT009_0424
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24c68b7d1342ccfe1657f42ca99af8ee = L.circleMarker(
+                [26.682882499999998, 83.1765525],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_24c68b7d1342ccfe1657f42ca99af8ee.bindTooltip(
+                `<div>
+                     EVT009_0424
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_8671cc1b2dac2356185fb70f7a5bc476 = L.rectangle(
+                [[26.705405, 83.70621], [26.75045, 83.756654]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_d475a14210211978761ee6d73b1c30aa = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1af4997b3838d281b8cbbb18a87ecba0 = $(`<div id="html_1af4997b3838d281b8cbbb18a87ecba0" style="width: 100.0%; height: 100.0%;"><b>EVT009_0425</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 405<br>xBD overlap: False<br>Bbox: [83.7062, 26.7054, 83.7567, 26.7505]</div>`)[0];
+                popup_d475a14210211978761ee6d73b1c30aa.setContent(html_1af4997b3838d281b8cbbb18a87ecba0);
+            
+        
+
+        rectangle_8671cc1b2dac2356185fb70f7a5bc476.bindPopup(popup_d475a14210211978761ee6d73b1c30aa)
+        ;
+
+        
+    
+    
+            rectangle_8671cc1b2dac2356185fb70f7a5bc476.bindTooltip(
+                `<div>
+                     EVT009_0425
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7f844d551c9131332eab5c65e1f5425 = L.circleMarker(
+                [26.7279275, 83.731432],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_a7f844d551c9131332eab5c65e1f5425.bindTooltip(
+                `<div>
+                     EVT009_0425
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b186d588aa6b6565830856c5c08d4fe0 = L.rectangle(
+                [[27.110811, 83.756654], [27.155856, 83.8]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_354f32698972fc30e281ce148b301328 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5fbd9b896d6fb18175ffaee5f86e745b = $(`<div id="html_5fbd9b896d6fb18175ffaee5f86e745b" style="width: 100.0%; height: 100.0%;"><b>EVT009_0426</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 62<br>xBD overlap: False<br>Bbox: [83.7567, 27.1108, 83.8000, 27.1559]</div>`)[0];
+                popup_354f32698972fc30e281ce148b301328.setContent(html_5fbd9b896d6fb18175ffaee5f86e745b);
+            
+        
+
+        rectangle_b186d588aa6b6565830856c5c08d4fe0.bindPopup(popup_354f32698972fc30e281ce148b301328)
+        ;
+
+        
+    
+    
+            rectangle_b186d588aa6b6565830856c5c08d4fe0.bindTooltip(
+                `<div>
+                     EVT009_0426
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_822599d6baef4ed10e02d6e5b1e1ba1d = L.circleMarker(
+                [27.1333335, 83.77832699999999],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_822599d6baef4ed10e02d6e5b1e1ba1d.bindTooltip(
+                `<div>
+                     EVT009_0426
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_75619b9045a7c9aa22c76b81eac9c619 = L.rectangle(
+                [[27.155856, 83.453992], [27.2, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_0979b47532282ea3a320f1aab67b2532 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b42b1fa76fe858b815e2e73de02519bd = $(`<div id="html_b42b1fa76fe858b815e2e73de02519bd" style="width: 100.0%; height: 100.0%;"><b>EVT009_0427</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 16<br>xBD overlap: False<br>Bbox: [83.4540, 27.1559, 83.5044, 27.2000]</div>`)[0];
+                popup_0979b47532282ea3a320f1aab67b2532.setContent(html_b42b1fa76fe858b815e2e73de02519bd);
+            
+        
+
+        rectangle_75619b9045a7c9aa22c76b81eac9c619.bindPopup(popup_0979b47532282ea3a320f1aab67b2532)
+        ;
+
+        
+    
+    
+            rectangle_75619b9045a7c9aa22c76b81eac9c619.bindTooltip(
+                `<div>
+                     EVT009_0427
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aec38d2daec16e704d6bc6a0eff04c9e = L.circleMarker(
+                [27.177928, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_aec38d2daec16e704d6bc6a0eff04c9e.bindTooltip(
+                `<div>
+                     EVT009_0427
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_30c2b4a7816e37ea93dfe6f3ad7f2732 = L.rectangle(
+                [[26.66036, 83.453992], [26.705405, 83.504436]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_abab1a735317ffd4c0854cb992ebe9f8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f028fd1e771072d5c10235905c9b4fce = $(`<div id="html_f028fd1e771072d5c10235905c9b4fce" style="width: 100.0%; height: 100.0%;"><b>EVT009_0428</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 1884<br>xBD overlap: False<br>Bbox: [83.4540, 26.6604, 83.5044, 26.7054]</div>`)[0];
+                popup_abab1a735317ffd4c0854cb992ebe9f8.setContent(html_f028fd1e771072d5c10235905c9b4fce);
+            
+        
+
+        rectangle_30c2b4a7816e37ea93dfe6f3ad7f2732.bindPopup(popup_abab1a735317ffd4c0854cb992ebe9f8)
+        ;
+
+        
+    
+    
+            rectangle_30c2b4a7816e37ea93dfe6f3ad7f2732.bindTooltip(
+                `<div>
+                     EVT009_0428
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_138af716407ee17e344cf41c7376212a = L.circleMarker(
+                [26.682882499999998, 83.479214],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_138af716407ee17e344cf41c7376212a.bindTooltip(
+                `<div>
+                     EVT009_0428
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_0e58c5c02cf200e48339025d893cf4e7 = L.rectangle(
+                [[26.885586, 83.201774], [26.930631, 83.252218]],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+        var popup_624b9d715166511a4c529dcc5415fd19 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b433ae21864255967556ff4fce60479f = $(`<div id="html_b433ae21864255967556ff4fce60479f" style="width: 100.0%; height: 100.0%;"><b>EVT009_0429</b><br>Event: EVT009 (flood)<br>Dates: 2017-06-01 – 2017-10-31<br>Sentinel scenes: 3<br>OSM roads: 818<br>xBD overlap: False<br>Bbox: [83.2018, 26.8856, 83.2522, 26.9306]</div>`)[0];
+                popup_624b9d715166511a4c529dcc5415fd19.setContent(html_b433ae21864255967556ff4fce60479f);
+            
+        
+
+        rectangle_0e58c5c02cf200e48339025d893cf4e7.bindPopup(popup_624b9d715166511a4c529dcc5415fd19)
+        ;
+
+        
+    
+    
+            rectangle_0e58c5c02cf200e48339025d893cf4e7.bindTooltip(
+                `<div>
+                     EVT009_0429
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74242d72145560306f6dc72a0fcace8a = L.circleMarker(
+                [26.9081085, 83.226996],
+                {"bubblingMouseEvents": true, "color": "#2222e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2222e5", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_d722edf4493c616786b832480cdcb317);
+        
+    
+            circle_marker_74242d72145560306f6dc72a0fcace8a.bindTooltip(
+                `<div>
+                     EVT009_0429
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_d722edf4493c616786b832480cdcb317.addTo(map_b3d462b7f3272ac2f05595a62aae352b);
+        
+    
+            var layer_control_e6ed16cb73fd993d1b040e8ff9141237_layers = {
+                base_layers : {
+                    "Street (OSM)" : tile_layer_3289df4468a9c959afc4990765a7be23,
+                    "Satellite (ESRI)" : tile_layer_b2286d438050fbc2449881b4d8ec01cc,
+                },
+                overlays :  {
+                    "EVT009 (flood)" : feature_group_d722edf4493c616786b832480cdcb317,
+                },
+            };
+            let layer_control_e6ed16cb73fd993d1b040e8ff9141237 = L.control.layers(
+                layer_control_e6ed16cb73fd993d1b040e8ff9141237_layers.base_layers,
+                layer_control_e6ed16cb73fd993d1b040e8ff9141237_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_b3d462b7f3272ac2f05595a62aae352b);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_b3d462b7f3272ac2f05595a62aae352b);
+        
+    
+            var mouse_position_8dd8c5f91ef07cec13a32a3baf99be5d = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_8dd8c5f91ef07cec13a32a3baf99be5d.options["latFormatter"] =
+                undefined;
+            mouse_position_8dd8c5f91ef07cec13a32a3baf99be5d.options["lngFormatter"] =
+                undefined;
+            map_b3d462b7f3272ac2f05595a62aae352b.addControl(mouse_position_8dd8c5f91ef07cec13a32a3baf99be5d);
+        
+</script>
+</html>

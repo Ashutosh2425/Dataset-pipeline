@@ -1,0 +1,170 @@
+================================================================================
+  TDRD Dataset Pipeline — Change Log
+  Maintainer : Ashutosh
+  Started    : 2026-04-13
+================================================================================
+
+FORMAT
+------
+Each entry follows this structure:
+
+  [DATE]  STEP X — Short title
+  File(s) changed : ...
+  Problem         : what was wrong and why
+  Fix             : what was changed
+  Data impact     : how many records / files were affected
+  Verified by     : command / output used to confirm the fix
+
+================================================================================
+
+
+--------------------------------------------------------------------------------
+2026-04-13  STEP 1 — xBD Overlap Flag Correction
+--------------------------------------------------------------------------------
+
+Files changed:
+  - tdrd/config.py
+  - tdrd/pipelines/step1_select_aois.py
+  - data/aoi_list.json  (data fix)
+
+Problem:
+  The build guide (Table 1.1) specifies which events have full xBD coverage
+  (marked YES) and which do not (marked Partial). The pipeline was setting
+  'has_xbd_overlap': False as a hardcoded placeholder for every AOI in the
+  run() method, so the field was never resolved correctly.
+  Result: only 24 out of 600 AOIs had has_xbd_overlap = True — far below
+  the expected 307.
+
+  Expected state per build guide:
+    YES  events → all AOIs in that event: has_xbd_overlap = True
+      EVT001 Hurricane Harvey        →  68 AOIs
+      EVT003 Camp Fire               →  41 AOIs
+      EVT005 Midwest Floods          →  55 AOIs
+      EVT006 Beirut Explosion        →  28 AOIs
+      EVT008 Natchez Tornadoes       →  22 AOIs
+      EVT010 Turkey Earthquake       →  58 AOIs
+      EVT011 Hawaii Wildfires        →  35 AOIs
+      TOTAL YES                      → 307 AOIs
+
+    Partial events → all AOIs: has_xbd_overlap = False
+    (step3a code confirms these use spectral/flood fallback, not xBD)
+      EVT002 Kerala Floods           →  52 AOIs
+      EVT004 Cyclone Fani            →  44 AOIs
+      EVT007 Cyclone Amphan          →  48 AOIs
+      EVT009 Pakistan Floods         →  72 AOIs
+      EVT012 Libya Derna Floods      →  77 AOIs
+      TOTAL Partial                  → 293 AOIs
+
+Fix 1 — tdrd/config.py
+  Added 'xbd_overlap' boolean field to every event dict in the EVENTS list.
+  This is now the single source of truth for xBD coverage.
+  Example:
+    {'id': 'EVT001', ..., 'xbd_overlap': True }   # YES
+    {'id': 'EVT002', ..., 'xbd_overlap': False}   # Partial
+
+Fix 2 — tdrd/pipelines/step1_select_aois.py  →  run()
+  Changed:
+    'has_xbd_overlap': False   # old hardcoded placeholder
+  To:
+    'has_xbd_overlap': event['xbd_overlap']   # reads from config
+
+Fix 3 — tdrd/pipelines/step1_select_aois.py  →  verify_existing()
+  Added xBD overlap validation:
+  - Counts AOIs where has_xbd_overlap does not match the event config.
+  - Reports True/False breakdown in the verification output.
+  - verify_existing() now returns False if any xbd_wrong count > 0.
+
+Fix 4 — tdrd/pipelines/step1_select_aois.py  →  module docstring
+  Corrected wrong filename in docstring:
+    Old: "tdrd/pipelines/select_aois.py"
+    New: "tdrd/pipelines/step1_select_aois.py"
+
+Data fix — data/aoi_list.json
+  Ran a one-time correction script to back-fill all 600 existing AOI records:
+  - 283 AOIs updated (those that had the wrong flag value)
+  - Final state:
+      has_xbd_overlap = True  : 307 AOIs  (all YES-event AOIs)
+      has_xbd_overlap = False : 293 AOIs  (all Partial-event AOIs)
+
+Verified by:
+  python -c "
+  import json
+  aois = json.load(open('data/aoi_list.json'))
+  print('True :', sum(1 for a in aois if a['has_xbd_overlap']))
+  print('False:', sum(1 for a in aois if not a['has_xbd_overlap']))
+  "
+  Output:
+    True : 307
+    False: 293
+
+================================================================================
+  (append new entries below this line as further fixes are made)
+================================================================================
+
+
+--------------------------------------------------------------------------------
+2026-04-13  STEP 2A — Mixed Sentinel-2 Tile IDs Across Epochs
+--------------------------------------------------------------------------------
+
+Files changed:
+  - tdrd/pipelines/step2a_query_epochs.py
+
+Problem:
+  The STAC API returns scenes from ALL Sentinel-2 tiles that spatially overlap
+  a query bbox. For 5km x 5km AOIs near tile boundaries, multiple adjacent tiles
+  can match (e.g. 14RQT, 14RQU, 15RTN for one AOI).
+
+  The select_epochs() function had no tile consistency check — it picked the
+  best scenes by date/cloud-cover regardless of which tile they came from.
+  Result: 220 out of 600 AOIs (37%) had epochs sourced from 2-3 different tiles.
+
+  Impact: When step2a streams a windowed crop from a tile that does not fully
+  cover the AOI bbox, the crop returns edge pixels or all-zero (black) values
+  for that epoch. This is the "black images / file id wrong" issue flagged by
+  the senior.
+
+  Verified scale of problem:
+    Consistent single tile : 380 / 600 AOIs
+    Mixed tile IDs         : 220 / 600 AOIs  (BROKEN)
+
+Fix — tdrd/pipelines/step2a_query_epochs.py
+  Added two helper functions before select_epochs():
+
+    _dominant_tile(items)     — finds the tile ID that appears most frequently
+                                across all STAC result items for an AOI.
+    _filter_to_tile(items, t) — keeps only items whose scene_id belongs to
+                                that tile.
+
+  Modified select_epochs() to apply tile filtering before any epoch selection:
+    best_tile = _dominant_tile(s2_items)
+    s2_items  = _filter_to_tile(s2_items, best_tile)
+
+  The dominant tile is the one with the most available scenes, meaning it has
+  the best temporal coverage of the AOI. All epochs now come from that single
+  tile, guaranteeing consistent spatial footprint across the temporal stack.
+
+What to do next:
+  The existing aoi_epochs.json and stacks for the 220 affected AOIs contain
+  potentially incorrect data. The correct remediation order is:
+
+    Step 1 — Regenerate epoch index (re-queries STAC with the fixed logic):
+      python main.py run-step2a-query
+
+    Step 2 — Re-download windowed COG crops for affected AOIs:
+      python main.py run-step2a-download
+      (step2a skips AOIs that already have download_complete.flag — delete
+       flags for the 220 affected AOIs first, or use --force if added)
+
+    Step 3 — Rebuild stacks for affected AOIs:
+      python main.py run-step2b
+      (step2b skips AOIs with existing stack.tif — delete those 220 stacks
+       first so they get rebuilt from the corrected downloads)
+
+Data impact:
+  aoi_epochs.json — needs to be regenerated (run-step2a-query)
+  220 stack TIFs  — need to be rebuilt after re-download
+  380 stack TIFs  — already correct, will be skipped (no change)
+
+================================================================================
+  (append new entries below this line as further fixes are made)
+================================================================================

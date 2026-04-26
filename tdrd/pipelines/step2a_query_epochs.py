@@ -81,12 +81,34 @@ def _build_epoch_record(item: dict, sensor: str, label: str) -> dict:
     }
 
 
+def _dominant_tile(items: list) -> str:
+    """Returns the tile ID that appears most frequently across a list of STAC items."""
+    counts: dict = {}
+    for item in items:
+        tile = item.get('id', '').split('_')[1] if item.get('id', '') else ''
+        if tile:
+            counts[tile] = counts.get(tile, 0) + 1
+    return max(counts, key=counts.get) if counts else ''
+
+
+def _filter_to_tile(items: list, tile: str) -> list:
+    """Keeps only items whose scene_id belongs to the given tile."""
+    return [i for i in items if i.get('id', '').split('_')[1] == tile]
+
+
 def select_epochs(s2_items: list, s1_items: list,
                   event_start: str, event_end: str,
                   max_epochs: int = 5) -> list:
-    """Select 3-5 temporally spread epochs. Returns [] if coverage < 3 epochs."""
+    """Select 3-5 temporally spread epochs from a single consistent tile.
+    Returns [] if coverage < 3 epochs."""
     start_dt = datetime.strptime(event_start, '%Y-%m-%d')
     end_dt   = datetime.strptime(event_end,   '%Y-%m-%d')
+
+    # Enforce tile consistency: all S2 epochs must come from the same tile.
+    # Pick the tile with the most scenes (best coverage of this AOI).
+    if s2_items:
+        best_tile = _dominant_tile(s2_items)
+        s2_items  = _filter_to_tile(s2_items, best_tile)
 
     # Sort all scenes by date
     s2_items = sorted(s2_items, key=_scene_datetime)

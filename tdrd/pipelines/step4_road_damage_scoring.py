@@ -30,9 +30,18 @@ warnings.filterwarnings('ignore')
 ox.settings.requests_timeout = 180
 ox.settings.overpass_rate_limit = False   # we handle pacing ourselves
 
-DAMAGE_CLASS_WEIGHTS = {0: 0.0, 1: 0.3, 2: 0.7, 3: 1.0}
-FLOOD_SCORE          = 0.85
-BUFFER_METERS        = 15
+# Per-event-type damage weights: fire rarely blocks roads; flood/structural cause most blockage.
+# Class 1 → 0.5 so it lands in the "degraded" zone (0.40–0.60).
+EVENT_DAMAGE_WEIGHTS = {
+    'fire':       {0: 0.0, 1: 0.2, 2: 0.4, 3: 0.55},   # smoke/ash, rarely impassable
+    'wind':       {0: 0.0, 1: 0.3, 2: 0.55, 3: 0.75},   # debris, moderate blockage
+    'flood':      {0: 0.0, 1: 0.5, 2: 0.75, 3: 1.0},
+    'structural': {0: 0.0, 1: 0.5, 2: 0.75, 3: 1.0},
+    'wind+flood': {0: 0.0, 1: 0.5, 2: 0.75, 3: 1.0},
+}
+DEFAULT_DAMAGE_WEIGHTS = {0: 0.0, 1: 0.5, 2: 0.75, 3: 1.0}
+FLOOD_SCORE            = 0.85
+BUFFER_METERS          = 15
 
 # Only 2 simultaneous Overpass connections allowed; serialise with semaphore
 _API_SEM = threading.Semaphore(2)
@@ -100,25 +109,37 @@ def _read_geojson(path, target_crs):
     return gdf.to_crs(target_crs)
 
 
-def _score_vectorised(roads_utm, dmg_gdf, flood_geom):
+def _score_vectorised(roads_utm, dmg_gdf, flood_geom, event_type=None):
     """
     Vectorised road scoring using spatial join.
     Returns (scores list, statuses list) aligned to roads_utm index.
+
+    Damage polygons from spectral NDVI change (source='spectral') are pixel-level
+    raster blobs that cover vast areas and would score almost every road as impassable.
+    Only xBD-sourced building-footprint polygons (source='xbd') are used for the
+    building-damage component; spectral-source polygons are skipped here because the
+    flood-extent component (flood_geom) handles road impact for flood/fire events.
     """
+    weights = EVENT_DAMAGE_WEIGHTS.get(event_type, DEFAULT_DAMAGE_WEIGHTS)
+
     roads_buf = roads_utm.copy()
     roads_buf['geometry'] = roads_utm['_buf']
     roads_buf = roads_buf.reset_index(drop=True)
 
-    # Damage score: max damage_class weight among intersecting damage polygons
+    # Damage score: only use xBD building footprints, not spectral pixel blobs
     damage_scores = {}
     if len(dmg_gdf) > 0 and 'damage_class' in dmg_gdf.columns:
-        dmg_clean = dmg_gdf[dmg_gdf.geometry.notna() & ~dmg_gdf.geometry.is_empty].copy()
+        if 'source' in dmg_gdf.columns:
+            dmg_clean = dmg_gdf[dmg_gdf['source'] == 'xbd'].copy()
+        else:
+            dmg_clean = dmg_gdf.copy()
+        dmg_clean = dmg_clean[dmg_clean.geometry.notna() & ~dmg_clean.geometry.is_empty]
         if len(dmg_clean) > 0:
             joined = gpd.sjoin(roads_buf[['geometry']].reset_index(),
                                dmg_clean[['geometry', 'damage_class']],
                                how='left', predicate='intersects')
             joined['weight'] = joined['damage_class'].map(
-                lambda dc: DAMAGE_CLASS_WEIGHTS.get(int(dc), 0.0) if dc == dc else 0.0
+                lambda dc: weights.get(int(dc), 0.0) if dc == dc else 0.0
             )
             damage_scores = joined.groupby('index')['weight'].max().to_dict()
 
@@ -146,11 +167,9 @@ def _score_vectorised(roads_utm, dmg_gdf, flood_geom):
     return scores, statuses
 
 
-def score_aoi(aoi_id, bbox, epochs, base_dir, cache_dir):
+def score_aoi(aoi_id, bbox, epochs, base_dir, cache_dir, event_type=None):
     base = Path(base_dir)
     out_path = base / 'data' / 'annotations' / aoi_id / 'road_damage_scores.gpkg'
-    if out_path.exists():
-        return str(out_path)
 
     G = _fetch_osm(bbox, cache_dir)
     if G is None:
@@ -183,7 +202,7 @@ def score_aoi(aoi_id, bbox, epochs, base_dir, cache_dir):
             if len(fld_gdf) > 0:
                 flood_geom = unary_union(fld_gdf.geometry)
 
-        scores, statuses = _score_vectorised(roads_utm, dmg_gdf, flood_geom)
+        scores, statuses = _score_vectorised(roads_utm, dmg_gdf, flood_geom, event_type)
         roads[f'score_T{ep}']  = scores
         roads[f'status_T{ep}'] = statuses
 
@@ -206,11 +225,14 @@ class Step4RoadDamagePipeline:
             return []
         return list(range(2, json.load(open(meta_path))['n_epochs'] + 1))
 
-    def run(self):
-        pending = [
-            a for a in self.aoi_list
-            if not (Path(self.base_dir) / 'data' / 'annotations' / a['aoi_id'] / 'road_damage_scores.gpkg').exists()
-        ]
+    def run(self, force=False):
+        if force:
+            pending = self.aoi_list
+        else:
+            pending = [
+                a for a in self.aoi_list
+                if not (Path(self.base_dir) / 'data' / 'annotations' / a['aoi_id'] / 'road_damage_scores.gpkg').exists()
+            ]
         done_count = len(self.aoi_list) - len(pending)
         print(f'Step 4: {len(pending)} AOIs to score ({done_count} already done)')
 
@@ -220,7 +242,7 @@ class Step4RoadDamagePipeline:
                 ex.submit(
                     score_aoi,
                     a['aoi_id'], a['bbox'], self._epochs(a['aoi_id']),
-                    self.base_dir, self.cache_dir
+                    self.base_dir, self.cache_dir, a.get('event_type')
                 ): a['aoi_id']
                 for a in pending
             }
