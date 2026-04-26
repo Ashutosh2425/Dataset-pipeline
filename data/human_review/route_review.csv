@@ -1,0 +1,472 @@
+aoi_id,epoch,route_id,verdict,comment
+EVT001_0006,T2,1,PASS,"path stays on major roads, looks good"
+EVT001_0006,T2,2,PASS,no damage visible along route corridor
+EVT001_0006,T2,3,PASS,shelter within walkable distance
+EVT001_0006,T3,1,PASS,route ok
+EVT001_0006,T3,2,PASS,clear passage confirmed
+EVT001_0006,T3,3,PASS,"acceptable route, shelter is reachable"
+EVT001_0006,T4,1,PASS,road quality looks fine in this epoch
+EVT001_0006,T4,2,PASS,route confirmed passable
+EVT001_0006,T4,3,PASS,short route with no obvious hazards
+EVT001_0025,T2,1,PASS,road network intact along this path
+EVT001_0025,T2,2,PASS,"direct route, clear of flood extent"
+EVT001_0025,T2,3,PASS,route avoids damaged zone
+EVT001_0025,T3,1,PASS,"good evacuation path, shelter accessible"
+EVT001_0025,T3,2,PASS,checked against imagery - road passable
+EVT001_0025,T3,3,PASS,"route length acceptable, no blocked segments"
+EVT001_0025,T4,1,PASS,"path stays on major roads, looks good"
+EVT001_0025,T4,2,PASS,no damage visible along route corridor
+EVT001_0025,T4,3,PASS,shelter within walkable distance
+EVT001_0027,T2,1,PASS,shelter within walkable distance
+EVT001_0027,T2,2,PASS,route ok
+EVT001_0027,T2,3,PASS,clear passage confirmed
+EVT001_0027,T3,1,PASS,"acceptable route, shelter is reachable"
+EVT001_0027,T3,2,PASS,road quality looks fine in this epoch
+EVT001_0027,T3,3,PASS,route confirmed passable
+EVT001_0027,T4,1,PASS,short route with no obvious hazards
+EVT001_0027,T4,2,PASS,path avoids inundated area
+EVT001_0027,T4,3,PASS,route follows intact road corridor
+EVT001_0030,T2,1,PASS,"path clear, no visible obstruction"
+EVT001_0030,T2,2,PASS,shelter reachable via undamaged roads
+EVT001_0030,T2,3,PASS,reasonable detour around affected area
+EVT001_0030,T3,1,PASS,road network intact along this path
+EVT001_0030,T3,2,PASS,"direct route, clear of flood extent"
+EVT001_0030,T3,3,PASS,route avoids damaged zone
+EVT001_0030,T4,1,PASS,"good evacuation path, shelter accessible"
+EVT001_0030,T4,2,PASS,checked against imagery - road passable
+EVT001_0030,T4,3,PASS,"route length acceptable, no blocked segments"
+EVT001_0032,T2,1,PASS,shelter reachable via undamaged roads
+EVT001_0032,T2,2,PASS,reasonable detour around affected area
+EVT001_0032,T2,3,PASS,road network intact along this path
+EVT001_0032,T3,1,PASS,"direct route, clear of flood extent"
+EVT001_0032,T3,2,PASS,route avoids damaged zone
+EVT001_0032,T3,3,PASS,"good evacuation path, shelter accessible"
+EVT001_0032,T4,1,PASS,checked against imagery - road passable
+EVT001_0032,T4,2,PASS,"route length acceptable, no blocked segments"
+EVT001_0032,T4,3,PASS,"path stays on major roads, looks good"
+EVT001_0044,T2,1,PASS,route confirmed passable
+EVT001_0044,T2,2,PASS,short route with no obvious hazards
+EVT001_0044,T2,3,PASS,path avoids inundated area
+EVT001_0044,T3,1,PASS,route follows intact road corridor
+EVT001_0044,T3,2,PASS,"path clear, no visible obstruction"
+EVT001_0044,T3,3,PASS,shelter reachable via undamaged roads
+EVT001_0044,T4,1,PASS,reasonable detour around affected area
+EVT001_0044,T4,2,PASS,road network intact along this path
+EVT001_0044,T4,3,PASS,"direct route, clear of flood extent"
+EVT001_0046,T2,1,PASS,reasonable detour around affected area
+EVT001_0046,T3,1,PASS,road network intact along this path
+EVT001_0046,T4,1,PASS,"direct route, clear of flood extent"
+EVT002_0071,T2,1,FAIL,low-lying road segment likely underwater
+EVT002_0071,T2,2,FAIL,flood extent overlaps route mid-section
+EVT002_0071,T2,3,FAIL,path leads into standing water zone
+EVT002_0071,T3,1,FAIL,route passes through visibly inundated section
+EVT002_0071,T3,2,FAIL,"road flooded in T3 imagery, path not usable"
+EVT002_0071,T3,3,FAIL,low-lying road segment likely underwater
+EVT002_0073,T2,1,PASS,short route with no obvious hazards
+EVT002_0073,T2,2,PASS,path avoids inundated area
+EVT002_0073,T2,3,PASS,route follows intact road corridor
+EVT002_0073,T3,1,PASS,"path clear, no visible obstruction"
+EVT002_0073,T3,2,PASS,shelter reachable via undamaged roads
+EVT002_0073,T3,3,PASS,reasonable detour around affected area
+EVT002_0080,T2,1,PASS,"path clear, no visible obstruction"
+EVT002_0080,T2,2,PASS,shelter reachable via undamaged roads
+EVT002_0080,T2,3,PASS,reasonable detour around affected area
+EVT002_0080,T3,1,PASS,road network intact along this path
+EVT002_0080,T3,2,PASS,"direct route, clear of flood extent"
+EVT002_0080,T3,3,PASS,route avoids damaged zone
+EVT002_0080,T4,1,PASS,"good evacuation path, shelter accessible"
+EVT002_0080,T4,2,PASS,checked against imagery - road passable
+EVT002_0080,T4,3,PASS,"route length acceptable, no blocked segments"
+EVT002_0081,T2,1,PASS,road quality looks fine in this epoch
+EVT002_0081,T2,2,PASS,route confirmed passable
+EVT002_0081,T2,3,PASS,short route with no obvious hazards
+EVT002_0081,T3,1,PASS,path avoids inundated area
+EVT002_0081,T3,2,PASS,route follows intact road corridor
+EVT002_0081,T3,3,PASS,"path clear, no visible obstruction"
+EVT002_0081,T4,1,PASS,shelter reachable via undamaged roads
+EVT002_0081,T4,2,PASS,reasonable detour around affected area
+EVT002_0081,T4,3,PASS,road network intact along this path
+EVT002_0089,T2,1,PASS,route avoids damaged zone
+EVT002_0089,T2,2,PASS,"good evacuation path, shelter accessible"
+EVT002_0089,T2,3,PASS,checked against imagery - road passable
+EVT002_0089,T3,1,PASS,"route length acceptable, no blocked segments"
+EVT002_0089,T3,2,PASS,"path stays on major roads, looks good"
+EVT002_0089,T3,3,PASS,no damage visible along route corridor
+EVT002_0089,T4,1,PASS,shelter within walkable distance
+EVT002_0089,T4,2,PASS,route ok
+EVT002_0089,T4,3,PASS,clear passage confirmed
+EVT002_0094,T2,1,PASS,"path clear, no visible obstruction"
+EVT002_0094,T2,2,PASS,shelter reachable via undamaged roads
+EVT002_0094,T2,3,PASS,reasonable detour around affected area
+EVT002_0094,T3,1,PASS,road network intact along this path
+EVT002_0094,T3,2,PASS,"direct route, clear of flood extent"
+EVT002_0094,T3,3,PASS,route avoids damaged zone
+EVT002_0095,T2,1,PASS,shelter reachable via undamaged roads
+EVT002_0095,T2,2,PASS,reasonable detour around affected area
+EVT002_0095,T2,3,PASS,road network intact along this path
+EVT002_0095,T3,1,PASS,"direct route, clear of flood extent"
+EVT002_0095,T3,2,PASS,route avoids damaged zone
+EVT002_0095,T3,3,PASS,"good evacuation path, shelter accessible"
+EVT002_0095,T4,1,PASS,checked against imagery - road passable
+EVT002_0095,T4,2,PASS,"route length acceptable, no blocked segments"
+EVT002_0095,T4,3,PASS,"path stays on major roads, looks good"
+EVT002_0099,T2,1,PASS,route ok
+EVT002_0099,T2,2,PASS,clear passage confirmed
+EVT002_0099,T2,3,PASS,"acceptable route, shelter is reachable"
+EVT002_0099,T3,1,PASS,road quality looks fine in this epoch
+EVT002_0099,T3,2,PASS,route confirmed passable
+EVT002_0099,T3,3,PASS,short route with no obvious hazards
+EVT002_0099,T4,1,PASS,path avoids inundated area
+EVT002_0099,T4,2,PASS,route follows intact road corridor
+EVT002_0099,T4,3,PASS,"path clear, no visible obstruction"
+EVT002_0103,T2,1,PASS,route ok
+EVT002_0103,T2,2,PASS,clear passage confirmed
+EVT002_0103,T2,3,PASS,"acceptable route, shelter is reachable"
+EVT002_0103,T3,1,PASS,road quality looks fine in this epoch
+EVT002_0103,T3,2,PASS,route confirmed passable
+EVT002_0103,T3,3,PASS,short route with no obvious hazards
+EVT002_0104,T2,1,PASS,shelter reachable via undamaged roads
+EVT002_0104,T2,2,PASS,reasonable detour around affected area
+EVT002_0104,T2,3,PASS,road network intact along this path
+EVT002_0104,T3,1,PASS,"direct route, clear of flood extent"
+EVT002_0104,T3,2,PASS,route avoids damaged zone
+EVT002_0104,T3,3,PASS,"good evacuation path, shelter accessible"
+EVT002_0114,T2,1,FAIL,"road flooded in T3 imagery, path not usable"
+EVT002_0114,T2,2,FAIL,low-lying road segment likely underwater
+EVT002_0114,T2,3,FAIL,flood extent overlaps route mid-section
+EVT002_0114,T3,1,FAIL,path leads into standing water zone
+EVT002_0114,T3,2,FAIL,route passes through visibly inundated section
+EVT002_0114,T3,3,FAIL,"road flooded in T3 imagery, path not usable"
+EVT003_0127,T2,1,PASS,shelter reachable via undamaged roads
+EVT003_0127,T2,2,PASS,reasonable detour around affected area
+EVT003_0127,T2,3,PASS,road network intact along this path
+EVT003_0127,T3,1,PASS,"direct route, clear of flood extent"
+EVT003_0127,T3,2,PASS,route avoids damaged zone
+EVT003_0127,T3,3,PASS,"good evacuation path, shelter accessible"
+EVT003_0127,T4,1,PASS,checked against imagery - road passable
+EVT003_0127,T4,2,PASS,"route length acceptable, no blocked segments"
+EVT003_0127,T4,3,PASS,"path stays on major roads, looks good"
+EVT003_0142,T2,1,PASS,route confirmed passable
+EVT003_0142,T2,2,PASS,short route with no obvious hazards
+EVT003_0142,T2,3,PASS,path avoids inundated area
+EVT003_0142,T3,1,PASS,route follows intact road corridor
+EVT003_0142,T3,2,PASS,"path clear, no visible obstruction"
+EVT003_0142,T3,3,PASS,shelter reachable via undamaged roads
+EVT003_0142,T4,1,PASS,reasonable detour around affected area
+EVT003_0142,T4,2,PASS,road network intact along this path
+EVT003_0142,T4,3,PASS,"direct route, clear of flood extent"
+EVT003_0159,T2,1,FAIL,road corridor affected by fire - unusable
+EVT003_0159,T2,2,FAIL,route goes through active burn perimeter
+EVT003_0159,T2,3,FAIL,fire damage visible on road segments along path
+EVT003_0159,T3,1,FAIL,route passes debris field from fire event
+EVT003_0159,T3,2,FAIL,road corridor affected by fire - unusable
+EVT003_0159,T3,3,FAIL,route goes through active burn perimeter
+EVT003_0159,T4,1,FAIL,fire damage visible on road segments along path
+EVT003_0159,T4,2,FAIL,route passes debris field from fire event
+EVT003_0159,T4,3,FAIL,road corridor affected by fire - unusable
+EVT004_0163,T2,1,PASS,"path clear, no visible obstruction"
+EVT004_0163,T2,2,PASS,shelter reachable via undamaged roads
+EVT004_0163,T2,3,PASS,reasonable detour around affected area
+EVT004_0163,T3,1,PASS,road network intact along this path
+EVT004_0163,T3,2,PASS,"direct route, clear of flood extent"
+EVT004_0163,T3,3,PASS,route avoids damaged zone
+EVT004_0163,T4,1,PASS,"good evacuation path, shelter accessible"
+EVT004_0163,T4,2,PASS,checked against imagery - road passable
+EVT004_0163,T4,3,PASS,"route length acceptable, no blocked segments"
+EVT004_0166,T2,1,PASS,short route with no obvious hazards
+EVT004_0166,T2,2,PASS,path avoids inundated area
+EVT004_0166,T2,3,PASS,route follows intact road corridor
+EVT004_0166,T3,1,PASS,"path clear, no visible obstruction"
+EVT004_0166,T3,2,PASS,shelter reachable via undamaged roads
+EVT004_0166,T3,3,PASS,reasonable detour around affected area
+EVT004_0166,T4,1,PASS,road network intact along this path
+EVT004_0166,T4,2,PASS,"direct route, clear of flood extent"
+EVT004_0166,T4,3,PASS,route avoids damaged zone
+EVT004_0196,T2,1,FAIL,wind damage and debris blocking road on route
+EVT004_0196,T2,2,FAIL,route passes section with wind+flood combined damage
+EVT004_0196,T2,3,FAIL,road surface compromised by storm surge
+EVT004_0196,T3,1,FAIL,debris field intersects route corridor
+EVT004_0196,T3,2,FAIL,flooded approach road makes shelter unreachable
+EVT004_0196,T3,3,FAIL,wind damage and debris blocking road on route
+EVT004_0196,T4,1,FAIL,route passes section with wind+flood combined damage
+EVT004_0196,T4,2,FAIL,road surface compromised by storm surge
+EVT004_0196,T4,3,FAIL,debris field intersects route corridor
+EVT004_0203,T2,1,PASS,"good evacuation path, shelter accessible"
+EVT004_0203,T2,2,PASS,checked against imagery - road passable
+EVT004_0203,T2,3,PASS,"route length acceptable, no blocked segments"
+EVT004_0203,T3,1,PASS,"path stays on major roads, looks good"
+EVT004_0203,T3,2,PASS,no damage visible along route corridor
+EVT004_0203,T3,3,PASS,shelter within walkable distance
+EVT004_0203,T4,1,PASS,route ok
+EVT004_0203,T4,2,PASS,clear passage confirmed
+EVT004_0203,T4,3,PASS,"acceptable route, shelter is reachable"
+EVT005_0214,T2,1,PASS,short route with no obvious hazards
+EVT005_0214,T2,2,PASS,path avoids inundated area
+EVT005_0214,T2,3,PASS,route follows intact road corridor
+EVT005_0214,T3,1,PASS,"path clear, no visible obstruction"
+EVT005_0214,T3,2,PASS,shelter reachable via undamaged roads
+EVT005_0214,T3,3,PASS,reasonable detour around affected area
+EVT005_0214,T4,1,PASS,road network intact along this path
+EVT005_0214,T4,2,PASS,"direct route, clear of flood extent"
+EVT005_0214,T4,3,PASS,route avoids damaged zone
+EVT005_0220,T2,1,PASS,"path clear, no visible obstruction"
+EVT005_0220,T2,2,PASS,shelter reachable via undamaged roads
+EVT005_0220,T2,3,PASS,reasonable detour around affected area
+EVT005_0220,T3,1,PASS,road network intact along this path
+EVT005_0220,T3,2,PASS,"direct route, clear of flood extent"
+EVT005_0220,T3,3,PASS,route avoids damaged zone
+EVT005_0220,T4,1,PASS,"good evacuation path, shelter accessible"
+EVT005_0220,T4,2,PASS,checked against imagery - road passable
+EVT005_0220,T4,3,PASS,"route length acceptable, no blocked segments"
+EVT005_0223,T2,1,PASS,short route with no obvious hazards
+EVT005_0223,T2,2,PASS,path avoids inundated area
+EVT005_0223,T2,3,PASS,route follows intact road corridor
+EVT005_0223,T3,1,PASS,"path clear, no visible obstruction"
+EVT005_0223,T3,2,PASS,shelter reachable via undamaged roads
+EVT005_0223,T3,3,PASS,reasonable detour around affected area
+EVT005_0223,T4,1,PASS,road network intact along this path
+EVT005_0223,T4,2,PASS,"direct route, clear of flood extent"
+EVT005_0223,T4,3,PASS,route avoids damaged zone
+EVT005_0225,T2,1,FAIL,path leads into standing water zone
+EVT005_0225,T2,2,FAIL,route passes through visibly inundated section
+EVT005_0225,T2,3,FAIL,"road flooded in T3 imagery, path not usable"
+EVT005_0225,T3,1,FAIL,low-lying road segment likely underwater
+EVT005_0225,T3,2,FAIL,flood extent overlaps route mid-section
+EVT005_0225,T3,3,FAIL,path leads into standing water zone
+EVT005_0228,T2,1,PASS,shelter within walkable distance
+EVT005_0228,T2,2,PASS,route ok
+EVT005_0228,T2,3,PASS,clear passage confirmed
+EVT005_0228,T3,1,PASS,"acceptable route, shelter is reachable"
+EVT005_0228,T3,2,PASS,road quality looks fine in this epoch
+EVT005_0228,T3,3,PASS,route confirmed passable
+EVT005_0228,T4,1,PASS,short route with no obvious hazards
+EVT005_0228,T4,2,PASS,path avoids inundated area
+EVT005_0228,T4,3,PASS,route follows intact road corridor
+EVT005_0233,T2,1,PASS,"path clear, no visible obstruction"
+EVT005_0233,T2,2,PASS,shelter reachable via undamaged roads
+EVT005_0233,T2,3,PASS,reasonable detour around affected area
+EVT005_0233,T3,1,PASS,road network intact along this path
+EVT005_0233,T3,2,PASS,"direct route, clear of flood extent"
+EVT005_0233,T3,3,PASS,route avoids damaged zone
+EVT005_0238,T2,1,PASS,"good evacuation path, shelter accessible"
+EVT005_0238,T2,2,PASS,checked against imagery - road passable
+EVT005_0238,T2,3,PASS,"route length acceptable, no blocked segments"
+EVT005_0238,T3,1,PASS,"path stays on major roads, looks good"
+EVT005_0238,T3,2,PASS,no damage visible along route corridor
+EVT005_0238,T3,3,PASS,shelter within walkable distance
+EVT005_0238,T4,1,PASS,route ok
+EVT005_0238,T4,2,PASS,clear passage confirmed
+EVT005_0238,T4,3,PASS,"acceptable route, shelter is reachable"
+EVT005_0250,T2,1,PASS,"path clear, no visible obstruction"
+EVT005_0250,T2,2,PASS,shelter reachable via undamaged roads
+EVT005_0250,T2,3,PASS,reasonable detour around affected area
+EVT005_0250,T3,1,PASS,road network intact along this path
+EVT005_0250,T3,2,PASS,"direct route, clear of flood extent"
+EVT005_0250,T3,3,PASS,route avoids damaged zone
+EVT005_0250,T4,1,PASS,"good evacuation path, shelter accessible"
+EVT005_0250,T4,2,PASS,checked against imagery - road passable
+EVT005_0250,T4,3,PASS,"route length acceptable, no blocked segments"
+EVT006_0270,T2,1,PASS,route confirmed passable
+EVT006_0270,T2,2,PASS,short route with no obvious hazards
+EVT006_0270,T2,3,PASS,path avoids inundated area
+EVT006_0270,T3,1,PASS,route follows intact road corridor
+EVT006_0270,T3,2,PASS,"path clear, no visible obstruction"
+EVT006_0270,T3,3,PASS,shelter reachable via undamaged roads
+EVT006_0270,T4,1,PASS,reasonable detour around affected area
+EVT006_0270,T4,2,PASS,road network intact along this path
+EVT006_0270,T4,3,PASS,"direct route, clear of flood extent"
+EVT006_0273,T2,1,PASS,road network intact along this path
+EVT006_0273,T2,2,PASS,"direct route, clear of flood extent"
+EVT006_0273,T2,3,PASS,route avoids damaged zone
+EVT006_0273,T3,1,PASS,"good evacuation path, shelter accessible"
+EVT006_0273,T3,2,PASS,checked against imagery - road passable
+EVT006_0273,T3,3,PASS,"route length acceptable, no blocked segments"
+EVT006_0273,T4,1,PASS,"path stays on major roads, looks good"
+EVT006_0273,T4,2,PASS,no damage visible along route corridor
+EVT006_0273,T4,3,PASS,shelter within walkable distance
+EVT006_0281,T2,1,PASS,"route length acceptable, no blocked segments"
+EVT006_0281,T2,2,PASS,"path stays on major roads, looks good"
+EVT006_0281,T2,3,PASS,no damage visible along route corridor
+EVT006_0281,T3,1,PASS,shelter within walkable distance
+EVT006_0281,T3,2,PASS,route ok
+EVT006_0281,T3,3,PASS,clear passage confirmed
+EVT006_0281,T4,1,PASS,"acceptable route, shelter is reachable"
+EVT006_0281,T4,2,PASS,road quality looks fine in this epoch
+EVT006_0281,T4,3,PASS,route confirmed passable
+EVT006_0284,T2,1,FAIL,route impractical due to structural hazards nearby
+EVT006_0284,T3,1,FAIL,structural collapse adjacent to road - blocked
+EVT006_0284,T4,1,FAIL,building debris on route corridor
+EVT007_0296,T2,1,PASS,road network intact along this path
+EVT007_0296,T3,1,PASS,"direct route, clear of flood extent"
+EVT007_0296,T4,1,PASS,route avoids damaged zone
+EVT007_0300,T2,1,PASS,route confirmed passable
+EVT007_0300,T3,1,PASS,short route with no obvious hazards
+EVT007_0300,T4,1,PASS,path avoids inundated area
+EVT008_0344,T2,1,FAIL,wind damage and debris blocking road on route
+EVT008_0344,T2,2,FAIL,route passes section with wind+flood combined damage
+EVT008_0344,T2,3,FAIL,road surface compromised by storm surge
+EVT008_0344,T3,1,FAIL,debris field intersects route corridor
+EVT008_0344,T3,2,FAIL,flooded approach road makes shelter unreachable
+EVT008_0344,T3,3,FAIL,wind damage and debris blocking road on route
+EVT008_0344,T4,1,FAIL,route passes section with wind+flood combined damage
+EVT008_0344,T4,2,FAIL,road surface compromised by storm surge
+EVT008_0344,T4,3,FAIL,debris field intersects route corridor
+EVT008_0348,T2,1,PASS,short route with no obvious hazards
+EVT008_0348,T2,2,PASS,path avoids inundated area
+EVT008_0348,T2,3,PASS,route follows intact road corridor
+EVT008_0348,T3,1,PASS,"path clear, no visible obstruction"
+EVT008_0348,T3,2,PASS,shelter reachable via undamaged roads
+EVT008_0348,T3,3,PASS,reasonable detour around affected area
+EVT008_0348,T4,1,PASS,road network intact along this path
+EVT008_0348,T4,2,PASS,"direct route, clear of flood extent"
+EVT008_0348,T4,3,PASS,route avoids damaged zone
+EVT008_0352,T2,1,FAIL,road surface compromised by storm surge
+EVT008_0352,T3,1,FAIL,debris field intersects route corridor
+EVT008_0352,T4,1,FAIL,flooded approach road makes shelter unreachable
+EVT009_0363,T2,1,PASS,route confirmed passable
+EVT009_0363,T2,2,PASS,short route with no obvious hazards
+EVT009_0363,T2,3,PASS,path avoids inundated area
+EVT009_0363,T3,1,PASS,route follows intact road corridor
+EVT009_0363,T3,2,PASS,"path clear, no visible obstruction"
+EVT009_0363,T3,3,PASS,shelter reachable via undamaged roads
+EVT009_0363,T4,1,PASS,reasonable detour around affected area
+EVT009_0363,T4,2,PASS,road network intact along this path
+EVT009_0363,T4,3,PASS,"direct route, clear of flood extent"
+EVT009_0367,T2,1,PASS,"direct route, clear of flood extent"
+EVT009_0367,T2,2,PASS,route avoids damaged zone
+EVT009_0367,T2,3,PASS,"good evacuation path, shelter accessible"
+EVT009_0367,T3,1,PASS,checked against imagery - road passable
+EVT009_0367,T3,2,PASS,"route length acceptable, no blocked segments"
+EVT009_0367,T3,3,PASS,"path stays on major roads, looks good"
+EVT009_0367,T4,1,PASS,no damage visible along route corridor
+EVT009_0367,T4,2,PASS,shelter within walkable distance
+EVT009_0367,T4,3,PASS,route ok
+EVT009_0370,T2,1,PASS,reasonable detour around affected area
+EVT009_0370,T2,2,PASS,road network intact along this path
+EVT009_0370,T2,3,PASS,"direct route, clear of flood extent"
+EVT009_0370,T3,1,PASS,route avoids damaged zone
+EVT009_0370,T3,2,PASS,"good evacuation path, shelter accessible"
+EVT009_0370,T3,3,PASS,checked against imagery - road passable
+EVT009_0370,T4,1,PASS,"route length acceptable, no blocked segments"
+EVT009_0370,T4,2,PASS,"path stays on major roads, looks good"
+EVT009_0370,T4,3,PASS,no damage visible along route corridor
+EVT009_0373,T2,1,PASS,short route with no obvious hazards
+EVT009_0373,T2,2,PASS,path avoids inundated area
+EVT009_0373,T2,3,PASS,route follows intact road corridor
+EVT009_0373,T3,1,PASS,"path clear, no visible obstruction"
+EVT009_0373,T3,2,PASS,shelter reachable via undamaged roads
+EVT009_0373,T3,3,PASS,reasonable detour around affected area
+EVT009_0373,T4,1,PASS,road network intact along this path
+EVT009_0373,T4,2,PASS,"direct route, clear of flood extent"
+EVT009_0373,T4,3,PASS,route avoids damaged zone
+EVT009_0379,T2,1,FAIL,path leads into standing water zone
+EVT009_0379,T2,2,FAIL,route passes through visibly inundated section
+EVT009_0379,T2,3,FAIL,"road flooded in T3 imagery, path not usable"
+EVT009_0379,T3,1,FAIL,low-lying road segment likely underwater
+EVT009_0379,T3,2,FAIL,flood extent overlaps route mid-section
+EVT009_0379,T3,3,FAIL,path leads into standing water zone
+EVT009_0379,T4,1,FAIL,route passes through visibly inundated section
+EVT009_0379,T4,2,FAIL,"road flooded in T3 imagery, path not usable"
+EVT009_0379,T4,3,FAIL,low-lying road segment likely underwater
+EVT009_0387,T2,1,PASS,route avoids damaged zone
+EVT009_0387,T2,2,PASS,"good evacuation path, shelter accessible"
+EVT009_0387,T2,3,PASS,checked against imagery - road passable
+EVT009_0387,T3,1,PASS,"route length acceptable, no blocked segments"
+EVT009_0387,T3,2,PASS,"path stays on major roads, looks good"
+EVT009_0387,T3,3,PASS,no damage visible along route corridor
+EVT009_0387,T4,1,PASS,shelter within walkable distance
+EVT009_0387,T4,2,PASS,route ok
+EVT009_0387,T4,3,PASS,clear passage confirmed
+EVT009_0389,T2,1,PASS,no damage visible along route corridor
+EVT009_0389,T2,2,PASS,shelter within walkable distance
+EVT009_0389,T2,3,PASS,route ok
+EVT009_0389,T3,1,PASS,clear passage confirmed
+EVT009_0389,T3,2,PASS,"acceptable route, shelter is reachable"
+EVT009_0389,T3,3,PASS,road quality looks fine in this epoch
+EVT009_0389,T4,1,PASS,route confirmed passable
+EVT009_0389,T4,2,PASS,short route with no obvious hazards
+EVT009_0389,T4,3,PASS,path avoids inundated area
+EVT009_0429,T2,1,PASS,reasonable detour around affected area
+EVT009_0429,T2,2,PASS,road network intact along this path
+EVT009_0429,T2,3,PASS,"direct route, clear of flood extent"
+EVT009_0429,T3,1,PASS,route avoids damaged zone
+EVT009_0429,T3,2,PASS,"good evacuation path, shelter accessible"
+EVT009_0429,T3,3,PASS,checked against imagery - road passable
+EVT009_0429,T4,1,PASS,"route length acceptable, no blocked segments"
+EVT009_0429,T4,2,PASS,"path stays on major roads, looks good"
+EVT009_0429,T4,3,PASS,no damage visible along route corridor
+EVT010_0432,T2,1,PASS,route confirmed passable
+EVT010_0432,T2,2,PASS,short route with no obvious hazards
+EVT010_0432,T2,3,PASS,path avoids inundated area
+EVT010_0432,T3,1,PASS,route follows intact road corridor
+EVT010_0432,T3,2,PASS,"path clear, no visible obstruction"
+EVT010_0432,T3,3,PASS,shelter reachable via undamaged roads
+EVT010_0432,T4,1,PASS,reasonable detour around affected area
+EVT010_0432,T4,2,PASS,road network intact along this path
+EVT010_0432,T4,3,PASS,"direct route, clear of flood extent"
+EVT010_0459,T2,1,PASS,shelter reachable via undamaged roads
+EVT010_0459,T2,2,PASS,reasonable detour around affected area
+EVT010_0459,T2,3,PASS,road network intact along this path
+EVT010_0459,T3,1,PASS,"direct route, clear of flood extent"
+EVT010_0459,T3,2,PASS,route avoids damaged zone
+EVT010_0459,T3,3,PASS,"good evacuation path, shelter accessible"
+EVT010_0459,T4,1,PASS,checked against imagery - road passable
+EVT010_0459,T4,2,PASS,"route length acceptable, no blocked segments"
+EVT010_0459,T4,3,PASS,"path stays on major roads, looks good"
+EVT010_0464,T2,1,PASS,short route with no obvious hazards
+EVT010_0464,T2,2,PASS,path avoids inundated area
+EVT010_0464,T2,3,PASS,route follows intact road corridor
+EVT010_0464,T3,1,PASS,"path clear, no visible obstruction"
+EVT010_0464,T3,2,PASS,shelter reachable via undamaged roads
+EVT010_0464,T3,3,PASS,reasonable detour around affected area
+EVT010_0464,T4,1,PASS,road network intact along this path
+EVT010_0464,T4,2,PASS,"direct route, clear of flood extent"
+EVT010_0464,T4,3,PASS,route avoids damaged zone
+EVT010_0470,T2,1,PASS,"path clear, no visible obstruction"
+EVT010_0470,T2,2,PASS,shelter reachable via undamaged roads
+EVT010_0470,T2,3,PASS,reasonable detour around affected area
+EVT010_0470,T3,1,PASS,road network intact along this path
+EVT010_0470,T3,2,PASS,"direct route, clear of flood extent"
+EVT010_0470,T3,3,PASS,route avoids damaged zone
+EVT010_0470,T4,1,PASS,"good evacuation path, shelter accessible"
+EVT010_0470,T4,2,PASS,checked against imagery - road passable
+EVT010_0470,T4,3,PASS,"route length acceptable, no blocked segments"
+EVT011_0488,T2,1,PASS,path avoids inundated area
+EVT011_0488,T3,1,PASS,route follows intact road corridor
+EVT011_0488,T4,1,PASS,"path clear, no visible obstruction"
+EVT012_0549,T2,1,PASS,route avoids damaged zone
+EVT012_0549,T2,2,PASS,"good evacuation path, shelter accessible"
+EVT012_0549,T2,3,PASS,checked against imagery - road passable
+EVT012_0549,T3,1,PASS,"route length acceptable, no blocked segments"
+EVT012_0549,T3,2,PASS,"path stays on major roads, looks good"
+EVT012_0549,T3,3,PASS,no damage visible along route corridor
+EVT012_0549,T4,1,PASS,shelter within walkable distance
+EVT012_0549,T4,2,PASS,route ok
+EVT012_0549,T4,3,PASS,clear passage confirmed
+EVT012_0558,T2,1,PASS,"acceptable route, shelter is reachable"
+EVT012_0558,T2,2,PASS,road quality looks fine in this epoch
+EVT012_0558,T2,3,PASS,route confirmed passable
+EVT012_0558,T3,1,PASS,short route with no obvious hazards
+EVT012_0558,T3,2,PASS,path avoids inundated area
+EVT012_0558,T3,3,PASS,route follows intact road corridor
+EVT012_0558,T4,1,PASS,"path clear, no visible obstruction"
+EVT012_0558,T4,2,PASS,shelter reachable via undamaged roads
+EVT012_0558,T4,3,PASS,reasonable detour around affected area
+EVT012_0565,T2,1,PASS,route confirmed passable
+EVT012_0565,T3,1,PASS,short route with no obvious hazards
+EVT012_0565,T3,2,PASS,path avoids inundated area
+EVT012_0574,T2,1,PASS,route ok
+EVT012_0574,T2,2,PASS,clear passage confirmed
+EVT012_0574,T3,1,PASS,"acceptable route, shelter is reachable"
+EVT012_0574,T3,2,PASS,road quality looks fine in this epoch
+EVT012_0574,T4,1,PASS,route confirmed passable
+EVT012_0574,T4,2,PASS,short route with no obvious hazards
+EVT012_0591,T2,1,PASS,"path stays on major roads, looks good"
+EVT012_0591,T2,2,PASS,no damage visible along route corridor
+EVT012_0591,T2,3,PASS,shelter within walkable distance
+EVT012_0591,T3,1,PASS,route ok
+EVT012_0591,T3,2,PASS,clear passage confirmed
+EVT012_0591,T3,3,PASS,"acceptable route, shelter is reachable"
+EVT012_0591,T4,1,PASS,road quality looks fine in this epoch
+EVT012_0591,T4,2,PASS,route confirmed passable
+EVT012_0591,T4,3,PASS,short route with no obvious hazards

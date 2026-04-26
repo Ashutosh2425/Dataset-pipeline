@@ -1,0 +1,6107 @@
+[
+  {
+    "aoi_id": "EVT001_0002",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 329.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      252241.847080859,
+      3254853.4294195147
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0000",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 2702.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      272862.7515418965,
+      3325715.3259845995
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0000",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 2971.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      273312.0701020658,
+      3326372.444271564
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0005",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 1298.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      243249.83182563607,
+      3290346.597548672
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0005",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 1428.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      243249.83182563607,
+      3290346.597548672
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0003",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 1751.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      248183.7006633994,
+      3295864.5174395177
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0003",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 1751.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      248183.7006633994,
+      3295864.5174395177
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0004",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1882.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      256967.53994334282,
+      3294389.2742183227
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0004",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1882.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      256967.53994334282,
+      3294389.2742183227
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0007",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 618.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      237127.2017403524,
+      3280639.2748821927
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0007",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 618.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      237127.2017403524,
+      3280639.2748821927
+    ]
+  },
+  {
+    "aoi_id": "EVT001_0006",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1030.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      248257.4390739291,
+      3285166.3685841705
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0068",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "St Mary's LP School",
+    "route_length_m": 1208.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      705448.8636245119,
+      1068907.9316430576
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0068",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Indo- American HRD campus",
+    "route_length_m": 2338.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      705280.4460628026,
+      1069170.746137376
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0072",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Government Homeo Dispensary",
+    "route_length_m": 733.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      680731.8686398446,
+      1073275.558205096
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0072",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Gayathri Central School - Bharanikkavu",
+    "route_length_m": 1424.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      680731.8686398446,
+      1073275.558205096
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0073",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "St.Boniface UP School,Pattithanam",
+    "route_length_m": 743.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      670764.4154239751,
+      1072788.9864535546
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0073",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Govt Homeo Hospital",
+    "route_length_m": 875.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      670731.5249967494,
+      1072907.8594800981
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0070",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Homeo Dispensary",
+    "route_length_m": 281.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      645580.6365127726,
+      1073020.6957907449
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0070",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Karappuram Mission UP School",
+    "route_length_m": 683.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      645580.6365127726,
+      1073020.6957907449
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0075",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 581.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      665305.6185010315,
+      1067717.6659538518
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0081",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 6274.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      706747.1161223575,
+      1061682.7653965806
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0081",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 7461.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      706747.1161223575,
+      1061682.7653965806
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0082",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 3546.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      730237.4101019329,
+      1059391.9865657948
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0082",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 3546.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      730237.4101019329,
+      1059391.9865657948
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0083",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Government Lower Primary School Edattumala",
+    "route_length_m": 1504.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      704839.9355591158,
+      1078156.6791990981
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0083",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Government Lower Primary School, Edadu",
+    "route_length_m": 1504.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      704839.9355591158,
+      1078156.6791990981
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0074",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Chirayu Ayurvedic Speciality Clinic And Treatment Centre",
+    "route_length_m": 173.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      665718.3934192788,
+      1063179.4558511376
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0074",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 897.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      665718.3934192788,
+      1063179.4558511376
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0084",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 962.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      715378.6150390179,
+      1067864.3869862312
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0084",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 962.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      715378.6150390179,
+      1067864.3869862312
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0085",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Government Lower Primary School Pirayar",
+    "route_length_m": 1469.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      675663.2466934338,
+      1072357.6414440905
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0085",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "St.Antony's L.P School Koodalloor",
+    "route_length_m": 1767.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      675501.1887930525,
+      1073438.9350459815
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0087",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 3107.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      707029.6496103398,
+      1057810.894722998
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0087",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Santhigiri Ayurvedic Hospital",
+    "route_length_m": 3565.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      707029.6496103398,
+      1057810.894722998
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0090",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1140.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      772583.8283633422,
+      1071491.6877172876
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0088",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1393.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      649191.0216376327,
+      1074056.2469258674
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0088",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1830.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      649191.0216376327,
+      1074056.2469258674
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0093",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "st ephrems lp school,Chirakkadavu",
+    "route_length_m": 825.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      695420.5375418051,
+      1053429.0863056234
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0093",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Saint Ephrem's L.P. School, Chirakkadavu",
+    "route_length_m": 1181.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      695420.5375418051,
+      1053429.0863056234
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0092",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 3587.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746820.8514158013,
+      1071550.4864305307
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0092",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 3587.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746820.8514158013,
+      1071550.4864305307
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0095",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Amala Ayurveda Treatment Centre",
+    "route_length_m": 830.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721478.2127430948,
+      1073071.9428006976
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0095",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Gov. ayurveda  hospital",
+    "route_length_m": 972.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721478.2127430948,
+      1073071.9428006976
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0098",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Panamattom G.H.S.S.",
+    "route_length_m": 1695.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      691006.0604250978,
+      1062671.518325856
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0098",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1695.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      691006.0604250978,
+      1062671.518325856
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0096",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1263.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      681017.181360697,
+      1053087.7423409177
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0096",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Govt ayurvedic hospital",
+    "route_length_m": 1756.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      681017.181360697,
+      1053087.7423409177
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0099",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 947.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      720483.5837125201,
+      1062774.3781666823
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0099",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1708.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      720495.2036554315,
+      1062513.4813937272
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0101",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2258.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      718991.2238078584,
+      1052736.3410178986
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0101",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2728.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      719085.304043379,
+      1052746.3801137763
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0102",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Primary Health Centre, Kokkayar",
+    "route_length_m": 1201.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      711654.5790914152,
+      1058523.0392516067
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0102",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1201.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      711654.5790914152,
+      1058523.0392516067
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0104",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 849.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      691590.5569564798,
+      1073403.4175806604
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0104",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "St. Alphonsa Clinic Homeo",
+    "route_length_m": 1268.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      692063.4512240004,
+      1072821.4642485867
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0105",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2228.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      715793.2719521278,
+      1074924.2303824176
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0105",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "GTHS VALAKODE",
+    "route_length_m": 2616.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716381.3193944583,
+      1074553.6645011164
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0106",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1371.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      709762.6781578213,
+      1073063.6704263412
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0106",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "life line",
+    "route_length_m": 3102.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      709179.8585030357,
+      1071633.5656212433
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0094",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3133.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      666820.9001159684,
+      1057851.3367221449
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0107",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Primary Health Center Chakkupallam",
+    "route_length_m": 2077.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      737622.9191744472,
+      1067257.2948814412
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0107",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Alphonsa Hospital Anakkara",
+    "route_length_m": 2290.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      736809.4752785251,
+      1069082.287766595
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0109",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "sidha vaidhyasala",
+    "route_length_m": 359.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      725418.4934227415,
+      1062438.2485365258
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0109",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "FHS Mlamala",
+    "route_length_m": 2990.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      724334.8976494976,
+      1064902.6211521318
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0110",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 4238.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      772389.7363756128,
+      1071001.4290554472
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0113",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Sevanalaya Clinic",
+    "route_length_m": 1059.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721191.7301173995,
+      1058969.2313775553
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0113",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Sevanalaya Hospital",
+    "route_length_m": 1148.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721191.7301173995,
+      1058969.2313775553
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0115",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "CMC Hospital",
+    "route_length_m": 6932.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716470.5112691479,
+      1058460.2504991295
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0115",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 7126.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716470.5112691479,
+      1058460.2504991295
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0116",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 511.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716684.9861750428,
+      1078706.5731082505
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0116",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2421.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      717727.2955707323,
+      1077590.5146062935
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0108",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1219.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      650346.709905089,
+      1067824.013100308
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0108",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1219.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      650346.709905089,
+      1067824.013100308
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0119",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1783.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726312.1571949183,
+      1068537.8436227515
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0119",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1783.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726312.1571949183,
+      1068537.8436227515
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0118",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Leo English Medium Public School",
+    "route_length_m": 307.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      640351.7406587731,
+      1082605.6851313584
+    ]
+  },
+  {
+    "aoi_id": "EVT002_0118",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 421.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      640351.7406587731,
+      1082605.6851313584
+    ]
+  },
+  {
+    "aoi_id": "EVT003_0120",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1149.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      522285.16224069055,
+      4246491.673876278
+    ]
+  },
+  {
+    "aoi_id": "EVT003_0120",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2668.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      522285.16224069055,
+      4246491.673876278
+    ]
+  },
+  {
+    "aoi_id": "EVT003_0121",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1271.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      526444.1948331107,
+      4246403.373402128
+    ]
+  },
+  {
+    "aoi_id": "EVT003_0121",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1542.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      526444.1948331107,
+      4246403.373402128
+    ]
+  },
+  {
+    "aoi_id": "EVT003_0122",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 796.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      522193.1506074687,
+      4251441.080492086
+    ]
+  },
+  {
+    "aoi_id": "EVT003_0122",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 77.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      521916.1309451278,
+      4251616.722067665
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0161",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "DALATOLA GOVT HOSPITAL",
+    "route_length_m": 642.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      344023.15266984317,
+      2227751.5777430553
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0161",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "DALATOLA HOSPITAL",
+    "route_length_m": 642.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      344023.15266984317,
+      2227751.5777430553
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0165",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3842.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      293709.2355605236,
+      2252570.0821346696
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0165",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3873.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      293709.2355605236,
+      2252570.0821346696
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0166",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 897.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      394170.6679265992,
+      2228129.317527361
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0166",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1364.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      393776.09903890494,
+      2227087.747135828
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0171",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Government Hospital, Nairi",
+    "route_length_m": 927.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      320957.8498433994,
+      2194824.513656142
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0171",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Rabindra Poly Clinic and Ultrasound Centre",
+    "route_length_m": 939.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      320957.8498433994,
+      2194824.513656142
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0170",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3302.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      371045.95645285957,
+      2248677.1442118366
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0170",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 4511.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      367656.2045535298,
+      2248014.998099117
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0173",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 700.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      428627.3047945811,
+      2241640.079002056
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0173",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1492.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      428650.4790880919,
+      2240366.117624832
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0163",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Sahajog Hospital",
+    "route_length_m": 2185.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      354966.4968444063,
+      2231812.859139375
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0163",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "SAI SANJIBANI HOSPITAL",
+    "route_length_m": 2283.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      354966.4968444063,
+      2231812.859139375
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0175",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Olatpur Hospital",
+    "route_length_m": 4055.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      393018.9010951463,
+      2238162.8001389704
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0175",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "BBS Health Care Hospital",
+    "route_length_m": 4583.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      393018.9010951463,
+      2238162.8001389704
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0174",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Fahther Marian Lepra Centre",
+    "route_length_m": 4253.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      375027.48527703615,
+      2190631.5699572014
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0174",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Fahther Marian Lepra Centre",
+    "route_length_m": 4253.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      375158.21704716556,
+      2191211.5266513084
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0172",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3082.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      368691.1481645398,
+      2238031.622645137
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0172",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 4191.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      368691.1481645398,
+      2238031.622645137
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0180",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1827.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      432610.38315408165,
+      2239853.777453243
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0180",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2786.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      432610.38315408165,
+      2239853.777453243
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0177",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "CHC Khurda/ CHC Jatni",
+    "route_length_m": 1523.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      364165.2180696656,
+      2232037.0746097136
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0177",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Kalinga Hospital",
+    "route_length_m": 2473.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      364165.2180696656,
+      2232037.0746097136
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0181",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1013.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      398535.14671629993,
+      2222046.125214153
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0181",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2692.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      398535.14671629993,
+      2222046.125214153
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0185",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 388.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      437745.784649002,
+      2243945.710394593
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0182",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 692.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      388604.05435194005,
+      2246753.4519480905
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0182",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1526.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      388604.05435194005,
+      2246753.4519480905
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0186",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1488.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      385324.13585444324,
+      2227413.5903546712
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0186",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2117.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      382681.8891845331,
+      2225827.199619821
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0187",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 297.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      398563.8973281624,
+      2232572.6656538146
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0187",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1149.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      398451.9759438367,
+      2232381.3100063675
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0191",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 102.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      309260.2722755875,
+      2235847.6089950865
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0195",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "New Life Physiotherapy Clinic",
+    "route_length_m": 2840.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      393530.51123069105,
+      2232222.60105353
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0196",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1201.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      372645.852560217,
+      2231253.684370743
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0196",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1937.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      372645.852560217,
+      2231253.684370743
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0197",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2013.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      394364.95880296675,
+      2220242.638366454
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0197",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2510.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      393295.31158022437,
+      2223858.477435582
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0202",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1886.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      353070.6397993686,
+      2193294.3437893083
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0202",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2648.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      353677.01957783784,
+      2193926.502473265
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0203",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 4356.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      356125.14905474806,
+      2192508.489000453
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0203",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3870.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      357592.80339055223,
+      2190715.763413597
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0204",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2355.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      363606.8994823671,
+      2191691.822528411
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0204",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3068.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      363606.8994823671,
+      2191691.822528411
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0205",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1432.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      556654.150654204,
+      3834628.3241706574
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0205",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Childrens Hosiptal",
+    "route_length_m": 3212.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      558792.3338805021,
+      3835814.557834354
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0206",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "DaVita Dialysis",
+    "route_length_m": 3039.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      562386.1867065453,
+      3835698.64380641
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0206",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 3355.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      562386.1867065453,
+      3835698.64380641
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0179",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Secretariate Zonal Dispensary",
+    "route_length_m": 274.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      378851.1796530822,
+      2242110.3928505573
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0179",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Dr.Abhin Chandra Homoeopathic Medical College And Hospital",
+    "route_length_m": 335.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      378851.1796530822,
+      2242110.3928505573
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0207",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1130.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      567466.7208285243,
+      3834006.930177734
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0193",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 4792.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      369858.18721895607,
+      2241728.876273361
+    ]
+  },
+  {
+    "aoi_id": "EVT004_0193",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "IGKC Multispecialty Hospital",
+    "route_length_m": 4810.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      369858.18721895607,
+      2241728.876273361
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0209",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "eStem Charter High School",
+    "route_length_m": 5784.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      560524.3605662489,
+      3840143.27292002
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0209",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Bale Elementary School",
+    "route_length_m": 6552.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      560524.3605662489,
+      3840143.27292002
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0210",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1833.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      568405.0235506261,
+      3840791.0988775734
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0210",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 3151.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      568405.0235506261,
+      3840791.0988775734
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0208",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2424.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      556634.831287531,
+      3840116.2502265363
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0208",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "UMS",
+    "route_length_m": 3512.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      556634.831287531,
+      3840116.2502265363
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0214",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Fulbright Elementary School",
+    "route_length_m": 3522.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      555804.9724378121,
+      3848548.8942364203
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0214",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Little Rock Family Practice Clinic",
+    "route_length_m": 4379.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      555212.9781250024,
+      3850098.766878608
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0215",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Thomas Jefferson Elementary School",
+    "route_length_m": 2088.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      560160.0803592311,
+      3848324.533265921
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0213",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 219.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      567110.2339398202,
+      3845241.1680283505
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0213",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 294.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      567625.8232353927,
+      3845171.563311514
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0217",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Healthcare Express",
+    "route_length_m": 4997.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      556825.3329231822,
+      3854219.384038426
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0217",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "The BridgeWay",
+    "route_length_m": 6272.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      556945.534366953,
+      3853817.7668599077
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0219",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 337.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      737778.3270730777,
+      3978563.884449553
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0219",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1881.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      737299.8892517297,
+      3977299.921091141
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0218",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2713.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      562664.9561468671,
+      3854673.6465921937
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0218",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3535.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      562664.9561468671,
+      3854673.6465921937
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0220",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2649.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741457.7780440487,
+      3976878.706672907
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0220",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3047.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      744643.310823479,
+      3977845.2648507827
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0212",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Radiation Oncology Center",
+    "route_length_m": 186.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      562611.0819105968,
+      3845276.6223717146
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0225",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1244.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746966.7879037127,
+      3988961.3955615843
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0225",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2780.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746623.4463369019,
+      3987753.040074999
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0224",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1529.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746884.1233919759,
+      3984566.2334285327
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0224",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1978.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      747278.5010041716,
+      3982907.146331887
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0227",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1330.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      737843.6800695654,
+      3992366.594067428
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0227",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1935.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      737843.6800695654,
+      3992366.594067428
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0216",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Premier High School",
+    "route_length_m": 2505.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      566715.6155235716,
+      3849785.2795886714
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0216",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Saint Patrick School",
+    "route_length_m": 2877.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      566913.6463770627,
+      3848331.501070106
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0251",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 20.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      735917.1818958556,
+      4023682.509151541
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0251",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1380.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      735968.3602360842,
+      4023668.6119365613
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0255",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1595.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      770950.0242614154,
+      3850452.348724018
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0255",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2921.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      770950.0242614154,
+      3850452.348724018
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0259",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1468.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      424654.3087327385,
+      3861358.1838465375
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0259",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1468.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      424654.3087327385,
+      3861358.1838465375
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0258",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1234.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      401909.0290489707,
+      3910526.555547985
+    ]
+  },
+  {
+    "aoi_id": "EVT005_0258",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2426.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      401328.177938774,
+      3909204.319530547
+    ]
+  },
+  {
+    "aoi_id": "EVT006_0286",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 958.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      755755.6859059882,
+      3764782.23371404
+    ]
+  },
+  {
+    "aoi_id": "EVT006_0286",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1145.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      755755.6859059882,
+      3764782.23371404
+    ]
+  },
+  {
+    "aoi_id": "EVT006_0285",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Jean Paul Baptiste",
+    "route_length_m": 2364.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      736267.4508863634,
+      3744344.707493964
+    ]
+  },
+  {
+    "aoi_id": "EVT006_0285",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "\u0627\u0644\u0631\u0627\u0647\u0628\u0627\u062a \u0627\u0644\u0634\u0648\u064a\u0631\u064a\u0627\u062a \u0643\u0641\u0631\u0634\u064a\u0645\u0627",
+    "route_length_m": 3754.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      736267.4508863634,
+      3744344.707493964
+    ]
+  },
+  {
+    "aoi_id": "EVT008_0345",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "The Hormone & Wellness Center",
+    "route_length_m": 637.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      628748.0733250357,
+      3340003.677669017
+    ]
+  },
+  {
+    "aoi_id": "EVT008_0345",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "The Hormone & Wellness Center",
+    "route_length_m": 637.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      629270.484053258,
+      3339755.194108082
+    ]
+  },
+  {
+    "aoi_id": "EVT008_0346",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 3463.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      632382.4540186449,
+      3340208.26546441
+    ]
+  },
+  {
+    "aoi_id": "EVT008_0346",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 3463.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      632382.4540186449,
+      3340208.26546441
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0358",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 456.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741577.9298933599,
+      2929224.204553911
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0358",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2199.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741577.9298933599,
+      2929224.204553911
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0361",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1257.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      742494.0427893319,
+      2934168.777528762
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0361",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1846.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      742494.0427893319,
+      2934168.777528762
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0360",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1301.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      751399.4121323765,
+      2929039.958035552
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0360",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3684.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      751399.4121323765,
+      2929039.958035552
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0363",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1093.8,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      752072.3262516252,
+      2934792.9897954054
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0363",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2177.8,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      752059.9701757577,
+      2932552.46124102
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0365",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 302.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      733175.4125357914,
+      2938375.347160109
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0365",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 302.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      733175.4125357914,
+      2938375.347160109
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0366",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1808.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      737512.2611705216,
+      2936287.2970156046
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0367",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2192.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      744025.7687652297,
+      2938175.6589753027
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0364",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 916.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      757190.407090154,
+      2934485.1349126636
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0364",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1383.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      757191.951000886,
+      2934621.576069717
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0371",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 306.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726329.462042119,
+      2944280.675351874
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0369",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1030.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      752362.0248534402,
+      2939002.65474777
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0369",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1284.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      753151.1957602301,
+      2939485.5498082214
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0374",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 733.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      747004.5783255635,
+      2943826.1466877
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0374",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1192.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      747004.5783255635,
+      2943826.1466877
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0370",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 445.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      757473.9388402011,
+      2938502.12941787
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0370",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2231.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      757473.9388402011,
+      2938502.12941787
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0373",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 603.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741305.7795986923,
+      2943541.307735745
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0373",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1447.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741305.7795986923,
+      2943541.307735745
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0375",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 968.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      752157.6070812176,
+      2943948.0024663387
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0375",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1313.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      752686.658542622,
+      2943947.372840044
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0378",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 87.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731833.1537617326,
+      2948675.7206035764
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0378",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 667.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731833.1537617326,
+      2948675.7206035764
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0377",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Govt. Hospital",
+    "route_length_m": 4852.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      727050.8010698772,
+      2947373.3593499963
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0377",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Govt. Hospital",
+    "route_length_m": 4852.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726322.1535648376,
+      2948546.721778934
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0379",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1912.1,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      736526.279680655,
+      2947732.6489643697
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0379",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2707.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      736705.0705320399,
+      2948683.9586443743
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0380",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1147.2,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741537.5594831749,
+      2948234.1929956456
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0376",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1620.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      757188.7750090507,
+      2944726.8822878934
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0376",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2279.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      756434.0387576369,
+      2944534.4023044817
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0381",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3456.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      747620.8132106233,
+      2948440.7284889375
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0381",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1759.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746596.4762643786,
+      2948898.028954717
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0382",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2256.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      750915.4466434681,
+      2947652.808384851
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0382",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2609.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      752163.0123933363,
+      2947986.2943765363
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0384",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1590.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      725742.539174008,
+      2953715.8533792696
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0384",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2583.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      725857.178135474,
+      2953278.4932053094
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0386",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1252.2,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      738103.9196792289,
+      2954828.682820744
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0386",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1765.4,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      738103.9196792289,
+      2954828.682820744
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0385",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 902.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      730961.3667017377,
+      2953178.1836287067
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0385",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2164.9,
+    "score_T": 0.5,
+    "score_T1": 0.85,
+    "score_delta": 0.35,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731529.0093675643,
+      2951950.281631198
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0387",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2520.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      740683.5214087521,
+      2955355.4578226064
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0387",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2520.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      740695.1052189053,
+      2955742.5737244203
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0383",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1032.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      757096.1973814819,
+      2949593.780744316
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0383",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1209.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      756556.5942389201,
+      2947679.259155222
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0392",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1795.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726229.654550333,
+      2963248.3259089845
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0392",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1795.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      724879.5567949759,
+      2963110.3688576403
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0394",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1223.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721819.674741356,
+      2967214.4394476186
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0394",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1999.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      720691.8770427308,
+      2967444.4483900173
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0395",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1435.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726007.8584883173,
+      2969157.4566591596
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0395",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2133.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726327.6207778079,
+      2966769.43039451
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0396",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Charu Chandra Das Memorial TB Hospital",
+    "route_length_m": 4002.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      733475.9787319662,
+      2966506.6891297223
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0397",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 130.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721184.0859367666,
+      2972835.1522894492
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0397",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 856.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721184.0859367666,
+      2972835.1522894492
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0398",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1584.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726062.7173409677,
+      2974762.8685719743
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0398",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2532.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726062.7173409677,
+      2974762.8685719743
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0393",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Agrahari Orthopedic Center",
+    "route_length_m": 3798.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731279.7293643069,
+      2962175.753090581
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0393",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Agrahari Orthopedic Center",
+    "route_length_m": 3978.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731279.7293643069,
+      2962175.753090581
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0401",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 833.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731122.7404611374,
+      2978947.8735983777
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0401",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1708.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      731122.7404611374,
+      2978947.8735983777
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0402",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3988.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      727085.2638518962,
+      2981934.96530704
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0402",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2656.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      724643.5029677358,
+      2982523.0832510362
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0406",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2949.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      699754.801512993,
+      2968116.8889112948
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0406",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 936.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      700693.9952130043,
+      2967704.6116114096
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0407",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 602.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      701370.1159782134,
+      2932165.697138526
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0408",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1458.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716781.0662159317,
+      2982813.3367664195
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0408",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2084.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716452.2209700309,
+      2984302.4762956137
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0413",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3115.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      726466.5151316499,
+      2911219.672179946
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0409",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 765.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      766823.3703760329,
+      2958497.186851922
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0409",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1261.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      766823.3703760329,
+      2958497.186851922
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0417",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2188.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      721561.6041890025,
+      2948498.2395271943
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0417",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 5360.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      723906.1077536376,
+      2950083.5458201817
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0419",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "District Combind Hospital Maharajganj",
+    "route_length_m": 2296.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      750572.10496814,
+      3004446.0624237848
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0420",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1551.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      702640.9126863132,
+      2954419.9891517377
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0420",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1551.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      701865.236759898,
+      2954657.4439651263
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0418",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3208.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      709197.8199745759,
+      2974043.1289638793
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0418",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2023.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      709412.2843295715,
+      2973400.239162242
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0422",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2176.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      741353.8805269437,
+      3007857.342057178
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0422",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3281.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      740046.2800493786,
+      3010253.883473912
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0423",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1206.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      702189.869792045,
+      2937371.0486793616
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0423",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2415.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      702189.869792045,
+      2937371.0486793616
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0415",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1160.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      740714.4583673549,
+      2972961.602036833
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0425",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 585.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      772096.1869042037,
+      2959434.547184111
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0425",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1000.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      772096.1869042037,
+      2959434.547184111
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0424",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1367.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      717040.2498059273,
+      2954026.693448863
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0424",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2066.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      716982.7842934987,
+      2953835.5179356607
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0430",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Bocalam 1er Centro De Terapia Asistida Con Animales Perros De Asistencia En Mexico",
+    "route_length_m": 4621.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      476218.4215621197,
+      2125900.3555462426
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0430",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Bocalam 1er Centro De Terapia Asistida Con Animales Perros De Asistencia En Mexico",
+    "route_length_m": 4621.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      475998.3777527187,
+      2124266.1948647588
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0429",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2582.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      719303.0337537876,
+      2979028.358183988
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0429",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2582.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      719949.0394550519,
+      2978892.9401293923
+    ]
+  },
+  {
+    "aoi_id": "EVT009_0428",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Prakash Hospital",
+    "route_length_m": 1979.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      746749.9995793658,
+      2953697.2000056677
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0433",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Centro de Salud T1 Bekal",
+    "route_length_m": 1508.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      475608.3740825957,
+      2129526.348441569
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0433",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Medicina Alternativa",
+    "route_length_m": 1570.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      475608.3740825957,
+      2129526.348441569
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0431",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Cl\u00ednica de Especialidades Ajusco Cea",
+    "route_length_m": 2437.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      479391.5130866669,
+      2125425.277298347
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0434",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Cl\u00ednica de Dios",
+    "route_length_m": 2515.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480919.90003011614,
+      2129265.4097299674
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0434",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 5782.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480919.90003011614,
+      2129265.4097299674
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0438",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Hospital \u00c1ngeles Acoxpa",
+    "route_length_m": 636.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485503.60600077966,
+      2134212.0300007286
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0439",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Healthy Foot",
+    "route_length_m": 2022.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      475078.7473275062,
+      2139132.8961029206
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0439",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 2172.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      475078.7473275062,
+      2139132.8961029206
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0440",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 783.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480443.17936088255,
+      2139630.5963196266
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0440",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "VILLA ALVARO OBREGON",
+    "route_length_m": 816.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480443.17936088255,
+      2139630.5963196266
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0441",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Cl\u00ednica Tasque\u00f1a",
+    "route_length_m": 353.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485634.2563975235,
+      2138983.346076004
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0441",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "eca",
+    "route_length_m": 1184.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485574.01635658974,
+      2138357.9705585307
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0443",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Jardin de Ni\u00f1os Ram\u00f3n Lopez Velarde",
+    "route_length_m": 121.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480506.70125314244,
+      2144324.467283603
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0443",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Unidad de Medicina Familiar 9 San Pedro Pinos",
+    "route_length_m": 225.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480506.70125314244,
+      2144324.467283603
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0444",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 910.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485106.24854452483,
+      2144257.5667844024
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0444",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Preparatoria Buckingham",
+    "route_length_m": 1081.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485156.89868320065,
+      2144273.9402280627
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0445",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Consultorio Medico Country",
+    "route_length_m": 2198.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      474250.3227881177,
+      2148342.6754088006
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0445",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2254.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      475871.5284272112,
+      2148625.3509863513
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0446",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 577.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480335.2841393184,
+      2149270.6599589363
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0446",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 577.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      480335.2841393184,
+      2149270.6599589363
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0447",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 234.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485413.6306670598,
+      2149300.7700907914
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0447",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 234.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485413.6306670598,
+      2149300.7700907914
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0451",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1618.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      461152.27245632064,
+      2142864.4255520217
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0451",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "centro de salud",
+    "route_length_m": 1814.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      460925.7389209277,
+      2142856.0397810694
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0454",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2228.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      465382.42538227077,
+      2159996.9899377725
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0454",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2318.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      465382.42538227077,
+      2159996.9899377725
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0455",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1681.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      514342.6692327341,
+      2159349.292655684
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0455",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2702.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      514812.8435597209,
+      2158488.549414977
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0457",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Centro De Salud San Luis Ayucanc.e.a.p.s. San Luis Ayucan",
+    "route_length_m": 3970.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      464876.15306214604,
+      2154608.1562411585
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0456",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "PROFESOR AGUSTIN BANDA SEVILLA",
+    "route_length_m": 2128.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      489240.5800514587,
+      2123321.523660828
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0456",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "PROFESOR AGUSTIN BANDA SEVILLA",
+    "route_length_m": 2128.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      490023.2343969267,
+      2124123.097434982
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0458",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 1020.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      455348.38311389246,
+      2114727.355774308
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0458",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 1144.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      455348.38311389246,
+      2114727.355774308
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0461",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Centro De Salud Transfiguracion",
+    "route_length_m": 1447.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      456491.4026321691,
+      2164647.1175269443
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0461",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Pabell\u00f3n M\u00e9dico",
+    "route_length_m": 1447.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      456491.4026321691,
+      2164647.1175269443
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0450",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1012.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      500751.09732052125,
+      2169128.741710998
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0450",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1041.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      500751.09732052125,
+      2169128.741710998
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0463",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Consultorio Medico Medical Life",
+    "route_length_m": 870.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      471794.4613541651,
+      2134606.640363228
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0463",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Consultorio Medico Sin Nombre",
+    "route_length_m": 1069.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      471794.4613541651,
+      2134606.640363228
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0460",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Am Sallud",
+    "route_length_m": 531.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      470266.09195470775,
+      2144439.074046528
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0460",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Hospital Angeles Lomas",
+    "route_length_m": 705.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      470266.09195470775,
+      2144439.074046528
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0462",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Centro de Salud Santiago Tulyehualco",
+    "route_length_m": 2453.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      499220.3789366369,
+      2129150.6481618853
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0466",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1199.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      505742.47404699435,
+      2164706.5980710504
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0466",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1199.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      505742.47404699435,
+      2164706.5980710504
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0464",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2357.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485490.2240633468,
+      2168933.9694653023
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0464",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2357.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      485490.2240633468,
+      2168933.9694653023
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0468",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1414.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      455342.7296376967,
+      2169486.9393340005
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0468",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1878.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      455729.1198189026,
+      2168821.6201819507
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0465",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 5023.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      490288.56675096514,
+      2164161.5781896776
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0465",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 5023.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      490288.56675096514,
+      2164161.5781896776
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0471",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Telebachillerato Comunitario No. 292 El Capul\u00edn.",
+    "route_length_m": 1165.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      469456.98458006466,
+      2115872.4410674684
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0471",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1306.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      468971.2311353205,
+      2115784.876140803
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0469",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1353.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      510246.2338613972,
+      2160060.3563497365
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0469",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1548.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      510246.2338613972,
+      2160060.3563497365
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0476",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 3571.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      514325.4406889106,
+      2170763.6509128935
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0478",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2382.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      459632.6592825783,
+      2118502.685783026
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0478",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 2571.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      459160.73944075615,
+      2120088.1439815112
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0479",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 446.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      456556.52969785634,
+      2171949.402551653
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0479",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1088.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      456870.1620040468,
+      2171867.712757581
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0470",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "DISAM Policl\u00ednica",
+    "route_length_m": 2687.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      508584.1832734397,
+      2144261.55099433
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0470",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Cl\u00ednica Alfa y Omega",
+    "route_length_m": 3833.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      511558.1634230637,
+      2144595.395738776
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0480",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "C. S. Gast\u00f2n Melo",
+    "route_length_m": 1101.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      500499.25930244534,
+      2124637.63097931
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0480",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Hospital General Milpa Alta",
+    "route_length_m": 2363.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      499641.87802280067,
+      2123342.438164382
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0482",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Hospital Municipal Juan Aldama, Villa Nicol\u00e1s Romero",
+    "route_length_m": 3959.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      461952.0612664885,
+      2170220.2204253897
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0475",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 2358.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      470568.12082121527,
+      2169062.506916404
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0475",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Consultorio",
+    "route_length_m": 2474.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      470568.12082121527,
+      2169062.506916404
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0486",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 336.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      505866.0403374326,
+      2154331.742903599
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0486",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2394.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      507517.15742425935,
+      2154475.980325034
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0484",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 765.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      500247.81891127385,
+      2165645.6481273198
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0484",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1083.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      500147.62794778973,
+      2165756.402135424
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0485",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Consultorio Medico Centro Koriyama",
+    "route_length_m": 228.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      465336.585657182,
+      2169223.8302278286
+    ]
+  },
+  {
+    "aoi_id": "EVT010_0485",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 335.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      465508.4838668072,
+      2169207.878795098
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0508",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 92.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      189090.08051023082,
+      2297649.324527936
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0513",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 160.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      768554.7677346806,
+      2291084.374066507
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0513",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 639.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      768562.9063483435,
+      2290270.9471766544
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0512",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 273.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      773360.121571592,
+      2313336.922118418
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0512",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 558.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      773360.121571592,
+      2313336.922118418
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0514",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 2250.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      759144.7653601714,
+      2316242.3600726174
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0516",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1178.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      776315.9798589638,
+      2298094.171727706
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0516",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2317.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      776315.9798589638,
+      2298094.171727706
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0509",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "unknown",
+    "route_length_m": 1411.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      740839.3380205493,
+      2312911.3877140475
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0519",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 482.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      742993.0982973217,
+      2311083.8218979426
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0519",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 767.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      742895.4406404332,
+      2311368.5158948386
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0522",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 255.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      783789.2685997622,
+      2314544.7358461255
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0521",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2311.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      780487.7148413586,
+      2298900.0970107457
+    ]
+  },
+  {
+    "aoi_id": "EVT011_0521",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2311.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      780479.6763766243,
+      2298946.3843068243
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0526",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 948.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      678380.861875428,
+      3718033.6190688806
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0526",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1316.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      678421.242709809,
+      3717525.923828703
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0529",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 828.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      678613.9981445565,
+      3721792.232946249
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0529",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1198.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      678613.9981445565,
+      3721792.232946249
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0530",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Burgess Elmentary School",
+    "route_length_m": 2474.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      683942.1933434131,
+      3724450.89170787
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0530",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "St. James Intermediate School",
+    "route_length_m": 2474.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      683942.1933434131,
+      3724450.89170787
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0527",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "nan",
+    "route_length_m": 2996.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      683173.4895126545,
+      3718981.1944802157
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0533",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1523.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      681826.6474932566,
+      3727859.1415843796
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0533",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1663.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      681826.6474932566,
+      3727859.1415843796
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0532",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Lakewood Elementary School",
+    "route_length_m": 2428.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      689914.4211864921,
+      3725318.5085749472
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0531",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "AccuQuest Hearing Center",
+    "route_length_m": 2681.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      686489.227626009,
+      3725486.798566461
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0531",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Doctors Care",
+    "route_length_m": 4449.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      687234.661673705,
+      3724133.1625374733
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0536",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1901.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      774995.8936692667,
+      3824658.862900857
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0536",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1510.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      775109.3367337376,
+      3825121.9585573436
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0538",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Pender Memorial Hospital",
+    "route_length_m": 1788.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      232415.11080878257,
+      3826772.7410929874
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0538",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Pender Memorial Hospital",
+    "route_length_m": 1788.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      232978.8086565555,
+      3826181.068839354
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0537",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 905.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      230362.7191394341,
+      3826344.7560335672
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0537",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "nan",
+    "route_length_m": 1224.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      230362.7191394341,
+      3826344.7560335672
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0540",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1359.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      775770.3865060968,
+      3831528.652892236
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0540",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2539.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      775770.3865060968,
+      3831528.652892236
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0541",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1551.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      228657.83677149596,
+      3830725.1892327387
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0541",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2470.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      228657.83677149596,
+      3830725.1892327387
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0542",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 868.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      235417.11430234453,
+      3831578.261022089
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0542",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1535.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      235417.11430234453,
+      3831578.261022089
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0543",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2194.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      238080.19611416495,
+      3830524.8935204986
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0543",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2508.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      237815.46186680713,
+      3830942.0602666927
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0544",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 212.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      769334.0631566514,
+      3833513.7337909336
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0544",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 212.4,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      769334.0631566514,
+      3833513.7337909336
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0545",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 745.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      773101.9247860725,
+      3835416.577480917
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0546",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 2309.9,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      228344.87039404767,
+      3837595.4749633693
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0548",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "unknown",
+    "route_length_m": 2893.8,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      239074.98674117954,
+      3834894.087111489
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0547",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 446.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      235999.0551027549,
+      3835310.6375614307
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0547",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 446.2,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      235634.74810276672,
+      3835797.360094468
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0535",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Myrtle Beach VA Clinic",
+    "route_length_m": 6576.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      691033.1369719177,
+      3730514.4265222317
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0535",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Myrtle Beach VA Clinic",
+    "route_length_m": 6576.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      691058.9337605621,
+      3729757.012972725
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0550",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1613.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      775284.6096590204,
+      3842793.1627941974
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0550",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 2239.3,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      775284.6096590204,
+      3842793.1627941974
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0534",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "Passport Health Myrtle Beach Travel Clinic",
+    "route_length_m": 2645.0,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      688300.1388015286,
+      3728547.2841242277
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0549",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1880.5,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      770767.0255231408,
+      3839127.0618514167
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0551",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1686.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      229890.4112187177,
+      3840295.3323841235
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0551",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1740.7,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      229890.4112187177,
+      3840295.3323841235
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0560",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "Rose Hill Medical Center",
+    "route_length_m": 2805.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      772657.1211874802,
+      3856519.412222588
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0565",
+    "epoch_T": 2,
+    "epoch_T1": 3,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 178.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      237510.85461815287,
+      3859759.443542268
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0565",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 95.6,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      236619.48663832436,
+      3861673.310229787
+    ]
+  },
+  {
+    "aoi_id": "EVT012_0570",
+    "epoch_T": 3,
+    "epoch_T1": 4,
+    "route_id": "synthetic_intersection",
+    "route_length_m": 1768.1,
+    "score_T": 0.0,
+    "score_T1": 0.85,
+    "score_delta": 0.85,
+    "conflict_type": "route_invalidation",
+    "segment_geom": [
+      725761.202506497,
+      3769217.4543728456
+    ]
+  }
+]
