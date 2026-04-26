@@ -1,9 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "damage_polygons_T2",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "damage_class": 1, "source": "spectral" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 22.315345088994544, 32.626702021612651 ], [ 22.315343769637341, 32.626611836293542 ], [ 22.315450342933943, 32.626610719773701 ], [ 22.315451662397969, 32.62670090508896 ], [ 22.315345088994544, 32.626702021612651 ] ] ] } },
-{ "type": "Feature", "properties": { "damage_class": 1, "source": "spectral" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 22.314788483974365, 32.62508426657898 ], [ 22.314785846546034, 32.62490389585254 ], [ 22.314892417842525, 32.624902779857855 ], [ 22.314895055484484, 32.6250831505766 ], [ 22.314788483974365, 32.62508426657898 ] ] ] } }
-]
-}

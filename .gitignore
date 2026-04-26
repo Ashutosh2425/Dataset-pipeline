@@ -1,9 +1,9 @@
-# ── Credentials ─────────────────────────────
+# Credentials
 .env
 *.pem
 *.key
 
-# ── Python ─────────────────────────────────
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -11,26 +11,49 @@ dist/
 build/
 .eggs/
 
-# Data — ignore heavy binaries, keep JSONs and flags
+# Heavy raster / binary data
 data/raw_scenes/**/*.tif
 data/stacks/*.tif
+data/annotations/**/*.tif
+data/annotations/**/*.gpkg
+
+# Per-AOI annotation files (too large for GitHub — use HuggingFace Hub for dataset)
+data/annotations/**/*.geojson
+data/annotations/**/evacuation_routes.json
+data/annotations/**/population_centroids.json
+data/annotations/**/shelter_pois.json
+
+# External data downloads
+data/osm_cache/
 data/sen1floods11/*.zip
 data/sen1floods11/v1.1/data/
 data/sen1floods11_repo/
 data/worldpop/
+data/xbd/
+
+# Keep small outputs and metadata
 !data/raw_scenes/**/download_complete.flag
 !data/aoi_list.json
 !data/aoi_epochs.json
 !data/stacks/*_meta.json
 !data/sen1floods11/label_index.json
+!data/conflict_events.json
+!data/queries_raw.jsonl
 
 # Cache / generated artifacts
 cache/
+data/cache/
 logs/
 *.log
 
-# ── OS / IDE ──────────────────────────────
+# OS / IDE
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+
+# Local session data
+.claude/
+
+# Full processed dataset (host on HuggingFace Hub)
+dataset/
