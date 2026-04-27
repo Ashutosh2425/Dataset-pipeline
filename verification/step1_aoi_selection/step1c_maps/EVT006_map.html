@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_25dd9e322a6f734eb304c67a1fc09efc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:9999;
+                background:white;padding:10px 14px;border-radius:6px;
+                box-shadow:2px 2px 6px rgba(0,0,0,0.3);font-size:12px;">
+      <b>EVT006 — structural (28 AOIs)</b><br>
+      <ul style="list-style:none;padding:0;margin:4px 0 0 0;">
+        <li><span style="background:#22e583;display:inline-block;width:14px;height:14px;margin-right:6px;border-radius:2px;"></span>EVT006</li>
+      </ul>
+    </div>
+    
+            <div class="folium-map" id="map_25dd9e322a6f734eb304c67a1fc09efc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_25dd9e322a6f734eb304c67a1fc09efc = L.map(
+                "map_25dd9e322a6f734eb304c67a1fc09efc",
+                {
+                    center: [33.89304999999999, 35.665023874999996],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8bcaf2898171db517f2811d8eae9f291 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8bcaf2898171db517f2811d8eae9f291.addTo(map_25dd9e322a6f734eb304c67a1fc09efc);
+        
+    
+            var tile_layer_b4864478f4a07298ae01f51d5f5adae8 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b4864478f4a07298ae01f51d5f5adae8.addTo(map_25dd9e322a6f734eb304c67a1fc09efc);
+        
+    
+            var feature_group_ab75693e4f096716331513daf08b8c39 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_5583d5aaf34ff298f88bd2764b08ca42 = L.rectangle(
+                [[33.79009, 35.797324], [33.835135, 35.851626]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_67c5d94b0b0ff075ca72db8426737c9d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c62f51105caf8e905c5f255b484843e9 = $(`<div id="html_c62f51105caf8e905c5f255b484843e9" style="width: 100.0%; height: 100.0%;"><b>EVT006_0260</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 152<br>OSM roads: 2457<br>xBD overlap: False<br>Bbox: [35.7973, 33.7901, 35.8516, 33.8351]</div>`)[0];
+                popup_67c5d94b0b0ff075ca72db8426737c9d.setContent(html_c62f51105caf8e905c5f255b484843e9);
+            
+        
+
+        rectangle_5583d5aaf34ff298f88bd2764b08ca42.bindPopup(popup_67c5d94b0b0ff075ca72db8426737c9d)
+        ;
+
+        
+    
+    
+            rectangle_5583d5aaf34ff298f88bd2764b08ca42.bindTooltip(
+                `<div>
+                     EVT006_0260
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_349504d41a7fdc9bc5d0f1506eae194f = L.circleMarker(
+                [33.8126125, 35.82447500000001],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_349504d41a7fdc9bc5d0f1506eae194f.bindTooltip(
+                `<div>
+                     EVT006_0260
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_5866866deb6f35b2e42fb21173124af8 = L.rectangle(
+                [[33.88018, 35.471511], [33.925225, 35.525813]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_cb670d257639fe48e59e61026c3cf099 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_44facee68de34ee5f3efad9a67d34e98 = $(`<div id="html_44facee68de34ee5f3efad9a67d34e98" style="width: 100.0%; height: 100.0%;"><b>EVT006_0261</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 121<br>OSM roads: 4552<br>xBD overlap: False<br>Bbox: [35.4715, 33.8802, 35.5258, 33.9252]</div>`)[0];
+                popup_cb670d257639fe48e59e61026c3cf099.setContent(html_44facee68de34ee5f3efad9a67d34e98);
+            
+        
+
+        rectangle_5866866deb6f35b2e42fb21173124af8.bindPopup(popup_cb670d257639fe48e59e61026c3cf099)
+        ;
+
+        
+    
+    
+            rectangle_5866866deb6f35b2e42fb21173124af8.bindTooltip(
+                `<div>
+                     EVT006_0261
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d04e541632742af72966c7f6c2c72e7 = L.circleMarker(
+                [33.902702500000004, 35.498661999999996],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_2d04e541632742af72966c7f6c2c72e7.bindTooltip(
+                `<div>
+                     EVT006_0261
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_09781a830fb956639f6ceefe3aa5eff8 = L.rectangle(
+                [[34.06036, 35.634418], [34.105405, 35.68872]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_aadd8a36eda661efd8707bd1d9064785 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_bdd708104056faa4735805e344d57c6c = $(`<div id="html_bdd708104056faa4735805e344d57c6c" style="width: 100.0%; height: 100.0%;"><b>EVT006_0262</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 121<br>OSM roads: 1683<br>xBD overlap: False<br>Bbox: [35.6344, 34.0604, 35.6887, 34.1054]</div>`)[0];
+                popup_aadd8a36eda661efd8707bd1d9064785.setContent(html_bdd708104056faa4735805e344d57c6c);
+            
+        
+
+        rectangle_09781a830fb956639f6ceefe3aa5eff8.bindPopup(popup_aadd8a36eda661efd8707bd1d9064785)
+        ;
+
+        
+    
+    
+            rectangle_09781a830fb956639f6ceefe3aa5eff8.bindTooltip(
+                `<div>
+                     EVT006_0262
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_052b10e2a816f33b6149ab1cfae1e149 = L.circleMarker(
+                [34.0828825, 35.661569],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_052b10e2a816f33b6149ab1cfae1e149.bindTooltip(
+                `<div>
+                     EVT006_0262
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_23a8e7962dac15edf61f461e7821d74a = L.rectangle(
+                [[33.88018, 35.525813], [33.925225, 35.580115]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_d30108b9e8cae3e24068b8eabd916041 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a2456141b8701da180bad0bb3f994edb = $(`<div id="html_a2456141b8701da180bad0bb3f994edb" style="width: 100.0%; height: 100.0%;"><b>EVT006_0263</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 121<br>OSM roads: 5613<br>xBD overlap: False<br>Bbox: [35.5258, 33.8802, 35.5801, 33.9252]</div>`)[0];
+                popup_d30108b9e8cae3e24068b8eabd916041.setContent(html_a2456141b8701da180bad0bb3f994edb);
+            
+        
+
+        rectangle_23a8e7962dac15edf61f461e7821d74a.bindPopup(popup_d30108b9e8cae3e24068b8eabd916041)
+        ;
+
+        
+    
+    
+            rectangle_23a8e7962dac15edf61f461e7821d74a.bindTooltip(
+                `<div>
+                     EVT006_0263
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0fa5aab6a889e7102c71c4791717168 = L.circleMarker(
+                [33.902702500000004, 35.552964],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_b0fa5aab6a889e7102c71c4791717168.bindTooltip(
+                `<div>
+                     EVT006_0263
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f83900f435e719fc3cb54b75affabb1b = L.rectangle(
+                [[33.745045, 35.417209], [33.79009, 35.471511]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_e0c47219e429426e23937b262757e01a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_ce53e6e50626ba3ebe15579cf12a08ba = $(`<div id="html_ce53e6e50626ba3ebe15579cf12a08ba" style="width: 100.0%; height: 100.0%;"><b>EVT006_0264</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 94<br>OSM roads: 632<br>xBD overlap: False<br>Bbox: [35.4172, 33.7450, 35.4715, 33.7901]</div>`)[0];
+                popup_e0c47219e429426e23937b262757e01a.setContent(html_ce53e6e50626ba3ebe15579cf12a08ba);
+            
+        
+
+        rectangle_f83900f435e719fc3cb54b75affabb1b.bindPopup(popup_e0c47219e429426e23937b262757e01a)
+        ;
+
+        
+    
+    
+            rectangle_f83900f435e719fc3cb54b75affabb1b.bindTooltip(
+                `<div>
+                     EVT006_0264
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f64fc8b2e40800f00253884a343be0c0 = L.circleMarker(
+                [33.7675675, 35.44436],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_f64fc8b2e40800f00253884a343be0c0.bindTooltip(
+                `<div>
+                     EVT006_0264
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_d6178774fab120ff6c9008a6aab2d2eb = L.rectangle(
+                [[34.015315, 35.634418], [34.06036, 35.68872]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_d3c2908174821197203ef2754e3db5dc = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_94b7585bbd3dde1c569282ee9742bf79 = $(`<div id="html_94b7585bbd3dde1c569282ee9742bf79" style="width: 100.0%; height: 100.0%;"><b>EVT006_0265</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 2298<br>xBD overlap: False<br>Bbox: [35.6344, 34.0153, 35.6887, 34.0604]</div>`)[0];
+                popup_d3c2908174821197203ef2754e3db5dc.setContent(html_94b7585bbd3dde1c569282ee9742bf79);
+            
+        
+
+        rectangle_d6178774fab120ff6c9008a6aab2d2eb.bindPopup(popup_d3c2908174821197203ef2754e3db5dc)
+        ;
+
+        
+    
+    
+            rectangle_d6178774fab120ff6c9008a6aab2d2eb.bindTooltip(
+                `<div>
+                     EVT006_0265
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ed24aabf14cc8e8becf36a78753f466 = L.circleMarker(
+                [34.0378375, 35.661569],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_6ed24aabf14cc8e8becf36a78753f466.bindTooltip(
+                `<div>
+                     EVT006_0265
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_2cb1be125c9a16122bc84e9e82091684 = L.rectangle(
+                [[34.105405, 35.851626], [34.15045, 35.9]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_70fbf478bba5f9d330f6abc2302417f0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_40fbbcb0936f39042693fdbaef073b09 = $(`<div id="html_40fbbcb0936f39042693fdbaef073b09" style="width: 100.0%; height: 100.0%;"><b>EVT006_0266</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 161<br>OSM roads: 516<br>xBD overlap: False<br>Bbox: [35.8516, 34.1054, 35.9000, 34.1504]</div>`)[0];
+                popup_70fbf478bba5f9d330f6abc2302417f0.setContent(html_40fbbcb0936f39042693fdbaef073b09);
+            
+        
+
+        rectangle_2cb1be125c9a16122bc84e9e82091684.bindPopup(popup_70fbf478bba5f9d330f6abc2302417f0)
+        ;
+
+        
+    
+    
+            rectangle_2cb1be125c9a16122bc84e9e82091684.bindTooltip(
+                `<div>
+                     EVT006_0266
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_191c546d273c23c9aaebc7e3a9100e15 = L.circleMarker(
+                [34.1279275, 35.875813],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_191c546d273c23c9aaebc7e3a9100e15.bindTooltip(
+                `<div>
+                     EVT006_0266
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_1e85c9ecefe7630c24d0d6e4fe70296d = L.rectangle(
+                [[33.745045, 35.580115], [33.79009, 35.634418]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_3291fc18f40449d6fc2907f2f42e337e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c19a2079ab89de8d7f8b0031bbcc86b5 = $(`<div id="html_c19a2079ab89de8d7f8b0031bbcc86b5" style="width: 100.0%; height: 100.0%;"><b>EVT006_0267</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 1046<br>xBD overlap: False<br>Bbox: [35.5801, 33.7450, 35.6344, 33.7901]</div>`)[0];
+                popup_3291fc18f40449d6fc2907f2f42e337e.setContent(html_c19a2079ab89de8d7f8b0031bbcc86b5);
+            
+        
+
+        rectangle_1e85c9ecefe7630c24d0d6e4fe70296d.bindPopup(popup_3291fc18f40449d6fc2907f2f42e337e)
+        ;
+
+        
+    
+    
+            rectangle_1e85c9ecefe7630c24d0d6e4fe70296d.bindTooltip(
+                `<div>
+                     EVT006_0267
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39be3a002a7ce598ab37240c54a030d7 = L.circleMarker(
+                [33.7675675, 35.607266499999994],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_39be3a002a7ce598ab37240c54a030d7.bindTooltip(
+                `<div>
+                     EVT006_0267
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_47ffad405a69ca03dc2fcca1a85a7338 = L.rectangle(
+                [[33.7, 35.851626], [33.745045, 35.9]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_6a34a5f5907314b7878bcee202e3304e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_dad4f946f75a7da63760c5e9c7ba7956 = $(`<div id="html_dad4f946f75a7da63760c5e9c7ba7956" style="width: 100.0%; height: 100.0%;"><b>EVT006_0268</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 134<br>OSM roads: 462<br>xBD overlap: False<br>Bbox: [35.8516, 33.7000, 35.9000, 33.7450]</div>`)[0];
+                popup_6a34a5f5907314b7878bcee202e3304e.setContent(html_dad4f946f75a7da63760c5e9c7ba7956);
+            
+        
+
+        rectangle_47ffad405a69ca03dc2fcca1a85a7338.bindPopup(popup_6a34a5f5907314b7878bcee202e3304e)
+        ;
+
+        
+    
+    
+            rectangle_47ffad405a69ca03dc2fcca1a85a7338.bindTooltip(
+                `<div>
+                     EVT006_0268
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a3c5e7eb727f34d104cb2b5fb7d2518 = L.circleMarker(
+                [33.7225225, 35.875813],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_4a3c5e7eb727f34d104cb2b5fb7d2518.bindTooltip(
+                `<div>
+                     EVT006_0268
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_f72012822d9d52862396c7c0a8d7e357 = L.rectangle(
+                [[34.15045, 35.68872], [34.195495, 35.743022]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_6a8a5011d616027f9464ab1cdfdb344c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_80e34bf21c09663677824aa0b55e2108 = $(`<div id="html_80e34bf21c09663677824aa0b55e2108" style="width: 100.0%; height: 100.0%;"><b>EVT006_0269</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 1157<br>xBD overlap: False<br>Bbox: [35.6887, 34.1504, 35.7430, 34.1955]</div>`)[0];
+                popup_6a8a5011d616027f9464ab1cdfdb344c.setContent(html_80e34bf21c09663677824aa0b55e2108);
+            
+        
+
+        rectangle_f72012822d9d52862396c7c0a8d7e357.bindPopup(popup_6a8a5011d616027f9464ab1cdfdb344c)
+        ;
+
+        
+    
+    
+            rectangle_f72012822d9d52862396c7c0a8d7e357.bindTooltip(
+                `<div>
+                     EVT006_0269
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9fd59710f37165e204370aa2564da76 = L.circleMarker(
+                [34.1729725, 35.71587100000001],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_d9fd59710f37165e204370aa2564da76.bindTooltip(
+                `<div>
+                     EVT006_0269
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_cd0adcfc84558dbf21833033b7f67ac6 = L.rectangle(
+                [[33.7, 35.743022], [33.745045, 35.797324]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_d4659898c3585b8c6749e9a0590ccb4e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_085975be1c96788591a9f70876acd8df = $(`<div id="html_085975be1c96788591a9f70876acd8df" style="width: 100.0%; height: 100.0%;"><b>EVT006_0270</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 152<br>OSM roads: 94<br>xBD overlap: False<br>Bbox: [35.7430, 33.7000, 35.7973, 33.7450]</div>`)[0];
+                popup_d4659898c3585b8c6749e9a0590ccb4e.setContent(html_085975be1c96788591a9f70876acd8df);
+            
+        
+
+        rectangle_cd0adcfc84558dbf21833033b7f67ac6.bindPopup(popup_d4659898c3585b8c6749e9a0590ccb4e)
+        ;
+
+        
+    
+    
+            rectangle_cd0adcfc84558dbf21833033b7f67ac6.bindTooltip(
+                `<div>
+                     EVT006_0270
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eeb987aa2f85cd3812dd870f9c5841cd = L.circleMarker(
+                [33.7225225, 35.770173],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_eeb987aa2f85cd3812dd870f9c5841cd.bindTooltip(
+                `<div>
+                     EVT006_0270
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c5d54fc96e4a94391295b01f660f4d90 = L.rectangle(
+                [[33.745045, 35.851626], [33.79009, 35.9]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_12abb2335845bf663968803d4c52daab = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fe45a87afc92ca26100bf0ac6edc4ddd = $(`<div id="html_fe45a87afc92ca26100bf0ac6edc4ddd" style="width: 100.0%; height: 100.0%;"><b>EVT006_0271</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 134<br>OSM roads: 1189<br>xBD overlap: False<br>Bbox: [35.8516, 33.7450, 35.9000, 33.7901]</div>`)[0];
+                popup_12abb2335845bf663968803d4c52daab.setContent(html_fe45a87afc92ca26100bf0ac6edc4ddd);
+            
+        
+
+        rectangle_c5d54fc96e4a94391295b01f660f4d90.bindPopup(popup_12abb2335845bf663968803d4c52daab)
+        ;
+
+        
+    
+    
+            rectangle_c5d54fc96e4a94391295b01f660f4d90.bindTooltip(
+                `<div>
+                     EVT006_0271
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2a58fc4fe169384c3adc14da07f0396 = L.circleMarker(
+                [33.7675675, 35.875813],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_d2a58fc4fe169384c3adc14da07f0396.bindTooltip(
+                `<div>
+                     EVT006_0271
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_6a3aea4764a1b5fbf2a3c92198deba58 = L.rectangle(
+                [[33.88018, 35.417209], [33.925225, 35.471511]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_ed3a69ecb36320e4d099c88339590174 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4a47193346ad9ebc1f6316d9702a6be6 = $(`<div id="html_4a47193346ad9ebc1f6316d9702a6be6" style="width: 100.0%; height: 100.0%;"><b>EVT006_0272</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 39<br>xBD overlap: False<br>Bbox: [35.4172, 33.8802, 35.4715, 33.9252]</div>`)[0];
+                popup_ed3a69ecb36320e4d099c88339590174.setContent(html_4a47193346ad9ebc1f6316d9702a6be6);
+            
+        
+
+        rectangle_6a3aea4764a1b5fbf2a3c92198deba58.bindPopup(popup_ed3a69ecb36320e4d099c88339590174)
+        ;
+
+        
+    
+    
+            rectangle_6a3aea4764a1b5fbf2a3c92198deba58.bindTooltip(
+                `<div>
+                     EVT006_0272
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99e77b0a7906ea8ded1e5b96d8c40c55 = L.circleMarker(
+                [33.902702500000004, 35.44436],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_99e77b0a7906ea8ded1e5b96d8c40c55.bindTooltip(
+                `<div>
+                     EVT006_0272
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b9214b5430b61f855336d20fc4283694 = L.rectangle(
+                [[33.79009, 35.471511], [33.835135, 35.525813]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_76647427747d011701494cd99dd14344 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a1dd9546bc4f7f00a47f336eb05137e4 = $(`<div id="html_a1dd9546bc4f7f00a47f336eb05137e4" style="width: 100.0%; height: 100.0%;"><b>EVT006_0273</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 4471<br>xBD overlap: False<br>Bbox: [35.4715, 33.7901, 35.5258, 33.8351]</div>`)[0];
+                popup_76647427747d011701494cd99dd14344.setContent(html_a1dd9546bc4f7f00a47f336eb05137e4);
+            
+        
+
+        rectangle_b9214b5430b61f855336d20fc4283694.bindPopup(popup_76647427747d011701494cd99dd14344)
+        ;
+
+        
+    
+    
+            rectangle_b9214b5430b61f855336d20fc4283694.bindTooltip(
+                `<div>
+                     EVT006_0273
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7abdf7552cab0d6d02ba1d404a18fa63 = L.circleMarker(
+                [33.8126125, 35.498661999999996],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_7abdf7552cab0d6d02ba1d404a18fa63.bindTooltip(
+                `<div>
+                     EVT006_0273
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_091bd372486062e05e991609616f8350 = L.rectangle(
+                [[33.97027, 35.580115], [34.015315, 35.634418]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_abe9f8f7ea9c51c11356fc5419c7303f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3677226305094cf02e407c69a178355c = $(`<div id="html_3677226305094cf02e407c69a178355c" style="width: 100.0%; height: 100.0%;"><b>EVT006_0274</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 1043<br>xBD overlap: False<br>Bbox: [35.5801, 33.9703, 35.6344, 34.0153]</div>`)[0];
+                popup_abe9f8f7ea9c51c11356fc5419c7303f.setContent(html_3677226305094cf02e407c69a178355c);
+            
+        
+
+        rectangle_091bd372486062e05e991609616f8350.bindPopup(popup_abe9f8f7ea9c51c11356fc5419c7303f)
+        ;
+
+        
+    
+    
+            rectangle_091bd372486062e05e991609616f8350.bindTooltip(
+                `<div>
+                     EVT006_0274
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40f7da34e23993ad88246ee8def301d2 = L.circleMarker(
+                [33.9927925, 35.607266499999994],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_40f7da34e23993ad88246ee8def301d2.bindTooltip(
+                `<div>
+                     EVT006_0274
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_8ba353c1147eb44b8e89c53fcf522c93 = L.rectangle(
+                [[34.105405, 35.743022], [34.15045, 35.797324]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_5547c48e0ea078fbac05445d52c9d513 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_66496a04d2c233d12f3bd804ca0905f5 = $(`<div id="html_66496a04d2c233d12f3bd804ca0905f5" style="width: 100.0%; height: 100.0%;"><b>EVT006_0275</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 161<br>OSM roads: 1596<br>xBD overlap: False<br>Bbox: [35.7430, 34.1054, 35.7973, 34.1504]</div>`)[0];
+                popup_5547c48e0ea078fbac05445d52c9d513.setContent(html_66496a04d2c233d12f3bd804ca0905f5);
+            
+        
+
+        rectangle_8ba353c1147eb44b8e89c53fcf522c93.bindPopup(popup_5547c48e0ea078fbac05445d52c9d513)
+        ;
+
+        
+    
+    
+            rectangle_8ba353c1147eb44b8e89c53fcf522c93.bindTooltip(
+                `<div>
+                     EVT006_0275
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60b3849034c37b2639fa90e8cb4a55b0 = L.circleMarker(
+                [34.1279275, 35.770173],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_60b3849034c37b2639fa90e8cb4a55b0.bindTooltip(
+                `<div>
+                     EVT006_0275
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_c60c0bbb83df902c358ad9980c8a59a2 = L.rectangle(
+                [[34.06036, 35.851626], [34.105405, 35.9]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_9c772c1682bb4dc26f1d5d8d7a24bb14 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_89fc94c9f8af8fa2b6c67732c0f9c120 = $(`<div id="html_89fc94c9f8af8fa2b6c67732c0f9c120" style="width: 100.0%; height: 100.0%;"><b>EVT006_0276</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 152<br>OSM roads: 780<br>xBD overlap: False<br>Bbox: [35.8516, 34.0604, 35.9000, 34.1054]</div>`)[0];
+                popup_9c772c1682bb4dc26f1d5d8d7a24bb14.setContent(html_89fc94c9f8af8fa2b6c67732c0f9c120);
+            
+        
+
+        rectangle_c60c0bbb83df902c358ad9980c8a59a2.bindPopup(popup_9c772c1682bb4dc26f1d5d8d7a24bb14)
+        ;
+
+        
+    
+    
+            rectangle_c60c0bbb83df902c358ad9980c8a59a2.bindTooltip(
+                `<div>
+                     EVT006_0276
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7a443206bfb32da2ef23ed14c4bbf91 = L.circleMarker(
+                [34.0828825, 35.875813],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_f7a443206bfb32da2ef23ed14c4bbf91.bindTooltip(
+                `<div>
+                     EVT006_0276
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_dbf997286636c686c351a1a0f96c11f7 = L.rectangle(
+                [[33.7, 35.580115], [33.745045, 35.634418]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_bdc0520b9b25fc513a86da1c89e6f586 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d0345ce590780c8c03de75dcf9c84ecd = $(`<div id="html_d0345ce590780c8c03de75dcf9c84ecd" style="width: 100.0%; height: 100.0%;"><b>EVT006_0277</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 718<br>xBD overlap: False<br>Bbox: [35.5801, 33.7000, 35.6344, 33.7450]</div>`)[0];
+                popup_bdc0520b9b25fc513a86da1c89e6f586.setContent(html_d0345ce590780c8c03de75dcf9c84ecd);
+            
+        
+
+        rectangle_dbf997286636c686c351a1a0f96c11f7.bindPopup(popup_bdc0520b9b25fc513a86da1c89e6f586)
+        ;
+
+        
+    
+    
+            rectangle_dbf997286636c686c351a1a0f96c11f7.bindTooltip(
+                `<div>
+                     EVT006_0277
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c54d94a48e29ecbc60e0c6228dca4e3f = L.circleMarker(
+                [33.7225225, 35.607266499999994],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_c54d94a48e29ecbc60e0c6228dca4e3f.bindTooltip(
+                `<div>
+                     EVT006_0277
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_b3258edf1340c904a9869c0035214bfb = L.rectangle(
+                [[34.015315, 35.743022], [34.06036, 35.797324]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_31bd941dd9a64c15e27a994c84b7d779 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_fd29fb50b9ca2a3077698aba9bcfb88d = $(`<div id="html_fd29fb50b9ca2a3077698aba9bcfb88d" style="width: 100.0%; height: 100.0%;"><b>EVT006_0278</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 152<br>OSM roads: 438<br>xBD overlap: False<br>Bbox: [35.7430, 34.0153, 35.7973, 34.0604]</div>`)[0];
+                popup_31bd941dd9a64c15e27a994c84b7d779.setContent(html_fd29fb50b9ca2a3077698aba9bcfb88d);
+            
+        
+
+        rectangle_b3258edf1340c904a9869c0035214bfb.bindPopup(popup_31bd941dd9a64c15e27a994c84b7d779)
+        ;
+
+        
+    
+    
+            rectangle_b3258edf1340c904a9869c0035214bfb.bindTooltip(
+                `<div>
+                     EVT006_0278
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d0597227b67074f5c314250e0d09b57 = L.circleMarker(
+                [34.0378375, 35.770173],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_0d0597227b67074f5c314250e0d09b57.bindTooltip(
+                `<div>
+                     EVT006_0278
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_19ecdf068ac8eb8fedfe0668e4c9e4cc = L.rectangle(
+                [[33.835135, 35.525813], [33.88018, 35.580115]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_202f190d56492976e2a6ca6b6de4291e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7926ebb7492c13799d0fd967b49f5097 = $(`<div id="html_7926ebb7492c13799d0fd967b49f5097" style="width: 100.0%; height: 100.0%;"><b>EVT006_0279</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 5093<br>xBD overlap: False<br>Bbox: [35.5258, 33.8351, 35.5801, 33.8802]</div>`)[0];
+                popup_202f190d56492976e2a6ca6b6de4291e.setContent(html_7926ebb7492c13799d0fd967b49f5097);
+            
+        
+
+        rectangle_19ecdf068ac8eb8fedfe0668e4c9e4cc.bindPopup(popup_202f190d56492976e2a6ca6b6de4291e)
+        ;
+
+        
+    
+    
+            rectangle_19ecdf068ac8eb8fedfe0668e4c9e4cc.bindTooltip(
+                `<div>
+                     EVT006_0279
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85ff43f8844cb0b907102183dcc919fe = L.circleMarker(
+                [33.8576575, 35.552964],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_85ff43f8844cb0b907102183dcc919fe.bindTooltip(
+                `<div>
+                     EVT006_0279
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_d703750feca4a86e861b64a47650aef2 = L.rectangle(
+                [[34.06036, 35.68872], [34.105405, 35.743022]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_e11df17e909fd081a53f95f4220ba258 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5d129074d4f541561e396480ccf85384 = $(`<div id="html_5d129074d4f541561e396480ccf85384" style="width: 100.0%; height: 100.0%;"><b>EVT006_0280</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 121<br>OSM roads: 1830<br>xBD overlap: False<br>Bbox: [35.6887, 34.0604, 35.7430, 34.1054]</div>`)[0];
+                popup_e11df17e909fd081a53f95f4220ba258.setContent(html_5d129074d4f541561e396480ccf85384);
+            
+        
+
+        rectangle_d703750feca4a86e861b64a47650aef2.bindPopup(popup_e11df17e909fd081a53f95f4220ba258)
+        ;
+
+        
+    
+    
+            rectangle_d703750feca4a86e861b64a47650aef2.bindTooltip(
+                `<div>
+                     EVT006_0280
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bfc326526d083bb55d5286cadf1a325 = L.circleMarker(
+                [34.0828825, 35.71587100000001],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_2bfc326526d083bb55d5286cadf1a325.bindTooltip(
+                `<div>
+                     EVT006_0280
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_bd4ed5e48719a4d233b6eaf0c47a7596 = L.rectangle(
+                [[33.7, 35.797324], [33.745045, 35.851626]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_81f278a96573fe2c667f404c008c70a5 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5fcdc260b33663a3021998953f28319a = $(`<div id="html_5fcdc260b33663a3021998953f28319a" style="width: 100.0%; height: 100.0%;"><b>EVT006_0281</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 134<br>OSM roads: 114<br>xBD overlap: False<br>Bbox: [35.7973, 33.7000, 35.8516, 33.7450]</div>`)[0];
+                popup_81f278a96573fe2c667f404c008c70a5.setContent(html_5fcdc260b33663a3021998953f28319a);
+            
+        
+
+        rectangle_bd4ed5e48719a4d233b6eaf0c47a7596.bindPopup(popup_81f278a96573fe2c667f404c008c70a5)
+        ;
+
+        
+    
+    
+            rectangle_bd4ed5e48719a4d233b6eaf0c47a7596.bindTooltip(
+                `<div>
+                     EVT006_0281
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a097c5ea8f26a815a06b180f2d485dbb = L.circleMarker(
+                [33.7225225, 35.82447500000001],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_a097c5ea8f26a815a06b180f2d485dbb.bindTooltip(
+                `<div>
+                     EVT006_0281
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_562b97317ebd3a6f3b7a9e016de88da9 = L.rectangle(
+                [[33.745045, 35.797324], [33.79009, 35.851626]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_5d6e57a19eedcfb78c2c35f3116c0085 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_875bc6524a8f07bfec5cdb075607d6db = $(`<div id="html_875bc6524a8f07bfec5cdb075607d6db" style="width: 100.0%; height: 100.0%;"><b>EVT006_0282</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 134<br>OSM roads: 734<br>xBD overlap: False<br>Bbox: [35.7973, 33.7450, 35.8516, 33.7901]</div>`)[0];
+                popup_5d6e57a19eedcfb78c2c35f3116c0085.setContent(html_875bc6524a8f07bfec5cdb075607d6db);
+            
+        
+
+        rectangle_562b97317ebd3a6f3b7a9e016de88da9.bindPopup(popup_5d6e57a19eedcfb78c2c35f3116c0085)
+        ;
+
+        
+    
+    
+            rectangle_562b97317ebd3a6f3b7a9e016de88da9.bindTooltip(
+                `<div>
+                     EVT006_0282
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ebaa4c56bed6a4800b5290d3c512f9ee = L.circleMarker(
+                [33.7675675, 35.82447500000001],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_ebaa4c56bed6a4800b5290d3c512f9ee.bindTooltip(
+                `<div>
+                     EVT006_0282
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_3a525526fb9db9515b5ecba02bbe70ab = L.rectangle(
+                [[33.835135, 35.471511], [33.88018, 35.525813]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_5dd8515e97094ce9ee1b31c4fdc508b9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_22cd652e95df5d70889a66208a7d8036 = $(`<div id="html_22cd652e95df5d70889a66208a7d8036" style="width: 100.0%; height: 100.0%;"><b>EVT006_0283</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 121<br>OSM roads: 8031<br>xBD overlap: False<br>Bbox: [35.4715, 33.8351, 35.5258, 33.8802]</div>`)[0];
+                popup_5dd8515e97094ce9ee1b31c4fdc508b9.setContent(html_22cd652e95df5d70889a66208a7d8036);
+            
+        
+
+        rectangle_3a525526fb9db9515b5ecba02bbe70ab.bindPopup(popup_5dd8515e97094ce9ee1b31c4fdc508b9)
+        ;
+
+        
+    
+    
+            rectangle_3a525526fb9db9515b5ecba02bbe70ab.bindTooltip(
+                `<div>
+                     EVT006_0283
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a41f322e0c3c400ad7988e41db7192c1 = L.circleMarker(
+                [33.8576575, 35.498661999999996],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_a41f322e0c3c400ad7988e41db7192c1.bindTooltip(
+                `<div>
+                     EVT006_0283
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_13d79a3273151f34f71ebfcb6cdae0e9 = L.rectangle(
+                [[33.7, 35.417209], [33.745045, 35.471511]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_17e31073252d18808a276db174d0d78d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c557cfdd5bff91df64da075bb2fb93cd = $(`<div id="html_c557cfdd5bff91df64da075bb2fb93cd" style="width: 100.0%; height: 100.0%;"><b>EVT006_0284</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 94<br>OSM roads: 1290<br>xBD overlap: False<br>Bbox: [35.4172, 33.7000, 35.4715, 33.7450]</div>`)[0];
+                popup_17e31073252d18808a276db174d0d78d.setContent(html_c557cfdd5bff91df64da075bb2fb93cd);
+            
+        
+
+        rectangle_13d79a3273151f34f71ebfcb6cdae0e9.bindPopup(popup_17e31073252d18808a276db174d0d78d)
+        ;
+
+        
+    
+    
+            rectangle_13d79a3273151f34f71ebfcb6cdae0e9.bindTooltip(
+                `<div>
+                     EVT006_0284
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d977a768060c66917dc991a6dcd7f26 = L.circleMarker(
+                [33.7225225, 35.44436],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_7d977a768060c66917dc991a6dcd7f26.bindTooltip(
+                `<div>
+                     EVT006_0284
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_e2cc661c66200cf5d7f81ae29b7a2e99 = L.rectangle(
+                [[33.79009, 35.525813], [33.835135, 35.580115]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_1f9a81be9540937eea08225080d76387 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d89620eb8998e6a5bb18489d7478ef3c = $(`<div id="html_d89620eb8998e6a5bb18489d7478ef3c" style="width: 100.0%; height: 100.0%;"><b>EVT006_0285</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 112<br>OSM roads: 3666<br>xBD overlap: False<br>Bbox: [35.5258, 33.7901, 35.5801, 33.8351]</div>`)[0];
+                popup_1f9a81be9540937eea08225080d76387.setContent(html_d89620eb8998e6a5bb18489d7478ef3c);
+            
+        
+
+        rectangle_e2cc661c66200cf5d7f81ae29b7a2e99.bindPopup(popup_1f9a81be9540937eea08225080d76387)
+        ;
+
+        
+    
+    
+            rectangle_e2cc661c66200cf5d7f81ae29b7a2e99.bindTooltip(
+                `<div>
+                     EVT006_0285
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7cc69671fd5c31911e265f702a68ca0 = L.circleMarker(
+                [33.8126125, 35.552964],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_a7cc69671fd5c31911e265f702a68ca0.bindTooltip(
+                `<div>
+                     EVT006_0285
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_1efe62ebf299a4077dffd7db58d69bda = L.rectangle(
+                [[33.97027, 35.743022], [34.015315, 35.797324]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_fc9c4ce4320267ac85a42e555156d4ee = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_457a129ce9403b929c5db947767c4b82 = $(`<div id="html_457a129ce9403b929c5db947767c4b82" style="width: 100.0%; height: 100.0%;"><b>EVT006_0286</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 152<br>OSM roads: 1317<br>xBD overlap: False<br>Bbox: [35.7430, 33.9703, 35.7973, 34.0153]</div>`)[0];
+                popup_fc9c4ce4320267ac85a42e555156d4ee.setContent(html_457a129ce9403b929c5db947767c4b82);
+            
+        
+
+        rectangle_1efe62ebf299a4077dffd7db58d69bda.bindPopup(popup_fc9c4ce4320267ac85a42e555156d4ee)
+        ;
+
+        
+    
+    
+            rectangle_1efe62ebf299a4077dffd7db58d69bda.bindTooltip(
+                `<div>
+                     EVT006_0286
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c6f01d392c253c7b520ca49c2dea7dd = L.circleMarker(
+                [33.9927925, 35.770173],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_8c6f01d392c253c7b520ca49c2dea7dd.bindTooltip(
+                `<div>
+                     EVT006_0286
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_708df9cef8db8ad0e985327096cc8222 = L.rectangle(
+                [[33.7, 35.471511], [33.745045, 35.525813]],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.08, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+        var popup_11ce5148e7eeaac26e568c98be681e7a = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_783d2560019b0bcb57f7e20440f18f44 = $(`<div id="html_783d2560019b0bcb57f7e20440f18f44" style="width: 100.0%; height: 100.0%;"><b>EVT006_0287</b><br>Event: EVT006 (structural)<br>Dates: 2020-07-15 – 2020-10-31<br>Sentinel scenes: 3<br>OSM roads: 706<br>xBD overlap: False<br>Bbox: [35.4715, 33.7000, 35.5258, 33.7450]</div>`)[0];
+                popup_11ce5148e7eeaac26e568c98be681e7a.setContent(html_783d2560019b0bcb57f7e20440f18f44);
+            
+        
+
+        rectangle_708df9cef8db8ad0e985327096cc8222.bindPopup(popup_11ce5148e7eeaac26e568c98be681e7a)
+        ;
+
+        
+    
+    
+            rectangle_708df9cef8db8ad0e985327096cc8222.bindTooltip(
+                `<div>
+                     EVT006_0287
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09eaf4a225d71ccdf1e5646c42e322be = L.circleMarker(
+                [33.7225225, 35.498661999999996],
+                {"bubblingMouseEvents": true, "color": "#22e583", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#22e583", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ab75693e4f096716331513daf08b8c39);
+        
+    
+            circle_marker_09eaf4a225d71ccdf1e5646c42e322be.bindTooltip(
+                `<div>
+                     EVT006_0287
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_ab75693e4f096716331513daf08b8c39.addTo(map_25dd9e322a6f734eb304c67a1fc09efc);
+        
+    
+            var layer_control_5d580e64f4c7bc20953812053bd8e6e2_layers = {
+                base_layers : {
+                    "Street (OSM)" : tile_layer_8bcaf2898171db517f2811d8eae9f291,
+                    "Satellite (ESRI)" : tile_layer_b4864478f4a07298ae01f51d5f5adae8,
+                },
+                overlays :  {
+                    "EVT006 (structural)" : feature_group_ab75693e4f096716331513daf08b8c39,
+                },
+            };
+            let layer_control_5d580e64f4c7bc20953812053bd8e6e2 = L.control.layers(
+                layer_control_5d580e64f4c7bc20953812053bd8e6e2_layers.base_layers,
+                layer_control_5d580e64f4c7bc20953812053bd8e6e2_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_25dd9e322a6f734eb304c67a1fc09efc);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_25dd9e322a6f734eb304c67a1fc09efc);
+        
+    
+            var mouse_position_1f1d95cbf7fc7095d114b76f5eafdcc3 = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_1f1d95cbf7fc7095d114b76f5eafdcc3.options["latFormatter"] =
+                undefined;
+            mouse_position_1f1d95cbf7fc7095d114b76f5eafdcc3.options["lngFormatter"] =
+                undefined;
+            map_25dd9e322a6f734eb304c67a1fc09efc.addControl(mouse_position_1f1d95cbf7fc7095d114b76f5eafdcc3);
+        
+</script>
+</html>
