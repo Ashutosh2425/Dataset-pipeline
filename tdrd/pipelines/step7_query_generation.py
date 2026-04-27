@@ -430,40 +430,77 @@ class Step7QueryPipeline:
     def run(self):
         out_path  = Path(self.base_dir) / "data" / "queries_raw.jsonl"
         llm_model = _check_ollama()
+
+        # Resume: skip AOIs that already have gt_answer_text populated
+        done_aois = set()
+        if out_path.exists():
+            with open(out_path, encoding="utf-8") as f:
+                for line in f:
+                    try:
+                        rec = json.loads(line)
+                        if rec.get("gt_answer_text"):   # only count complete records
+                            done_aois.add(rec["aoi_id"])
+                    except Exception:
+                        pass
+        remaining = [a for a in AOI_LIST if a["aoi_id"] not in done_aois]
+        if done_aois:
+            print(f"  Resuming: {len(done_aois)} AOIs already done, "
+                  f"{len(remaining)} remaining")
         print(f"Step 7: generating queries with {llm_model}  (1 LLM call/AOI)")
+
+        # Wipe incomplete records from the file, keep only done AOIs
+        if done_aois and out_path.exists():
+            with open(out_path, encoding="utf-8") as f:
+                kept = [l for l in f
+                        if json.loads(l).get("aoi_id") in done_aois]
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.writelines(kept)
 
         all_queries = []
         completed   = 0
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=self.workers) as ex:
-            futures = {
-                ex.submit(generate_queries_for_aoi, a, llm_model): a["aoi_id"]
-                for a in AOI_LIST
-            }
-            for fut in concurrent.futures.as_completed(futures):
-                aoi_id = futures[fut]
-                try:
-                    qs = fut.result()
-                    all_queries.extend(qs)
-                except Exception as e:
-                    print(f"  ERROR {aoi_id}: {e}")
-                completed += 1
-                if completed % 50 == 0 or completed == len(AOI_LIST):
-                    print(f"  {completed}/{len(AOI_LIST)} AOIs | "
-                          f"{len(all_queries)} queries so far")
+        # Open output file for appending — write each AOI immediately
+        out_f = open(out_path, "a", encoding="utf-8")
+        try:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=self.workers) as ex:
+                futures = {
+                    ex.submit(generate_queries_for_aoi, a, llm_model): a["aoi_id"]
+                    for a in remaining
+                }
+                for fut in concurrent.futures.as_completed(futures):
+                    aoi_id = futures[fut]
+                    try:
+                        qs = fut.result()
+                        for q in qs:
+                            out_f.write(json.dumps(q) + "\n")
+                        out_f.flush()
+                        all_queries.extend(qs)
+                    except Exception as e:
+                        print(f"  ERROR {aoi_id}: {e}")
+                    completed += 1
+                    if completed % 50 == 0 or completed == len(remaining):
+                        print(f"  {completed}/{len(remaining)} AOIs this run | "
+                              f"{len(all_queries)} new queries")
+        finally:
+            out_f.close()
 
-        with open(out_path, "w", encoding="utf-8") as f:
-            for q in all_queries:
-                f.write(json.dumps(q) + "\n")
+        # Summary over full file
+        all_in_file = []
+        with open(out_path, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    all_in_file.append(json.loads(line))
+                except Exception:
+                    pass
 
         by_type = defaultdict(int)
-        for q in all_queries:
+        for q in all_in_file:
             by_type[q["query_type"]] += 1
 
-        print(f"\nTotal queries : {len(all_queries)}")
+        print(f"\nTotal queries : {len(all_in_file)}")
         print(f"Target        : ~3600  (600 AOIs × 6 types)")
         print(f"\nBy type:")
         for qt in QUERY_TYPES:
             print(f"  {qt:<18} {by_type[qt]}")
         print(f"\nSaved -> {out_path}")
-        return all_queries
+        return all_in_file

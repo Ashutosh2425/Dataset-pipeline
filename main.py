@@ -23,6 +23,7 @@ from tdrd.pipelines.step4_road_damage_scoring import Step4RoadDamagePipeline
 from tdrd.pipelines.step5b_compute_routes import Step5EvacuationPipeline
 from tdrd.pipelines.step6_conflict_annotation import Step6ConflictPipeline
 from tdrd.pipelines.step7_query_generation import Step7QueryPipeline
+from tdrd.pipelines.step8_verify_and_assemble import Step8VerifyAssemblePipeline
 
 
 def cli_check_aois(args):
@@ -68,6 +69,9 @@ def cli_run_step6(args):
 def cli_run_step7(args):
     workers = getattr(args, 'workers', 2)
     Step7QueryPipeline(workers=workers).run()
+
+def cli_run_step8(args):
+    Step8VerifyAssemblePipeline().run()
 
 def cli_rerun_after_xbd(args):
     """
@@ -153,6 +157,8 @@ def main():
     p7 = sub.add_parser("run-step7", help="Generate NL queries with Ollama")
     p7.add_argument("--workers", type=int, default=2)
 
+    sub.add_parser("run-step8", help="Verify GT chains and assemble final dataset splits")
+
     pxbd = sub.add_parser(
         "re-run-after-xbd",
         help="After loading xBD data: re-annotate + re-score + re-route + detect conflicts"
@@ -174,6 +180,7 @@ def main():
         "run-step5":         cli_run_step5,
         "run-step6":         cli_run_step6,
         "run-step7":         cli_run_step7,
+        "run-step8":         cli_run_step8,
         "re-run-after-xbd":  cli_rerun_after_xbd,
     }
 
